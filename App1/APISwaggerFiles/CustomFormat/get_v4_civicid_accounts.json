@@ -1,0 +1,49 @@
+{
+  "path" : "/v4/civicid/accounts",
+  "description" : "Get All Linked User Accounts",
+  "httpMethod" : "GET",
+  "summary" : "Get Linked Accounts",
+  "responseType" : "accounts",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {  
+   "accounts": {
+      "id": "accounts",
+      "properties": {
+        "socialAccounts": {
+          "type": "List<account>"
+        },
+        "agencyAccounts": {
+          "type": "List<account>"
+        },
+        "citizenAccounts": {
+          "type": "List<account>"
+        }
+      }
+    },
+	"account": {
+      "id": "account",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "agencyName": {
+          "type": "string"
+        },
+        "agencyDisplayName": {
+          "type": "string"
+        }
+      }
+    }
+   }
+}
+

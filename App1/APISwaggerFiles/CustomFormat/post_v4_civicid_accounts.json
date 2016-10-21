@@ -1,0 +1,41 @@
+{
+    "path": "/v4/civicid/accounts",
+    "description": "Link current loggedin civic user with citizen user or agency user.",
+    "httpMethod": "POST",
+    "summary": "Link current loggedin civic user with citizen user or agency user.",
+    "responseType": "string",
+    "nickname": "createCivicIdAccountLink",
+    "parameters": [
+        {
+            "description": "Account information to link with user.",
+            "paramType": "body",
+            "required": true,
+            "isArray": false,
+            "dataType": "account"
+        },
+        {
+            "name": "lang",
+            "description": "Language parameter to support I18N. Default language is en_US",
+            "paramType": "query",
+            "required": false,
+            "isArray": false,
+            "dataType": "string"
+        }
+    ],
+    "models": {
+        "account": {
+            "id": "account",
+            "properties": {
+                "accountType": {
+                    "type": "string"
+                },
+                "loginName": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

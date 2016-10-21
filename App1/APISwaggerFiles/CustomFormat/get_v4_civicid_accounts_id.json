@@ -1,0 +1,41 @@
+{
+  "path" : "/v4/civicid/accounts/{id}",
+  "description" : "Get Account Profile",
+  "httpMethod" : "GET",
+  "summary" : "Get Account Profile",
+  "responseType" : "account",
+  "parameters": [
+			{
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "id"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {  
+	"account": {
+      "id": "account",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "agencyName": {
+          "type": "string"
+        },
+        "agencyDisplayName": {
+          "type": "string"
+        }
+      }
+    }
+   }
+}
+

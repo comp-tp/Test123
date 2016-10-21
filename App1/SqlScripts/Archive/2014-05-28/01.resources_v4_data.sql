@@ -1,0 +1,312 @@
+-- Record1:  Update : '/v4/inspections/checklists/{checklistId}/checklistItems/{checklistItemId}/statuses'  to '/v4/inspections/{inspectionId}/checklists/{checklistId}/checklistItems/{checklistItemId}/statuses'--
+UPDATE [dbo].[Resources]
+SET
+	API = '/v4/inspections/{inspectionId}/checklists/{checklistId}/checklistItems/{checklistItemId}/statuses',
+	RelativeUriTemplateFull='/v4/inspections/{inspectionId}/checklists/{checklistId}/checklistItems/{checklistItemId}/statuses?lang={lang}'
+WHERE [Id] = N'C4012345-AAAA-BBBB-CCCC-123456700218'
+
+-- Record2:  Update : '/apis/v4/inspector?lang={lang}&departmentCode={department}'  to '/apis/v4/inspector?lang={lang}&department={department}'--
+UPDATE RESOURCES 
+SET 
+	RelativeUriTemplateFull='/v4/inspectors?lang={lang}&department={department}',
+PROXYAPI = '/apis/v4/inspector?lang={lang}&department={department}'   
+ WHERE        ID ='C4012345-AAAA-BBBB-CCCC-123456700040'    AND           API = '/v4/inspectors'
+ 
+-- Record3:  Update : '/v4/search/records?lang={lang}&offset={offset}&limit={limit}&fields={fields}&sort={sort}&direction={direction}'  to '/v4/search/records?lang={lang}&offset={offset}&limit={limit}&fields={fields}&sort={sort}&direction={direction}&expand={expand}'--
+UPDATE RESOURCES 
+SET 
+	RelativeUriTemplateFull='/v4/search/records?lang={lang}&offset={offset}&limit={limit}&fields={fields}&sort={sort}&direction={direction}&expand={expand}',
+PROXYAPI = '/apis/v4/search/records?lang={lang}&offset={offset}&limit={limit}&fields={fields}&sort={sort}&direction={direction}&expand={expand}'   
+ WHERE        ID ='C4012345-AAAA-BBBB-CCCC-123456700060'  
+ 
+ -- Record4:  Add : 'GET /v4/records/{recordId}/contacts/{contactId}/customForms/meta'  --
+ IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms/meta' and HttpVerb=N'GET' )
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'245044D7-76DE-4146-943E-FCA026223C13', N'/v4/records/{recordId}/contacts/{contactId}/customForms/meta', N'GET', N'/v4/records/{recordId}/contacts/{contactId}/customForms/meta?lang={lang}', N'get_record_contact_customforms_meta ', N'Get Record Contacts Custom Forms Meta', N'Get Record Contacts Custom Forms Meta', 5, 11, N'System', getdate(), Null, Null, N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms/meta?lang={lang}', N'getRecordContactCustomFormsMeta', N'All', N'7.3.2', NULL, N'Records', NULL)
+END
+ELSE
+BEGIN
+        UPDATE [dbo].[Resources] SET [RelativeUriTemplateFull] = N'/v4/records/{recordId}/contacts/{contactId}/customForms/meta?lang={lang}' , ProxyAPI = N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms/meta?lang={lang}' WHERE [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms/meta' and HttpVerb=N'GET'
+END
+
+ -- Record5:  Add : GET '/v4/records/{recordId}/contacts/{contactId}/customForms'  --
+ IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms' and HttpVerb=N'GET' )
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'245044D7-76DE-4146-943E-FCA026223C14', N'/v4/records/{recordId}/contacts/{contactId}/customForms', N'GET', N'/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}', N'get_record_contact_customforms', N'Get Record Contacts Custom Forms', N'Get Record Contacts Custom Forms', 5, 11, N'System', getdate(), Null, Null, N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}', N'getRecordContactCustomForms', N'All', N'7.3.2', NULL, N'Records', NULL)
+END
+ELSE
+BEGIN
+        UPDATE [dbo].[Resources] SET [RelativeUriTemplateFull] = N'/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}' , ProxyAPI = N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}' WHERE [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms' and HttpVerb=N'GET'
+END
+
+ -- Record6:  Add : PUT '/v4/records/{recordId}/contacts/{contactId}/customForms'  --
+ IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms' and HttpVerb=N'PUT' )
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'245044D7-76DE-4146-943E-FCA026223C15', N'/v4/records/{recordId}/contacts/{contactId}/customForms', N'PUT', N'/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}', N'update_record_contact_customforms', N'Update Record Contact Custom Forms', N'Update Record Contact Custom Forms', 5, 11, N'System', getdate(), Null, Null, N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}', N'updateRecordContactCustomForms', N'All', N'7.3.2', NULL, N'Records', NULL)
+END
+ELSE
+BEGIN
+        UPDATE [dbo].[Resources] SET [RelativeUriTemplateFull] = N'/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}' , ProxyAPI = N'/apis/v4/records/{recordId}/contacts/{contactId}/customForms?lang={lang}' WHERE [api] = N'/v4/records/{recordId}/contacts/{contactId}/customForms' and HttpVerb=N'PUT'
+END
+
+ -- Record8:  Add : GET '/v4/settings/contacts/types/{id}/customForms'  --
+ IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [api] = N'/v4/settings/contacts/types/{id}/customForms' and HttpVerb=N'GET' )
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'245044D7-76DE-4146-943E-FCA026223C17', N'/v4/settings/contacts/types/{id}/customForms', N'GET', N'/v4/settings/contacts/types/{id}/customForms?lang={lang}', N'update_record_contact_customforms', N'GET Contact Custom Forms Settings', N'GET Contact Custom Forms Settings', 5, 11, N'System', getdate(), Null, Null, N'/apis/v4/settings/contacts/types/{id}/customForms?lang={lang}', N'getContactCustomFormsSettings', N'All', N'7.3.2', NULL, N'Contacts', NULL)
+END
+ELSE
+BEGIN
+        UPDATE [dbo].[Resources] SET [RelativeUriTemplateFull] = N'/v4/settings/contacts/types/{id}/customForms?lang={lang}' , ProxyAPI = N'/apis//v4/settings/contacts/types/{id}/customForms?lang={lang}' WHERE [api] = N'/v4/settings/contacts/types/{id}/customForms?lang={lang}' and HttpVerb=N'GET'
+END
+
+IF EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [Id] = N'9430809D-23E6-47B8-8395-C14B70A2C11E')
+BEGIN
+	UPDATE [dbo].[Resources]
+	SET [HttpVerb] = N'POST'
+	, [RelativeUriTemplateFull] = N'/v3/geo/geocode/geocodeaddresses'
+	WHERE [Id] = N'9430809D-23E6-47B8-8395-C14B70A2C11E'
+END
+
+UPDATE [dbo].[Resources] SET [api] = N'/v4/inspections/{inspectionId}/related/{childInspectionIds}' , RelativeUriTemplateFull = '/v4/inspections/{inspectionId}/related/{childInspectionIds}?lang={lang}', ProxyAPI = N'/apis/v4/inspections/{inspectionId}/related/{childInspectionIds}?lang={lang}' WHERE [api] = N'/v4/inspections/{inspectionId}/related/{childIds}' and HttpVerb=N'DELETE'
+
+UPDATE [dbo].[Resources] SET [api] = N'/v4/records/{recordId}/related/{childRecordIds}?lang={lang}' , RelativeUriTemplateFull='/v4/records/{recordId}/related/{childRecordIds}?lang={lang}', ProxyAPI = N'/apis/v4/records/{recordId}/related/{childRecordIds}?lang={lang}' WHERE [api] = N'/v4/records/{recordId}/related/{childIds}' and HttpVerb=N'DELETE'
+
+
+-- update api display name for document
+update resources set displayname = 'Get All Custom Tables for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700001'
+update resources set displayname = 'Get Record Custom Table' where id = 'C4012345-AAAA-BBBB-CCCC-123456700002'
+update resources set displayname = 'Update Record Custom Tables' where id = 'C4012345-AAAA-BBBB-CCCC-123456700003'
+update resources set displayname = 'Get All Custom Tables Metadata for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700004'
+update resources set displayname = 'Get Custom Table Metadata for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700005'
+update resources set displayname = 'Get All Custom Forms for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700006'
+update resources set displayname = 'Get All Custom Forms Metadata for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700007'
+update resources set displayname = 'Update Record Custom Forms' where id = 'C4012345-AAAA-BBBB-CCCC-123456700008'
+update resources set displayname = 'Get Custom Form Metadata for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700009'
+update resources set displayname = 'Get Drilldown Settings' where id = 'C4012345-AAAA-BBBB-CCCC-123456700010'
+update resources set displayname = 'Get All Parcels for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700011'
+update resources set displayname = 'Create Record Parcels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700012'
+update resources set displayname = 'Update Record Parcel' where id = 'C4012345-AAAA-BBBB-CCCC-123456700013'
+update resources set displayname = 'Delete Record Parcels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700014'
+update resources set displayname = 'Get All Parcel Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700015'
+update resources set displayname = 'Get All Parcel Owners' where id = 'C4012345-AAAA-BBBB-CCCC-123456700016'
+update resources set displayname = 'Get All Parcels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700017'
+update resources set displayname = 'Get Parcel' where id = 'C4012345-AAAA-BBBB-CCCC-123456700018'
+update resources set displayname = 'Get Additional Details for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700019'
+update resources set displayname = 'Update Additional Details for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700020'
+update resources set displayname = 'Get All Comments for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700021'
+update resources set displayname = 'Update Record Comment' where id = 'C4012345-AAAA-BBBB-CCCC-123456700022'
+update resources set displayname = 'Delete Record Comments' where id = 'C4012345-AAAA-BBBB-CCCC-123456700023'
+update resources set displayname = 'Create Record Comments' where id = 'C4012345-AAAA-BBBB-CCCC-123456700024'
+update resources set displayname = 'Create Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700025'
+update resources set displayname = 'Create Partial Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700026'
+update resources set displayname = 'Finalize Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700027'
+update resources set displayname = 'Get Records' where id = 'C4012345-AAAA-BBBB-CCCC-123456700028'
+update resources set displayname = 'Get All Records' where id = 'C4012345-AAAA-BBBB-CCCC-123456700029'
+update resources set displayname = 'Get My Records' where id = 'C4012345-AAAA-BBBB-CCCC-123456700030'
+update resources set displayname = 'Get All Inspection Types for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700031'
+update resources set displayname = 'Get All Inspections for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700032'
+update resources set displayname = 'Get All Document Categories for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700033'
+update resources set displayname = 'Update Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700034'
+update resources set displayname = 'Get All Custom Forms for Record Type' where id = 'C4012345-AAAA-BBBB-CCCC-123456700035'
+update resources set displayname = 'Get All Custom Tables for Record Type' where id = 'C4012345-AAAA-BBBB-CCCC-123456700036'
+update resources set displayname = 'Get All Record Construction Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700037'
+update resources set displayname = 'Get All Record Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700038'
+update resources set displayname = 'Get All Fees for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700039'
+update resources set displayname = 'Get All Inspectors' where id = 'C4012345-AAAA-BBBB-CCCC-123456700040'
+update resources set displayname = 'Get Inspector' where id = 'C4012345-AAAA-BBBB-CCCC-123456700041'
+update resources set displayname = 'Create Report' where id = 'C4012345-AAAA-BBBB-CCCC-123456700042'
+update resources set displayname = 'Get All Report Categories' where id = 'C4012345-AAAA-BBBB-CCCC-123456700043'
+update resources set displayname = 'Get All Report Definitions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700044'
+update resources set displayname = 'Get Report Definition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700045'
+update resources set displayname = 'Run EMSE Script' where id = 'C4012345-AAAA-BBBB-CCCC-123456700046'
+update resources set displayname = 'Get All  Time Accounting Entries for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700047'
+update resources set displayname = 'Create Inspection Time Accounting Entry' where id = 'C4012345-AAAA-BBBB-CCCC-123456700048'
+update resources set displayname = 'Delete Inspection Time Accounting Entries' where id = 'C4012345-AAAA-BBBB-CCCC-123456700049'
+update resources set displayname = 'Update Inspection Time Accounting Entry' where id = 'C4012345-AAAA-BBBB-CCCC-123456700050'
+update resources set displayname = 'Get All Workflow Tasks for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700053'
+update resources set displayname = 'Get Record Workflow Task' where id = 'C4012345-AAAA-BBBB-CCCC-123456700054'
+update resources set displayname = 'Update Record Workflow Task' where id = 'C4012345-AAAA-BBBB-CCCC-123456700055'
+update resources set displayname = 'Get My Workflow Tasks' where id = 'C4012345-AAAA-BBBB-CCCC-123456700056'
+update resources set displayname = 'Search Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700057'
+update resources set displayname = 'Search All' where id = 'C4012345-AAAA-BBBB-CCCC-123456700058'
+update resources set displayname = 'Search Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700059'
+update resources set displayname = 'Search Records' where id = 'C4012345-AAAA-BBBB-CCCC-123456700060'
+update resources set displayname = 'Search Owners' where id = 'C4012345-AAAA-BBBB-CCCC-123456700061'
+update resources set displayname = 'Search Professionals' where id = 'C4012345-AAAA-BBBB-CCCC-123456700062'
+update resources set displayname = 'Search Parcels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700063'
+update resources set displayname = 'Search Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700064'
+update resources set displayname = 'Download Document' where id = 'C4012345-AAAA-BBBB-CCCC-123456700065'
+update resources set displayname = 'Get Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700066'
+update resources set displayname = 'Get All Document Categories' where id = 'C4012345-AAAA-BBBB-CCCC-123456700067'
+update resources set displayname = 'Create Record Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700068'
+update resources set displayname = 'Get All Documents for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700069'
+update resources set displayname = 'Delete Record Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700070'
+update resources set displayname = 'Get All Standard Condition Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700071'
+update resources set displayname = 'Get All Standard Condition Statuses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700072'
+update resources set displayname = 'Get All Approval Condition Statuses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700073'
+update resources set displayname = 'Get All Standard Condition Priorities' where id = 'C4012345-AAAA-BBBB-CCCC-123456700074'
+update resources set displayname = 'Get All Approval Conditions for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700075'
+update resources set displayname = 'Get Inspection Approval Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700076'
+update resources set displayname = 'Create Inspection Approval Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700077'
+update resources set displayname = 'Update Inspection Approval Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700078'
+update resources set displayname = 'Delete Inspection Approval Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700079'
+update resources set displayname = 'Get All Standard Conditions for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700080'
+update resources set displayname = 'Get Inspection Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700081'
+update resources set displayname = 'Create Inspection Standard Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700082'
+update resources set displayname = 'Update Inspection Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700083'
+update resources set displayname = 'Delete Inspection Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700084'
+update resources set displayname = 'Get Inspection Condition History' where id = 'C4012345-AAAA-BBBB-CCCC-123456700085'
+update resources set displayname = 'Create Record Approval Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700086'
+update resources set displayname = 'Delete Record Approval Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700087'
+update resources set displayname = 'Get All Approval Conditions for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700088'
+update resources set displayname = 'Get Record Approval Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700089'
+update resources set displayname = 'Update Record Approval Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700090'
+update resources set displayname = 'Get All Conditions for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700091'
+update resources set displayname = 'Get Record Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700092'
+update resources set displayname = 'Create Record Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700093'
+update resources set displayname = 'Update Record Condition' where id = 'C4012345-AAAA-BBBB-CCCC-123456700094'
+update resources set displayname = 'Delete Record Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700095'
+update resources set displayname = 'Get All Approval Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700096'
+update resources set displayname = 'Get All Standard Conditions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700097'
+update resources set displayname = 'Get All Contacts for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700098'
+update resources set displayname = 'Get All Contact Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700099'
+update resources set displayname = 'Get All Contact Relations' where id = 'C4012345-AAAA-BBBB-CCCC-123456700100'
+update resources set displayname = 'Get All Contact Salutations' where id = 'C4012345-AAAA-BBBB-CCCC-123456700101'
+update resources set displayname = 'Get All Contact Races' where id = 'C4012345-AAAA-BBBB-CCCC-123456700102'
+update resources set displayname = 'Get All Contact Preferred Channels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700103'
+update resources set displayname = 'Get Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700104'
+update resources set displayname = 'Create Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700105'
+update resources set displayname = 'Update Contact' where id = 'C4012345-AAAA-BBBB-CCCC-123456700106'
+update resources set displayname = 'Delete Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700107'
+update resources set displayname = 'Create Contact Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700108'
+update resources set displayname = 'Get All Contact Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700109'
+update resources set displayname = 'Create Record Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700110'
+update resources set displayname = 'Update Record Contact' where id = 'C4012345-AAAA-BBBB-CCCC-123456700111'
+update resources set displayname = 'Delete Record Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700112'
+update resources set displayname = 'Get All Owners' where id = 'C4012345-AAAA-BBBB-CCCC-123456700113'
+update resources set displayname = 'Get Owner' where id = 'C4012345-AAAA-BBBB-CCCC-123456700114'
+update resources set displayname = 'Get All Owners for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700115'
+update resources set displayname = 'Create Record Owners' where id = 'C4012345-AAAA-BBBB-CCCC-123456700116'
+update resources set displayname = 'Update Record Owner' where id = 'C4012345-AAAA-BBBB-CCCC-123456700117'
+update resources set displayname = 'Delete Record Owners' where id = 'C4012345-AAAA-BBBB-CCCC-123456700118'
+update resources set displayname = 'Get All Professionals for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700119'
+update resources set displayname = 'Create Record Professionals' where id = 'C4012345-AAAA-BBBB-CCCC-123456700120'
+update resources set displayname = 'Delete Record Professionals' where id = 'C4012345-AAAA-BBBB-CCCC-123456700121'
+update resources set displayname = 'Update Record Professional' where id = 'C4012345-AAAA-BBBB-CCCC-123456700122'
+update resources set displayname = 'Get All Professional License Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700123'
+update resources set displayname = 'Get All Professional License Boards' where id = 'C4012345-AAAA-BBBB-CCCC-123456700124'
+update resources set displayname = 'Get All Professional Salutations' where id = 'C4012345-AAAA-BBBB-CCCC-123456700125'
+update resources set displayname = 'Get Professionals' where id = 'C4012345-AAAA-BBBB-CCCC-123456700126'
+update resources set displayname = 'Get All Professionals' where id = 'C4012345-AAAA-BBBB-CCCC-123456700127'
+update resources set displayname = 'Get All Professional Records' where id = 'C4012345-AAAA-BBBB-CCCC-123456700128'
+update resources set displayname = 'Create Related Details for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700129'
+update resources set displayname = 'Delete Related Details from Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700130'
+update resources set displayname = 'Get All Related Details for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700131'
+update resources set displayname = 'Get All Departments' where id = 'C4012345-AAAA-BBBB-CCCC-123456700132'
+update resources set displayname = 'Get All Department Staff' where id = 'C4012345-AAAA-BBBB-CCCC-123456700133'
+update resources set displayname = 'Get All Statuses for Record Type' where id = 'C4012345-AAAA-BBBB-CCCC-123456700134'
+update resources set displayname = 'Get All Priorities' where id = 'C4012345-AAAA-BBBB-CCCC-123456700135'
+update resources set displayname = 'Get Related Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700136'
+update resources set displayname = 'Create Related Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700137'
+update resources set displayname = 'Delete Related Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700138'
+update resources set displayname = 'Get All Inspection Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700139'
+update resources set displayname = 'Get Inspection Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700140'
+update resources set displayname = 'Get All Inspection Grades' where id = 'C4012345-AAAA-BBBB-CCCC-123456700141'
+update resources set displayname = 'Get All Inspection Statuses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700142'
+update resources set displayname = 'Get All Comments for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700143'
+update resources set displayname = 'Get Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700144'
+update resources set displayname = 'Get Inspection History' where id = 'C4012345-AAAA-BBBB-CCCC-123456700145'
+update resources set displayname = 'Get All  Checklists for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700146'
+update resources set displayname = 'Create Inspection Checklist' where id = 'C4012345-AAAA-BBBB-CCCC-123456700147'
+update resources set displayname = 'Get All Checklist Items for Checklist' where id = 'C4012345-AAAA-BBBB-CCCC-123456700148'
+update resources set displayname = 'Delete Inspection Checklists' where id = 'C4012345-AAAA-BBBB-CCCC-123456700149'
+update resources set displayname = 'Get Checklist History' where id = 'C4012345-AAAA-BBBB-CCCC-123456700150'
+update resources set displayname = 'Get Checklist Item History' where id = 'C4012345-AAAA-BBBB-CCCC-123456700151'
+update resources set displayname = 'Update Inspection Checklist Items' where id = 'C4012345-AAAA-BBBB-CCCC-123456700152'
+update resources set displayname = 'Get All Documents for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700153'
+update resources set displayname = 'Create Checklist Item Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700154'
+update resources set displayname = 'Get All Documents for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700155'
+update resources set displayname = 'Create Inspection Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700156'
+update resources set displayname = 'Delete Inspection Documents' where id = 'C4012345-AAAA-BBBB-CCCC-123456700157'
+update resources set displayname = 'Schedule Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700158'
+update resources set displayname = 'Get All Available Dates for Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700159'
+update resources set displayname = 'Schedule Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700160'
+update resources set displayname = 'Reschedule Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700161'
+update resources set displayname = 'Cancel Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700162'
+update resources set displayname = 'Update Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700163'
+update resources set displayname = 'Result Inspection' where id = 'C4012345-AAAA-BBBB-CCCC-123456700164'
+update resources set displayname = 'Assign Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700165'
+update resources set displayname = 'Delete Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700166'
+update resources set displayname = 'Get All Inspections' where id = 'C4012345-AAAA-BBBB-CCCC-123456700167'
+update resources set displayname = 'Get All Inspection Checklists' where id = 'C4012345-AAAA-BBBB-CCCC-123456700168'
+update resources set displayname = 'Get Inspection Checklists' where id = 'C4012345-AAAA-BBBB-CCCC-123456700169'
+update resources set displayname = 'Get All Custom Tables for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700170'
+update resources set displayname = 'Get All Custom Forms for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700171'
+update resources set displayname = 'Get All Inspection Checklist Groups' where id = 'C4012345-AAAA-BBBB-CCCC-123456700172'
+update resources set displayname = 'Get All Custom Forms for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700173'
+update resources set displayname = 'Update Custom Forms for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700174'
+update resources set displayname = 'Get All Custom Forms Metadata for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700175'
+update resources set displayname = 'Get Custom Form Metadata for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700176'
+update resources set displayname = 'Get All Custom Tables Metadata for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700177'
+update resources set displayname = 'Get Custom Table Metadata for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700178'
+update resources set displayname = 'Update Custom Tables for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700179'
+update resources set displayname = 'Get All Custom Tables for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700180'
+update resources set displayname = 'Get Custom Table for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700181'
+update resources set displayname = 'Get All Addresses for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700182'
+update resources set displayname = 'Create Record Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700183'
+update resources set displayname = 'Update Record Address' where id = 'C4012345-AAAA-BBBB-CCCC-123456700184'
+update resources set displayname = 'Delete Record Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700185'
+update resources set displayname = 'Get All Address States' where id = 'C4012345-AAAA-BBBB-CCCC-123456700186'
+update resources set displayname = 'Get All Address Countries' where id = 'C4012345-AAAA-BBBB-CCCC-123456700187'
+update resources set displayname = 'Get All Address Street Suffixes' where id = 'C4012345-AAAA-BBBB-CCCC-123456700188'
+update resources set displayname = 'Get All Address Street Directions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700189'
+update resources set displayname = 'Get All Address Street Fractions' where id = 'C4012345-AAAA-BBBB-CCCC-123456700190'
+update resources set displayname = 'Get All Address Unit Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700191'
+update resources set displayname = 'Get All Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700192'
+update resources set displayname = 'Get Address' where id = 'C4012345-AAAA-BBBB-CCCC-123456700193'
+update resources set displayname = 'Get App Specific Data' where id = 'C4012345-AAAA-BBBB-CCCC-123456700194'
+update resources set displayname = 'Update App Specific Data' where id = 'C4012345-AAAA-BBBB-CCCC-123456700195'
+update resources set displayname = 'Delete App Specific Data' where id = 'C4012345-AAAA-BBBB-CCCC-123456700196'
+update resources set displayname = 'Get All App Settings' where id = 'C4012345-AAAA-BBBB-CCCC-123456700197'
+update resources set displayname = 'Get All Standard Comments' where id = 'C4012345-AAAA-BBBB-CCCC-123456700198'
+update resources set displayname = 'Get All Standard Comment Groups' where id = 'C4012345-AAAA-BBBB-CCCC-123456700199'
+update resources set displayname = 'Get Agency' where id = 'C4012345-AAAA-BBBB-CCCC-123456700201'
+update resources set displayname = 'Get Agency Logo' where id = 'C4012345-AAAA-BBBB-CCCC-123456700202'
+update resources set displayname = 'Get All Approval Condition Types' where id = 'C4012345-AAAA-BBBB-CCCC-123456700203'
+update resources set displayname = 'Get All Approval Condition Priorities' where id = 'C4012345-AAAA-BBBB-CCCC-123456700204'
+update resources set displayname = 'Get Record Location' where id = 'C4012345-AAAA-BBBB-CCCC-123456700205'
+update resources set displayname = 'Create Record User Comments' where id = 'C4012345-AAAA-BBBB-CCCC-123456700206'
+update resources set displayname = 'Get All User Comments for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700207'
+update resources set displayname = 'Create Record Votes' where id = 'C4012345-AAAA-BBBB-CCCC-123456700208'
+update resources set displayname = 'Get All Votes for Record' where id = 'C4012345-AAAA-BBBB-CCCC-123456700209'
+update resources set displayname = 'Get Record Votes Summary' where id = 'C4012345-AAAA-BBBB-CCCC-123456700210'
+update resources set displayname = 'Get User Profile' where id = 'C4012345-AAAA-BBBB-CCCC-123456700211'
+update resources set displayname = 'Get All Modules' where id = 'C4012345-AAAA-BBBB-CCCC-123456700212'
+update resources set displayname = 'Create Record Fees' where id = 'C4012345-AAAA-BBBB-CCCC-123456700213'
+update resources set displayname = 'Describe Required Record Attributes' where id = 'C4012345-AAAA-BBBB-CCCC-123456700214'
+update resources set displayname = 'Create Payment' where id = 'C4012345-AAAA-BBBB-CCCC-123456700215'
+update resources set displayname = 'Get All Statuses for Workflow Task' where id = 'C4012345-AAAA-BBBB-CCCC-123456700216'
+update resources set displayname = 'Get All Fee Schedules for Record Type' where id = 'C4012345-AAAA-BBBB-CCCC-123456700217'
+update resources set displayname = 'Get All Statuses for Checklist Item' where id = 'C4012345-AAAA-BBBB-CCCC-123456700218'
+update resources set displayname = 'Get All Address Parcels' where id = 'C4012345-AAAA-BBBB-CCCC-123456700219'
+update resources set displayname = 'Get All Addresses for Contact' where id = 'C4012345-AAAA-BBBB-CCCC-123456700220'
+update resources set displayname = 'Create Record Contact Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700221'
+update resources set displayname = 'Delete Record Contact Addresses' where id = 'C4012345-AAAA-BBBB-CCCC-123456700222'
+update resources set displayname = 'Update Record Contact Address' where id = 'C4012345-AAAA-BBBB-CCCC-123456700223'
+update resources set displayname = 'Get All Linked User Accounts' where id = 'C4012345-AAAA-BBBB-CCCC-123456700224'
+update resources set displayname = 'Get All Agencies' where id = 'C4012345-AAAA-BBBB-CCCC-123456700225'
+update resources set displayname = 'Get User Account' where id = 'C4012345-AAAA-BBBB-CCCC-123456700229'
+update resources set displayname = 'Create Record Invoice' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700224'
+update resources set displayname = 'Get Payment Transactions' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700226'
+update resources set displayname = 'Get All Fee Schedules' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700227'
+update resources set displayname = 'Open Data Query' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700228'
+update resources set displayname = 'Get All Payments for Record' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700230'
+update resources set displayname = 'Get Record Payment' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700231'
+update resources set displayname = 'Get All Contacts' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700232'
+update resources set displayname = 'Get All Record Expiration Statuses' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700233'
+update resources set displayname = 'Search Agency' where id = 'C4012345-AAAA-BBBB-CCCC-D23456700234'
+update resources set displayname = 'Get Record Contacts Custom Forms Meta' where id = '245044D7-76DE-4146-943E-FCA026223C13'
+update resources set displayname = 'Get Record Contacts Custom Forms' where id = '245044D7-76DE-4146-943E-FCA026223C14'
+update resources set displayname = 'Update Record Contact Custom Forms' where id = '245044D7-76DE-4146-943E-FCA026223C15'
+update resources set displayname = 'GET Contact Custom Forms Settings' where id = '245044D7-76DE-4146-943E-FCA026223C17'
+ 

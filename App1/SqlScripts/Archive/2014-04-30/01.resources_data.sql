@@ -1,0 +1,4 @@
+IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE  [Id] = N'9430809D-23E6-47B8-8395-C14B70A2C11E')
+BEGIN
+    INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'9430809D-23E6-47B8-8395-C14B70A2C11E', N'/v3/geo/geocode/geocodeaddresses', N'GET', N'/v3/geo/geocode/geocodeaddresses?addresses={addresses}&outSR={outSR}', N'geocode_addresses', N'Geocode addresses', N'Retrieves a list of longitude, latitude by a list of address.', 3, 2, N'System', getdate(), Null, Null, Null, Null, Null, Null, NULL, Null, Null)
+END

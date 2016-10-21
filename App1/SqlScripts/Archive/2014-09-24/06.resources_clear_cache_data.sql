@@ -1,0 +1,4 @@
+IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE Id = 'BEC64236-F513-479B-A394-F1CE695B7D5D')
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription]) VALUES (  N'BEC64236-F513-479B-A394-F1CE695B7D5D', N'/apis/v3/caches/remove', N'PUT', N'/apis/v3/caches/remove', N'remove_cache', N'remove cache', N'remove cache', 3, 2, N'System', getdate(), Null, Null, null, N'removeCache', N'All', null, NULL, null, null)
+END

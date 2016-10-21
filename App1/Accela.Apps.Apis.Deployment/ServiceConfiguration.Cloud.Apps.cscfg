@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Accela.Apps.Apis.Deployment" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Accela.Apps.Apis.Services.Host">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!-- config same cross env. -->
+      <Setting name="current_sub_system" value="Construct.Apis" />
+      <Setting name="DefaultCulture" value="en-US" />
+      <!-- config specific to env. -->
+      <Setting name="EnableMockAPI" value="false" />
+      <Setting name="GenericAgencyName" value="BIGBUCKET" />
+      <Setting name="EnableSSLorTLSValidation" value="false" />
+      <Setting name="AccessTokenSigningKey" value="LkFjY2VsYU9BdXRoVjIuMFRva2VuMjAxMjEyMDgu" />
+      <Setting name="ResourceServerEncryptionKey" value="Ij2lUjf3UYs8O" />
+      <!--timeout setting-->
+      <Setting name="ResourceCacheExpirationMinutes" value="60" />
+      <Setting name="AgencyAndEnvironmentCacheExpirationMinutes" value="60" />
+      <Setting name="AppCacheExpirationMinutes" value="60" />
+      <Setting name="GatewayRequestTimeoutMinutes" value="5" />
+      <Setting name="InternalAPI_Timeout_Seconds" value="300" />
+      <Setting name="StorageRetryPolicy" value="RetryMethod:Exponential,DeltaBackOffMilliSeconds:300,MaxAttempts:3" />
+      <Setting name="LogLevel" value="Debug" />
+      <!-- config specific to 3rd party ArcGIS server -->
+      <Setting name="ArcGISServerUrl" value="https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer" />
+      <Setting name="ArcGISTokenServiceUrl" value="https://www.arcgis.com/sharing/generateToken" />
+      <Setting name="ArcGISTokenUserName" value="alakkyreddy" />
+      <Setting name="ArcGISTokenPassword" value="Accela12" />
+      <Setting name="ArcGISTokenExpiration" value="60" />
+      <Setting name="ArcGISReferer" value="accela.com" />
+      <!-- config specific to 3rd party Logentries -->
+      <Setting name="LOGENTRIES_TOKEN" value="b97f2604-82c1-4074-89c3-181466c891da" />
+      <!-- config specific to 3rd party Redis server -->
+      <Setting name="redis.server" value="construct-qa-cache.redis.cache.windows.net" />
+      <Setting name="redis.port" value="6380" />
+      <Setting name="redis.ssl" value="true" />
+      <Setting name="redis.password" value="vuXiFDJ4ZLuYECnJEkNkoSIMvv7V5Rhk3GrBBElBXVI=" />
+      <!-- config specific to other Construct sub-system -->
+      <Setting name="InternalAPI_AccessKey" value="123456789" />
+      <Setting name="Ref_InternalAPI_Admin" value="https://apps-admin.cloudapp.net/apis/v3" />
+      <Setting name="Ref_InternalAPI_Dev" value="https://apps-developer.cloudapp.net/apis/v3" />
+      <Setting name="Ref_InternalAPI_User" value="https://apps-user.cloudapp.net/apis/v3" />
+      <Setting name="Ref_InternalAPI_OAuth" value="https://apps-auth.cloudapp.net/apis/v3" />
+      <!-- config specific to infrastructure -->
+      <Setting name="Api_DBConnectionString" value="provider connection string='data source=n9qmmhqrs9.database.windows.net;initial catalog=QA_API;User ID=constructscm;Password=@ccela123;multipleactiveresultsets=True;App=EntityFramework';metadata=res://*/ApiDataContext.csdl|res://*/ApiDataContext.ssdl|res://*/ApiDataContext.msl;provider=System.Data.SqlClient;" />
+      <Setting name="Api_StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=constructqa;AccountKey=LRaXBrHhYM3oUrsJR2tVlVsodssJ7eWojYnpVvBXsv08VmdysgeVywIi0uq7hzew/8IfYf7dnlbeLr0ix+tUsQ==" />
+      <Setting name="DocumentDB_ConnectionString" value="AccountEndpoint=https://admdocumentdb.documents.azure.com:443/;AccountKey=uMKEXr4kMAt8PLUFTFp7vlvSTciDjFX5S2TSl94Irv49ECHXDqBRvuL/etwq6zBdpG9HZIWs/S1CsSRk77Vmkw==;Database=Apps" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://construct-qa-service-bus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=kx76Y0v0yqNe3W0ARJgMzDlvxtLeJrydN9wFXC+cbd0=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=constructqa;AccountKey=LRaXBrHhYM3oUrsJR2tVlVsodssJ7eWojYnpVvBXsv08VmdysgeVywIi0uq7hzew/8IfYf7dnlbeLr0ix+tUsQ==" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="c206a3e2-e24e-419d-acae-22bdc1d91773" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="constructscm" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIICLgYJKoZIhvcNAQcDoIICHzCCAhsCAQAxggHfMIIB2wIBADCBwjCBtDELMAkGA1UEBhMCVVMxEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHkuY29tLCBJbmMuMS0wKwYDVQQLEyRodHRwOi8vY2VydHMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS8xMzAxBgNVBAMTKkdvIERhZGR5IFNlY3VyZSBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkgLSBHMgIJAM8XhuQ4F6uxMA0GCSqGSIb3DQEBAQUABIIBAIWu8i2iV5glgTf8HVAERYgYGH1fkH0ZnxMWXpUOR53EC61KTW01lSmD5UofOfVmIjbhUs+Tc+1xC26/f/1NdXkPPx1eFdnKe2eVf+nvuPr3jx2lgMcSrTkhII+0UxjnUgYGQOBIcGV0rNlo2C/mctwj8KftA+pU+xm98bpM2KbDQt8AM2xMrDcxQOzmUmom4cHdPkt+NceUp2L6iT8ILBzsPAHiGV52U/L34kQMqrdjtslBuA9z49ou4stZeOXyYmYYo++ImdrjTbI6o4wwdOHen9nIniB/RZtyP7ttw0/+5V8RpusEDHNul9xGGO5GNV22U1q+0n9hM5+B52LHgsEwMwYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAjFCpRxaN1pUYAQAyh6V5UlsCVDtKqWVUPOFw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-03-26T23:59:59.0000000-07:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Certificate1" thumbprint="181998223C35B629115FE03504060BE50ABE64D1" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="181998223C35B629115FE03504060BE50ABE64D1" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

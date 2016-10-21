@@ -1,0 +1,5 @@
+IF NOT EXISTS(SELECT * FROM [dbo].[Resources] WHERE [Id] = N'C4012345-AAAA-BBBB-CCCC-D23456700235')
+BEGIN
+	INSERT [dbo].[Resources] ([Id], [API], [HttpVerb], [RelativeUriTemplateFull], [Name], [DisplayName], [Description], [AuthenticationType], [APIAttribute], [CreatedBy], [CreatedDate], [LastUpdatedBy], [LastUpdatedDate], [ProxyAPI],[MethodNickName],[Applicability],[SupportedAAVersions],[SupportedAPIVersions],[ResourceGroupName],[FIDDescription])
+	VALUES ( 'C4012345-AAAA-BBBB-CCCC-D23456700235', N'/v4/documents/{documentId}/thumbnail', N'GET', N'/v4/documents/{documentId}/thumbnail?height={height}&width={width}&password={password}&userId={userId}', N'get_document_thumbnail', N'Get Document Thumbnail', N'Get Document Thumbnail', 5, 0, N'System', getdate(), NULL, NULL, NULL, N'getDocumentThumbnail', N'All', N'7.3.2', NULL, N'Documents', NULL)
+END

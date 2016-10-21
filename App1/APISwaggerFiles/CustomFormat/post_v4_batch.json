@@ -1,0 +1,55 @@
+{
+  "path" : "/v4/batch",
+  "description" : "batch request api, support maximum 25 apis.",
+  "httpMethod" : "POST",
+  "summary" : "batch request api.",
+  "responseType" : "batchResponse",
+  "parameters": [
+            {
+              "paramType": "body",
+              "required": true,
+              "dataType": "batchRequest",
+              "name": "batchRequest"
+            }
+          ],
+   "models": {
+   "batchRequest": {
+      "id": "batchRequest",
+      "properties": {
+        "method": {
+          "type": "string",
+		  "required":true
+        },
+        "relativeUrl": {
+          "type": "string",
+		  "required":true
+        },
+        "body": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "header"
+        }
+      }
+    },
+    "header": {
+      "id": "header",
+      "properties": {
+        "<headerKey>": {
+          "type": "string"
+        }
+      }
+    },
+    "batchResponse": {
+      "id": "batchResult",
+      "properties": {
+        "status": {
+          "type": "integer"
+        },
+        "result": {
+          "type": "List<object>"
+        }
+      }
+    }
+  }
+}

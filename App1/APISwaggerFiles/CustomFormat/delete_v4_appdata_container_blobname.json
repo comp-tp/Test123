@@ -1,0 +1,40 @@
+{
+  "path" : "/v4/appdata/{container}/{blobname}",
+  "description" : "Delete App Specific Data",
+  "httpMethod" : "DELETE",
+  "summary" : "Deletes app data based on the container and blob name. No error will be returned if neither of the parameters exists in the Cloud.",
+  "responseType" : "",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "container"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "blobName"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appid"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appSecret"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {    }
+}

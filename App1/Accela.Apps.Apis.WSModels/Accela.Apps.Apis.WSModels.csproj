@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.Apps.Apis.WSModels</RootNamespace>
+    <AssemblyName>Accela.Apps.Apis.WSModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accela.Apps.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.2.0.3\lib\net45\Accela.Apps.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.Shared.WSModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.WSModels.1.0.2\lib\net451\Accela.Apps.Shared.WSModels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.User.WSModels">
+      <HintPath>..\Shared-Library\Accela-DLLs\Accela.Apps.User.WSModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addresses\WSAddress.cs" />
+    <Compile Include="Addresses\WSAddressByCoordinates.cs" />
+    <Compile Include="Addresses\WSAddressesResponse.cs" />
+    <Compile Include="Addresses\WSAddressResponse.cs" />
+    <Compile Include="Addresses\WSCompactAddress.cs" />
+    <Compile Include="Addresses\WSGetAddressByCoordinateResponse.cs" />
+    <Compile Include="Addresses\WSStreetPrefix.cs" />
+    <Compile Include="Addresses\WSStreetPrefixesResponse.cs" />
+    <Compile Include="AppDatas\WSGetAppDataResponse.cs" />
+    <Compile Include="AppDatas\WSSaveAppDataRequest.cs" />
+    <Compile Include="AppSettings\WSAppSetting.cs" />
+    <Compile Include="AppSettings\WSAppSettingsResponse.cs" />
+    <Compile Include="ASIs\WSASITDetail.cs" />
+    <Compile Include="ASIs\WSASITMeta.cs" />
+    <Compile Include="ASIs\WSAdditional.cs" />
+    <Compile Include="ASIs\WSAdditionalDetail.cs" />
+    <Compile Include="ASIs\WSAdditionalDetailItem.cs" />
+    <Compile Include="ASIs\WSAdditionalDetailSubGroup.cs" />
+    <Compile Include="ASIs\WSAdditionalItem.cs" />
+    <Compile Include="ASIs\WSAdditionalSubGroup.cs" />
+    <Compile Include="ASIs\WSASI.cs" />
+    <Compile Include="ASIs\WSASIColumn.cs" />
+    <Compile Include="ASIs\WSASIGroup.cs" />
+    <Compile Include="ASIs\WSASIItem.cs" />
+    <Compile Include="ASIs\WSASIResponse.cs" />
+    <Compile Include="ASIs\WSASIRow.cs" />
+    <Compile Include="ASIs\WSASISubGroup.cs" />
+    <Compile Include="ASIs\WSASIT.cs" />
+    <Compile Include="ASIs\WSASITResponse.cs" />
+    <Compile Include="ASIs\WSASIValue.cs" />
+    <Compile Include="ASIs\WSDrillDown.cs" />
+    <Compile Include="ASIs\WSDrillDownSeries.cs" />
+    <Compile Include="ASIs\WSDrillDownValuesResponse.cs" />
+    <Compile Include="Assessments\WSGetAssetCABasicInfosResponse .cs" />
+    <Compile Include="Assets\WSAssetParent.cs" />
+    <Compile Include="Assets\WSGetAssetAttributeTablesResponse.cs" />
+    <Compile Include="Assets\WSGetAssetCATypesResponse.cs" />
+    <Compile Include="Assessments\WSGetObservationDetailsResponse.cs" />
+    <Compile Include="Assessments\WSGetObservationDescribesResponse.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCAObservationsRequest.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCAAttributesRequest.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCABasicInfoRequest.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCABasicInfo.cs" />
+    <Compile Include="Assessments\WSCreateAssetCAObservationsRequest.cs" />
+    <Compile Include="Assessments\WSCreateAssetCABase.cs" />
+    <Compile Include="Assessments\WSCreateAssetCAAttributesRequest.cs" />
+    <Compile Include="Assessments\WSCreateAssetCABasicInfo.cs" />
+    <Compile Include="Assessments\WSCreateAssetCABasicInfoRequest.cs" />
+    <Compile Include="Assessments\WSAssessmentFilter.cs" />
+    <Compile Include="Assessments\WSAssessmentSearchRequest.cs" />
+    <Compile Include="Assessments\WSAssetCABase.cs" />
+    <Compile Include="Assessments\WSCreateAssetCA.cs" />
+    <Compile Include="Assessments\WSCreateAssetCARequest.cs" />
+    <Compile Include="Assessments\WSCreateAssetCAResponse.cs" />
+    <Compile Include="Assessments\WSGetAssetCABasicInfoResponse.cs" />
+    <Compile Include="Assessments\WSGetAssetCAResponse.cs" />
+    <Compile Include="Assessments\WSGetCAAttributesDetailResponse.cs" />
+    <Compile Include="Assessments\WSGetCAAttributesDescribeResponse.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCA.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCARequest.cs" />
+    <Compile Include="Assessments\WSUpdateAssetCAResponse.cs" />
+    <Compile Include="Assets\WSAsset.cs" />
+    <Compile Include="Assets\WSAssetCA.cs" />
+    <Compile Include="Assets\WSAssetCADepartment.cs" />
+    <Compile Include="Assets\WSAssetCAStaffPerson.cs" />
+    <Compile Include="Assets\WSAssetCAStatus.cs" />
+    <Compile Include="Assets\WSAssetCAType.cs" />
+    <Compile Include="Assets\WSAssetDescription.cs" />
+    <Compile Include="Assets\WSAssetFitlter.cs" />
+    <Compile Include="Assets\WSAssetResponse.cs" />
+    <Compile Include="Assets\WSAssetsResponse.cs" />
+    <Compile Include="Assets\WSAssetsResponseNoPaging.cs" />
+    <Compile Include="Assets\WSAssetsSearchRequest.cs" />
+    <Compile Include="Assets\WSAssetStatus.cs" />
+    <Compile Include="Assets\WSAssetStatusesResponse.cs" />
+    <Compile Include="Assets\WSAssetType.cs" />
+    <Compile Include="Assets\WSAssetTypesResponse.cs" />
+    <Compile Include="Assets\WSAssetUnitTypes.cs" />
+    <Compile Include="Assets\WSAssetUnitTypesResponse.cs" />
+    <Compile Include="Assets\WSAssetCABasicInfo.cs" />
+    <Compile Include="Assets\WSCAAsset.cs" />
+    <Compile Include="Assets\WSCreateAsset.cs" />
+    <Compile Include="Assets\WSCreateAssetRequest.cs" />
+    <Compile Include="Assets\WSCreateAssetResponse.cs" />
+    <Compile Include="Assets\WSGetAssetAttributesResponse.cs" />
+    <Compile Include="Assets\WSGetAssetCAsResponse.cs" />
+    <Compile Include="Assets\WSGetAssetWorkOrdersResponse.cs" />
+    <Compile Include="Attachments\WSDocumentGroup.cs" />
+    <Compile Include="Attachments\WSDocumentType.cs" />
+    <Compile Include="Attachments\WSDocumentTypeResponse.cs" />
+    <Compile Include="Caches\WSCache.cs" />
+    <Compile Include="Caches\WSGetCacheResponse.cs" />
+    <Compile Include="Checklists\WSChecklist.cs" />
+    <Compile Include="Checklists\WSChecklistGroup.cs" />
+    <Compile Include="Checklists\WSChecklistItem.cs" />
+    <Compile Include="Checklists\WSChecklistItemStatus.cs" />
+    <Compile Include="Checklists\WSChecklistItemStatusGroup.cs" />
+    <Compile Include="Checklists\WSGetChecklistGroupResponse.cs" />
+    <Compile Include="Checklists\WSGetChecklistItemResponse.cs" />
+    <Compile Include="Checklists\WSGetChecklistResponse.cs" />
+    <Compile Include="Citizen\WSCitizen.cs" />
+    <Compile Include="Comments\WSComment.cs" />
+    <Compile Include="Comments\WSCreateCommentRequest.cs" />
+    <Compile Include="Comments\WSCreateCommentResponse.cs" />
+    <Compile Include="Comments\WSGetCommetResponse.cs" />
+    <Compile Include="Common\WSAsyncRequestIdV4Response.cs" />
+    <Compile Include="Common\WSBatchRequest.cs" />
+    <Compile Include="Checklists\WSDescription.cs" />
+    <Compile Include="Resources\WSResourceInfoRequest.cs" />
+    <Compile Include="WorkOrder\WSSystemWorkOrderTemplate.cs" />
+    <Compile Include="WorkOrder\WSWorkOrderTemplateResponse.cs" />
+    <Compile Include="Contacts\WSContact.cs" />
+    <Compile Include="Contacts\WSGetContactsResponse.cs" />
+    <Compile Include="Contacts\WSSearchContactsRequest.cs" />
+    <Compile Include="Contacts\WSSearchContactsResponse.cs" />
+    <Compile Include="Contacts\WSSystemContactType.cs" />
+    <Compile Include="Contacts\WSSystemContactTypesResponse.cs" />
+    <Compile Include="Departments\WSSystemDepartment.cs" />
+    <Compile Include="Departments\WSSystemDepartmentStaffsResponse.cs" />
+    <Compile Include="Departments\WSSystemStaff.cs" />
+    <Compile Include="Departments\WSSytemDepartmentsResponse.cs" />
+    <Compile Include="Documents\WSDocument.cs" />
+    <Compile Include="Documents\WSDocumentCreationResponse.cs" />
+    <Compile Include="Documents\WSDocumentsResponse.cs" />
+    <Compile Include="Geo\WSGeoLocation.cs" />
+    <Compile Include="Geo\WSGeoLocationListItem.cs" />
+    <Compile Include="Geo\WSGeoSingleLineItem.cs" />
+    <Compile Include="Geo\WSGeoSingleLine.cs" />
+    <Compile Include="Geo\WSGetCoordinatesByAddressesRequest.cs" />
+    <Compile Include="Geo\WSGetCoordinatesByAddressesResponse.cs" />
+    <Compile Include="Inspections\WSAvailableInspectionDatesResponse.cs" />
+    <Compile Include="Inspections\WSCancelInspectionResponse.cs" />
+    <Compile Include="Inspections\WSDetailAddress.cs" />
+    <Compile Include="Inspections\WSChecklist.cs" />
+    <Compile Include="Inspections\WSChecklistItem.cs" />
+    <Compile Include="Inspections\WSChecklistItemStatus.cs" />
+    <Compile Include="Inspections\WSChecklistItemStatusGroup.cs" />
+    <Compile Include="Inspections\WSCreateInspection.cs" />
+    <Compile Include="Inspections\WSCreateInspectionRequest.cs" />
+    <Compile Include="Inspections\WSCreateInspectionResponse.cs" />
+    <Compile Include="Inspections\WSInspection.cs" />
+    <Compile Include="Inspections\WSInspectionBase.cs" />
+    <Compile Include="Inspections\WSInspectionComment.cs" />
+    <Compile Include="Inspections\WSInspectionFilter.cs" />
+    <Compile Include="Inspections\WSInspectionGroup.cs" />
+    <Compile Include="Inspections\WSInspectionGroupResponse.cs" />
+    <Compile Include="Inspections\WSInspectionResponse.cs" />
+    <Compile Include="Inspections\WSInspectionsResponse.cs" />
+    <Compile Include="Inspections\WSInspectionsSearchRequest.cs" />
+    <Compile Include="Inspections\WSInspectionStatus.cs" />
+    <Compile Include="Inspections\WSInspectionType.cs" />
+    <Compile Include="Inspections\WSInspector.cs" />
+    <Compile Include="Inspections\WSInspectionChecklistItemResponse.cs" />
+    <Compile Include="Inspections\WSInspectionChecklistResponse.cs" />
+    <Compile Include="Inspections\WSReassignInspection.cs" />
+    <Compile Include="Inspections\WSReassignInspectionRequest.cs" />
+    <Compile Include="Inspections\WSReassignInspectionResponse.cs" />
+    <Compile Include="Inspections\WSRescheduleInspection.cs" />
+    <Compile Include="Inspections\WSRescheduleInspectionRequest.cs" />
+    <Compile Include="Inspections\WSRescheduleInspectionResponse.cs" />
+    <Compile Include="Inspections\WSScheduleChecklist.cs" />
+    <Compile Include="Inspections\WSScheduleChecklistItem.cs" />
+    <Compile Include="Inspections\WSScheduleInspection.cs" />
+    <Compile Include="Inspections\WSScheduleInspectionRequest.cs" />
+    <Compile Include="Inspections\WSScheduleInspectionResponse.cs" />
+    <Compile Include="Inspections\WSSystemInspctionType.cs" />
+    <Compile Include="Inspections\WSSystemInspectionChecklistGroup.cs" />
+    <Compile Include="Inspections\WSSystemInspectionStatus.cs" />
+    <Compile Include="Inspections\WSSystemInspectionTypeResponse.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppAssignToInfo.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppCitizen.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppCompactAddress.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppCondition.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppConditionGroup.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppConditionsResponse.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppConditionStatus.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppConditionType.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppContact.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppContactRole.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppContactsResponse.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppLicensedProfessional.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppLicenseType.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppRecord.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppRecordBase.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppRecordResponse.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppRecordStatus.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppRecordType.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppSeverity.cs" />
+    <Compile Include="InspectorApp\Records\WSInspectorAppStaffPerson.cs" />
+    <Compile Include="InspectorApp\WSInspectionAppInspectionStatusResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppChecklist.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppChecklistGroup.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppChecklistItem.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppChecklistItemStatus.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppChecklistItemStatusGroup.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppComment.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppConditionSummary.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppConditionSummaryResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppContactSummary.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppContactSummaryResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDepartment.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDepartmentResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDescription.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDocument.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDocumentCreationResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppDocumentsResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppFeeSummary.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppFeeSummaryResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspection.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionChecklistItemResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionChecklistResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionCommentResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionsResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionStatus.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionSummary.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionSummaryResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionType.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectionTypeResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspector.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppInspectorResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppKeysRecord.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppKeysRecordType.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditional.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditionalDetail.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditionalDetailItem.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditionalDetailSubGroup.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditionalItem.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppAdditionalSubGroup.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASI.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIColumn.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIGroup.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIItem.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIResponse.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIRow.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASISubGroup.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIT.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASITDetail.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASITMeta.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASITResponse.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppASIValue.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppDrillDown.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppDrillDownSeries.cs" />
+    <Compile Include="InspectorApp\ASIs\WSInspectorAppDrillDownValuesResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppCleanupCacheResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppStandardComment.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppStandardCommentGroup.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppStandardCommentGroupResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppStandardCommentResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppStandardCommentType.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppUpdateInspectionResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppUpdateInspectionRequest.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppUploadAttachmentDescResponse.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppWorkflowSummary.cs" />
+    <Compile Include="InspectorApp\WSInspectorAppWorkflowSummaryResponse.cs" />
+    <Compile Include="Location\WSGeometryPoint.cs" />
+    <Compile Include="Location\WSGisObject.cs" />
+    <Compile Include="Location\WSLocation.cs" />
+    <Compile Include="Modules\WSModule.cs" />
+    <Compile Include="Modules\WSModuleCount.cs" />
+    <Compile Include="Modules\WSModulesResponse.cs" />
+    <Compile Include="OAuth2\WSAccessToken.cs" />
+    <Compile Include="OAuth2\WSAccessTokenInfo.cs" />
+    <Compile Include="Owners\WSOwner.cs" />
+    <Compile Include="Owners\WSOwnersResponse.cs" />
+    <Compile Include="Owners\WSRecordOwnersResponse.cs" />
+    <Compile Include="Parcels\WSParcel.cs" />
+    <Compile Include="Parcels\WSParcelFilter.cs" />
+    <Compile Include="Parcels\WSParcelOwnersResponse.cs" />
+    <Compile Include="Parcels\WSParcelResponse.cs" />
+    <Compile Include="Parcels\WSParcelsResponse.cs" />
+    <Compile Include="Parcels\WSParcelsResponseNoPaging.cs" />
+    <Compile Include="Parcels\WSParcelsSearchRequest.cs" />
+    <Compile Include="Parcels\WSParcelStatus.cs" />
+    <Compile Include="Parts\WSPart.cs" />
+    <Compile Include="Parts\WSPartBrand.cs" />
+    <Compile Include="Parts\WSPartDescription.cs" />
+    <Compile Include="Parts\WSPartInventory.cs" />
+    <Compile Include="Parts\WSPartsResponse.cs" />
+    <Compile Include="Parts\WSPartStatus.cs" />
+    <Compile Include="Parts\WSPartSupply.cs" />
+    <Compile Include="Parts\WSPartType.cs" />
+    <Compile Include="Parts\WSPartUnitOfMeasurement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordAssets\WSRecordAssetsResponse.cs" />
+    <Compile Include="RecordComments\WSA311RecordComment.cs" />
+    <Compile Include="RecordComments\WSRecordComment.cs" />
+    <Compile Include="RecordComments\WSRecordCommentsResponse.cs" />
+    <Compile Include="RecordConditions4V3p\WSCondition4V3p.cs" />
+    <Compile Include="RecordConditions4V3p\WSId4V3p.cs" />
+    <Compile Include="RecordConditions4V3p\WSRecordConditionsResponse4V3p.cs" />
+    <Compile Include="RecordConditions4V3p\WSRecordId4V3p.cs" />
+    <Compile Include="RecordConditions\WSCondition.cs" />
+    <Compile Include="RecordConditions\WSConditionGroup.cs" />
+    <Compile Include="RecordConditions\WSConditionStatus.cs" />
+    <Compile Include="RecordConditions\WSConditionType.cs" />
+    <Compile Include="RecordConditions\WSRecordConditionsResponse.cs" />
+    <Compile Include="RecordConditions\WSSeverity.cs" />
+    <Compile Include="RecordContacts\WSContact.cs" />
+    <Compile Include="RecordContacts\WSContactRole.cs" />
+    <Compile Include="RecordContacts\WSLicensedProfessional.cs" />
+    <Compile Include="RecordContacts\WSLicenseType.cs" />
+    <Compile Include="RecordContacts\WSRecordContactsResponse.cs" />
+    <Compile Include="RecordCosts\WSCost.cs" />
+    <Compile Include="RecordCosts\WSCostAccount.cs" />
+    <Compile Include="RecordCosts\WSCostItemType.cs" />
+    <Compile Include="RecordCosts\WSCostsResponse.cs" />
+    <Compile Include="RecordCosts\WSCostStatus.cs" />
+    <Compile Include="RecordCosts\WSCostType.cs" />
+    <Compile Include="RecordCosts\WSCostUnitOfMeasure.cs" />
+    <Compile Include="RecordInspections\WSRecordInspectionsResponse.cs" />
+    <Compile Include="RecordLocation\WSRecordLocationRequest.cs" />
+    <Compile Include="RecordLocation\WSRecordLocationResponse.cs" />
+    <Compile Include="RecordStatus\WSRecordStatus.cs" />
+    <Compile Include="RecordStatus\WSRecordStatusesResponse.cs" />
+    <Compile Include="RecordSummary\WSConditionSummary.cs" />
+    <Compile Include="RecordSummary\WSConditionSummaryResponse.cs" />
+    <Compile Include="RecordSummary\WSContactSummary.cs" />
+    <Compile Include="RecordSummary\WSContactSummaryResponse.cs" />
+    <Compile Include="RecordSummary\WSDailyRecord.cs" />
+    <Compile Include="RecordSummary\WSDailyRecordsCountRequest.cs" />
+    <Compile Include="RecordSummary\WSDailyRecordsCountResponse.cs" />
+    <Compile Include="RecordSummary\WSFeeSummary.cs" />
+    <Compile Include="RecordSummary\WSFeeSummaryResponse.cs" />
+    <Compile Include="RecordSummary\WSInspectionSummary.cs" />
+    <Compile Include="RecordSummary\WSInspectionSummaryResponse.cs" />
+    <Compile Include="RecordSummary\WSProjectInformation.cs" />
+    <Compile Include="RecordSummary\WSProjectInformationResponse.cs" />
+    <Compile Include="RecordSummary\WSRecordSummaryRequest.cs" />
+    <Compile Include="RecordSummary\WSWorkflowSummary.cs" />
+    <Compile Include="RecordSummary\WSWorkflowSummaryResponse.cs" />
+    <Compile Include="Records\WSBBox.cs" />
+    <Compile Include="Records\WSCreateRecord.cs" />
+    <Compile Include="Records\WSCreateRecordRequest.cs" />
+    <Compile Include="Records\WSCreateRecordResponse.cs" />
+    <Compile Include="Records\WSGeoCircle.cs" />
+    <Compile Include="Records\WSGetWorkOrderTaskUnitResponse.cs" />
+    <Compile Include="Records\WSRecord.cs" />
+    <Compile Include="Records\WSRecordBase.cs" />
+    <Compile Include="Records\WSRecordCivicGeo.cs" />
+    <Compile Include="Records\WSRecordCountResponse.cs" />
+    <Compile Include="Records\WSRecordFilter.cs" />
+    <Compile Include="Records\WSRecordGeo.cs" />
+    <Compile Include="Records\WSRecordGeoFilter.cs" />
+    <Compile Include="Records\WSRecordId.cs" />
+    <Compile Include="Records\WSRecordPrioritiesResponse.cs" />
+    <Compile Include="Records\WSRecordPriority.cs" />
+    <Compile Include="Records\WSRecordRequest.cs" />
+    <Compile Include="Records\WSRecordResponse.cs" />
+    <Compile Include="Records\WSRecordResponseNoPaging.cs" />
+    <Compile Include="Records\WSRecordsGeoSearchCivicResponse.cs" />
+    <Compile Include="Records\WSRecordsGeoSearchRequest.cs" />
+    <Compile Include="Records\WSRecordsGeoSearchResponse.cs" />
+    <Compile Include="Records\WSRecordsResponse.cs" />
+    <Compile Include="Records\WSRecordsResponseNoPaging.cs" />
+    <Compile Include="Records\WSRecordsSearchFilter.cs" />
+    <Compile Include="Records\WSRecordsSearchRequest.cs" />
+    <Compile Include="Records\WSRecordsSearchResponse.cs" />
+    <Compile Include="Records\WSRecordWithAddress.cs" />
+    <Compile Include="Records\WSRecordWithinInspection.cs" />
+    <Compile Include="Records\WSWorkOrderTaskUnit.cs" />
+    <Compile Include="Records\WSUpdateRecord.cs" />
+    <Compile Include="Records\WSUpdateRecordRequest.cs" />
+    <Compile Include="Records\WSUpdateRecordResponse.cs" />
+    <Compile Include="RecordTypes\WSRecordType.cs" />
+    <Compile Include="RecordTypes\WSRecordTypeResponse.cs" />
+    <Compile Include="RecordTypes\WSRecordTypesResponse.cs" />
+    <Compile Include="RelatedRecords\WSDepartment.cs" />
+    <Compile Include="RelatedRecords\WSDepartmentWithStaffs.cs" />
+    <Compile Include="RelatedRecords\WSRelatedRecord.cs" />
+    <Compile Include="RelatedRecords\WSRelatedRecordsResponse.cs" />
+    <Compile Include="RelatedRecords\WSRelationship.cs" />
+    <Compile Include="RelatedRecords\WSStaffPerson.cs" />
+    <Compile Include="Reports\WSCreateReportRequest.cs" />
+    <Compile Include="Reports\WSCreateReportResponse.cs" />
+    <Compile Include="Reports\WSReport.cs" />
+    <Compile Include="Reports\WSReportCategoriesResponse.cs" />
+    <Compile Include="Reports\WSReportCategory.cs" />
+    <Compile Include="Reports\WSReportDefinition.cs" />
+    <Compile Include="Reports\WSReportDefinitionResponse.cs" />
+    <Compile Include="Reports\WSReportsDefinitionResponse.cs" />
+    <Compile Include="Reports\WSReportParameter.cs" />
+    <Compile Include="Resources\WSResource.cs" />
+    <Compile Include="Resources\WSResourcesResponse.cs" />
+    <Compile Include="Scopes\WSScope.cs" />
+    <Compile Include="Scopes\WSScopeGroup.cs" />
+    <Compile Include="Scopes\WSScopesResponse.cs" />
+    <Compile Include="StandardComments\WSStandardComment.cs" />
+    <Compile Include="StandardComments\WSStandardCommentGroup.cs" />
+    <Compile Include="StandardComments\WSStandardCommentGroupsResponse.cs" />
+    <Compile Include="StandardComments\WSStandardCommentsResponse.cs" />
+    <Compile Include="StandardComments\WSStandardCommentType.cs" />
+    <Compile Include="Users\WSUserProfileResponse.cs" />
+    <Compile Include="V1\Inspectors\WSInspectorResponse.cs" />
+    <Compile Include="V1\Inspectors\WSInspectorWithDepartment.cs" />
+    <Compile Include="V1\Inspectors\WSSystemInspector.cs" />
+    <Compile Include="V1\Inspectors\WSSystemInspectorResponse.cs" />
+    <Compile Include="V1\WorkOrderTasks\WSWorkOrderTask.cs" />
+    <Compile Include="V1\WorkOrderTasks\WSWorkOrderTasksResponse.cs" />
+    <Compile Include="V4\AppData\WSGetAppDataV4Response.cs" />
+    <Compile Include="V4\AppData\WSSaveAppDataV4Request.cs" />
+    <Compile Include="V4\AppSettings\WSAppSetting.cs" />
+    <Compile Include="V4\AppSettings\WSAppSettingsResponse.cs" />
+    <Compile Include="V4\Comments\WSComment.cs" />
+    <Compile Include="V4\Comments\WSCreateCommentRequest.cs" />
+    <Compile Include="V4\Comments\WSCreateCommentResponse.cs" />
+    <Compile Include="V4\Comments\WSGetCommetResponse.cs" />
+    <Compile Include="V4\RecordLocation\WSGeometryPoint.cs" />
+    <Compile Include="V4\RecordLocation\WSGisObject.cs" />
+    <Compile Include="V4\RecordLocation\WSLocation.cs" />
+    <Compile Include="V4\RecordLocation\WSLocationV4Request.cs" />
+    <Compile Include="V4\RecordLocation\WSRecordLocationResponse.cs" />
+    <Compile Include="V4\StandardComments\WSStandardComment.cs" />
+    <Compile Include="V4\StandardComments\WSStandardCommentGroup.cs" />
+    <Compile Include="V4\StandardComments\WSStandardCommentGroupsResponse.cs" />
+    <Compile Include="V4\StandardComments\WSStandardCommentsResponse.cs" />
+    <Compile Include="V4\StandardComments\WSStandardCommentType.cs" />
+    <Compile Include="V4\WSIdentifierBaseV4.cs" />
+    <Compile Include="Workflow\WSUpdateWorkflowTask.cs" />
+    <Compile Include="Workflow\WSUpdateWorkflowTaskRequest.cs" />
+    <Compile Include="Workflow\WSUpdateWorkflowTaskResponse.cs" />
+    <Compile Include="Workflow\WSWorkflowTask.cs" />
+    <Compile Include="Workflow\WSWorkflowTaskBase.cs" />
+    <Compile Include="Workflow\WSWorkflowTaskHistory.cs" />
+    <Compile Include="Workflow\WSWorkflowTasksResponse.cs" />
+    <Compile Include="Workflow\WSWorkflowTaskStatus.cs" />
+    <Compile Include="WSAction.cs" />
+    <Compile Include="WSDataModel.cs" />
+    <Compile Include="WSEntityState.cs" />
+    <Compile Include="WSValueTextBase.cs" />
+    <Compile Include="WSIdentifierBase.cs" />
+    <Compile Include="WSListResponse.cs" />
+    <Compile Include="WSPagedResponse.cs" />
+    <Compile Include="WSPagination.cs" />
+    <Compile Include="WSRequestBase.cs" />
+    <Compile Include="WSResponseBase.cs" />
+    <Compile Include="WSResponseHandler.cs" />
+    <Compile Include="WSSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accela.Apps.Apis.Models\Accela.Apps.Apis.Models.csproj">
+      <Project>{14FAA66A-3F1B-4385-95A8-32322F6B53C5}</Project>
+      <Name>Accela.Apps.Apis.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

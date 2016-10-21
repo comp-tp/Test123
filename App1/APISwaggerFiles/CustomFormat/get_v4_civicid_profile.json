@@ -1,0 +1,65 @@
+{
+  "path" : "/v4/civicid/profile",
+  "description" : "Get Current User Profile",
+  "httpMethod" : "GET",
+  "summary" : "Get Profile for Current Civic ID",
+  "responseType" : "userProfile",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {  
+	"userProfile": {
+      "id": "userProfile",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "loginName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "phoneCountryCode": {
+          "type": "string"
+        },
+        "phoneAreaCode": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "avatarUrl": {
+          "type": "string"
+        }
+      }
+    }
+   }
+}
+

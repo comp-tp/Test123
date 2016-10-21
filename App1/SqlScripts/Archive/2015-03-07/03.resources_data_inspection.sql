@@ -1,0 +1,2 @@
+update resources set proxyapi='/apis/v4/inspections/checklists/{checklistId}/checklistItems?fields={fields}&lang={lang}' 
+       where httpverb='GET' and api='/v4/inspections/{inspectionId}/checklists/{checklistId}/checklistItems';

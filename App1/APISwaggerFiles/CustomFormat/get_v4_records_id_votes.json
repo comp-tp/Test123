@@ -1,0 +1,31 @@
+{
+  "path": "/v4/records/{recordId}/votes",
+  "description": "get my vote for specific record",
+  "httpMethod": "GET",
+  "summary": "get my vote for specific record",
+  "responseType": "voteResult",
+  "parameters": [
+      {
+      "paramType": "path",
+      "required": true,
+      "dataType": "string",
+      "name": "recordId"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "lang"
+    }
+  ],
+  "models": {
+    "voteResult": {
+      "id": "voteResult",
+      "properties": {
+        "vote": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

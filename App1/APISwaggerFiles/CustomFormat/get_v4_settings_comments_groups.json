@@ -1,0 +1,40 @@
+{
+  "path": "/v4/settings/comments/groups",
+  "description": "get comment groups",
+  "httpMethod": "GET",
+  "summary": "get comment groups",
+  "responseType": "List<standardCommentGroup>",
+  "parameters": [
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "lang"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "offset"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "limit"
+    }
+  ],
+  "models": {
+    "standardCommentGroup": {
+      "id": "standardCommentGroup",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

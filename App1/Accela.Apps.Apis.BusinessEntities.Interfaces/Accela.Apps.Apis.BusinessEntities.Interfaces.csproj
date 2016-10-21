@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E927887-A156-4AD0-8C09-72C9DAE9066C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.Apps.Apis.BusinessEntities.Interfaces</RootNamespace>
+    <AssemblyName>Accela.Apps.Apis.BusinessEntities.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accela.Apps.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.2.0.3\lib\net45\Accela.Apps.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Infrastructure.Cache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Infrastructure.Cache.1.0.0\lib\net45\Accela.Infrastructure.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAddressBusinessEntity.cs" />
+    <Compile Include="IAgencySpatialDataEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAppBusinessEntity.cs" />
+    <Compile Include="IAppDataBusinessEntity.cs" />
+    <Compile Include="IAppSettingsBusinessEntity.cs" />
+    <Compile Include="IASIBusinessEntity.cs" />
+    <Compile Include="IASISecurityBusinessEntity.cs" />
+    <Compile Include="IAssessmentBusinessEntity.cs" />
+    <Compile Include="IAssetBusinessEntity.cs" />
+    <Compile Include="IAsyncRequestBusinessEntity.cs" />
+    <Compile Include="IAttachmentBusinessEntity.cs" />
+    <Compile Include="IBusinessEntity.cs" />
+    <Compile Include="IChecklistBusinessEntity.cs" />
+    <Compile Include="IContactBusinessEntity.cs" />
+    <Compile Include="IGlobalEntityBusinessEntity.cs" />
+    <Compile Include="IImageBusinessEntity.cs" />
+    <Compile Include="IImageCache.cs" />
+    <Compile Include="IInspectionBusinessEntity.cs" />
+    <Compile Include="IJobBusinessEntity.cs" />
+    <Compile Include="IMapBusinessEntity.cs" />
+    <Compile Include="IParcelBusinessEntity.cs" />
+    <Compile Include="IPersistedDataBusinessEntity.cs" />
+    <Compile Include="IRecordBusinessEntity.cs" />
+    <Compile Include="IReferenceBusinessEntity.cs" />
+    <Compile Include="IReportBusinessEntity.cs" />
+    <Compile Include="IResourceBusinessEntity.cs" />
+    <Compile Include="IScopeBusinessEntity.cs" />
+    <Compile Include="IUserBusinessEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accela.Apps.Apis.Models\Accela.Apps.Apis.Models.csproj">
+      <Project>{14FAA66A-3F1B-4385-95A8-32322F6B53C5}</Project>
+      <Name>Accela.Apps.Apis.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

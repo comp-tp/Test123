@@ -1,0 +1,74 @@
+{
+  "path" : "/v4/agencies",
+  "description" : "get agencies",
+  "httpMethod" : "GET",
+  "summary" : "get agencies",
+  "responseType" : "List<agency>",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "name"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "integer",
+              "name": "offset"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "integer",
+              "name": "limit"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "order"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "direction"
+            }
+          ],
+   "models": {
+    "agency": {
+      "id": "agency",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "serviceProviderCode": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "iconName": {
+          "type": "string"
+        },
+        "hostedACA": {
+          "type": "boolean"
+        },
+        "isForDemo": {
+          "type": "boolean"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+		
+      }
+    }
+  }
+}

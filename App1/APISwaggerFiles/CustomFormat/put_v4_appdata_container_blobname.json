@@ -1,0 +1,55 @@
+{
+  "path" : "/v4/appdata/{container}/{blobname}",
+  "description" : "Update App Specific Data",
+  "httpMethod" : "PUT",
+  "summary" : "Stores app data in the Cloud based on the container and blob name. If the two parameters exist in the Cloud already, the API will override them; otherwise, the API will create them in the Cloud. The two parameters are defined by the invoker (an app) and must be unique.",
+  "responseType" : "",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "container"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "blobName"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appid"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appSecret"
+            },
+            {
+              "paramType": "body",
+              "required": true,
+              "dataType": "updateAppDataRequest",
+              "name": "updateAppDataRequest"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {  
+   "updateAppDataRequest": {
+      "id": "updateAppDataRequest",
+      "properties": {
+        "appData": {
+          "type": "string"
+        }
+      }
+    }
+   }
+}

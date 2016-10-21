@@ -1,0 +1,46 @@
+{
+  "path" : "/v4/appsettings",
+  "description" : "Get All Settings for App",
+  "httpMethod" : "GET",
+  "summary" : "Gets a list of settings of the given App",
+  "responseType" : "List<appSetting>",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "keys"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "agency"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "appId"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "appSecret"
+            }
+          ],
+   "models": {  
+   "appSetting": {
+      "id": "appSetting",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    }
+   }
+}

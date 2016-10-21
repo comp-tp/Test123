@@ -1,0 +1,47 @@
+﻿/**
+ * <pre>
+ * 
+ *  Accela Citizen Access
+ *  File: RefExaminationPKModel4WS.cs
+ * 
+ *  Accela, Inc.
+ *  Copyright (C): 2009
+ * 
+ *  Description:
+ *  RefExaminationPKModel4WS model..
+ * 
+ *  Notes:
+ * $Id: RefExaminationPKModel4WS.cs 137738 2009-07-06 06:52:41Z ACHIEVO\jackie.yu $.
+ *  Revision History
+ *  &lt;Date&gt;,    &lt;Who&gt;,    &lt;What&gt;
+ * </pre>
+ */
+using System.Runtime.Serialization;
+namespace Accela.ACA.WSProxy
+{
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RefExaminationModel4WS))]
+    
+    [DataContract]
+    
+    
+    
+    public partial class RefExaminationPKModel4WS
+    {
+        /// <remarks/>
+        [DataMember(EmitDefaultValue=false)]
+        public long refExamNbr
+        { 
+            get;
+            set;
+        }
+
+        /// <remarks/>
+        [DataMember(EmitDefaultValue=false)]
+        public string serviceProviderCode
+        {
+            get;
+            set;
+        }
+    }
+}

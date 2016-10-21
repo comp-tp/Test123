@@ -1,0 +1,29 @@
+{
+  "path" : "/v4/documents/{documentId}/thumbnail",
+  "description" : "get document thumbnail",
+  "httpMethod" : "GET",
+  "summary" : "get document thumbnail",
+  "responseType" : "file",
+  "parameters": [
+            {
+              "paramType": "path",
+              "required": true,
+              "dataType": "string",
+              "name": "documentId"
+            },
+			{
+              "paramType": "query",
+              "required": false,
+              "dataType": "int",
+              "name": "height"
+            },
+			{
+              "paramType": "path",
+              "required": false,
+              "dataType": "int",
+              "name": "width"
+            }
+          ],
+ 
+  "models": {}
+}

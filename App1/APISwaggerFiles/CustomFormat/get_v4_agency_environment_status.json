@@ -1,0 +1,28 @@
+{
+  "path": "/v4/agencies/{name}/environments/{env}/status",
+  "description": "get agency environment status",
+  "httpMethod": "GET",
+  "summary": "get agency environment status",
+  "responseType": "availability",
+  "parameters": [
+    {
+      "paramType": "query",
+      "required": true,
+      "dataType": "string",
+      "name": "name"
+    },
+    {
+      "paramType": "query",
+      "required": true,
+      "dataType": "string",
+      "name": "env"
+    }
+  ],
+  "models": {
+    "availability": {
+      "isAvailable": {
+        "type": "boolean"
+      }
+    }
+  }
+}

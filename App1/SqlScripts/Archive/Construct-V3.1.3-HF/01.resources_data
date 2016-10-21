@@ -1,0 +1,126 @@
+if not exists(select * from [dbo].[Resources] where Id ='11D38658-C41E-48A5-91C3-E0D7355202B9' or ( HttpVerb='PUT' and API='/V4/payments/{id}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('11D38658-C41E-48A5-91C3-E0D7355202B9', '/V4/payments/{id}', 'PUT', '/V4/payments/{id}?fields={fields}&lang={lang}', 'confirm_payment', 'confirm_payment', NULL, 5, 0, 'moss.li@beyondsoft.com', 'Apr  1 2015  9:16AM', 'moss.li@beyondsoft.com', 'Apr  1 2015  9:55AM', '/apis/V4/payments/{id}?fields={fields}&lang={lang}', 'Citizen', NULL, '7.3.3.4', NULL, NULL, NULL, 1, 0)
+end 
+
+
+delete from [dbo].[Resources] where Id ='C4012345-AAAA-BBBB-CCCC-123456700139'
+
+delete from [dbo].[Resources] where Id ='C4012345-AAAA-BBBB-CCCC-123456700140'
+
+delete from [dbo].[Resources] where Id ='3754E633-E396-4B8F-A3C8-51C3C70F3707'
+
+delete from [dbo].[Resources] where Id ='F5A90B82-4440-4E91-81E8-665AD1828044'
+
+delete from [dbo].[Resources] where Id ='8EABF719-4568-4AE7-875B-85811FB63553'
+
+
+-- ********************************** Document Review **********************************
+if not exists(select * from [dbo].[Resources] where Id ='F9D63226-B7F5-4028-B628-2EF3A1CDAC7E' or ( HttpVerb='DELETE' and API='/v4/documentReview/documents/{documentId}/comments/{commentIds}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('F9D63226-B7F5-4028-B628-2EF3A1CDAC7E', '/v4/documentReview/documents/{documentId}/comments/{commentIds}', 'DELETE', '/v4/documentReview/documents/{documentId}/comments/{commentIds}?fields={fields}&lang={lang}', 'delete_documentreview_documents_comments', 'delete_documentreview_documents_comments', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:18AM', 'kay.li', 'Feb  6 2015  9:22AM', '/apis/v4/documentReview/documents/{documentId}/comments/{commentIds}?fields={fields}&lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='1067D3D7-7CDD-497B-91A8-457657992AAC' or ( HttpVerb='GET' and API='/v4/documentReview/documents/{documentId}/comments/{commentIds}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('1067D3D7-7CDD-497B-91A8-457657992AAC', '/v4/documentReview/documents/{documentId}/comments/{commentIds}', 'GET', '/v4/documentReview/documents/{documentId}/comments/{commentIds}?isActive={isActive}&fields={fields}&lang={lang}', 'get_documentreview_documents_comments', 'get_documentreview_documents_comments', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:21AM', 'kay.li', 'Feb  6 2015  9:23AM', '/apis/v4/documentReview/documents/{documentId}/comments/{commentIds}?isActive={isActive}&fields={fields}&lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='443AECFF-E7F4-468A-AAAD-69E6B9F64675' or ( HttpVerb='POST' and API='/v4/documentReview/records/{recordId}/documents'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('443AECFF-E7F4-468A-AAAD-69E6B9F64675', '/v4/documentReview/records/{recordId}/documents', 'POST', '/v4/documentReview/records/{recordId}/documents?lang={lang}', 'create_documentreview_records_documents', 'create_documentreview_records_documents', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:58AM', 'kay.li', 'Feb  6 2015  9:23AM', '/apis/v4/documentReview/records/{recordId}/documents?lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='4CA7BF8D-3E9F-4CF5-A13C-84BF40BC9808' or ( HttpVerb='POST' and API='/v4/documentReview/records/{recordId}/documents/{documentId}/checkin'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('4CA7BF8D-3E9F-4CF5-A13C-84BF40BC9808', '/v4/documentReview/records/{recordId}/documents/{documentId}/checkin', 'POST', '/v4/documentReview/records/{recordId}/documents/{documentId}/checkin?lang={lang}', 'create_documentreview_records_documents_checkin', 'create_documentreview_records_documents_checkin', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Mar 17 2015  2:35AM', 'kay.li@beyondsoft.com', 'Mar 17 2015  5:47AM', '/apis/v4/documentReview/records/{recordId}/documents/{documentId}/checkin?lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='5B3AC5BC-B057-47AD-81D2-90455FDCE430' or ( HttpVerb='POST' and API='/v4/documentReview/documents/{documentId}/comments'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('5B3AC5BC-B057-47AD-81D2-90455FDCE430', '/v4/documentReview/documents/{documentId}/comments', 'POST', '/v4/documentReview/documents/{documentId}/comments?fields={fields}&lang={lang}', 'create_documentreview_documents_comments', 'create_documentreview_documents_comments', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:39AM', 'kay.li@beyondsoft.com', 'Mar  6 2015  7:24AM', '/apis/v4/documentReview/documents/{documentId}/comments?fields={fields}&lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='E45E52AF-8C37-45DB-863C-9518536D3474' or ( HttpVerb='PUT' and API='/v4/documentReview/documents/{documentId}/tasks/{id}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('E45E52AF-8C37-45DB-863C-9518536D3474', '/v4/documentReview/documents/{documentId}/tasks/{id}', 'PUT', '/v4/documentReview/documents/{documentId}/tasks/{id}?fields={fields}&lang={lang}', 'update_documentreview_documents_tasks', 'update_documentreview_documents_tasks', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:59AM', 'kay.li', 'Feb  6 2015  9:23AM', '/apis/v4/documentReview/documents/{documentId}/tasks/{id}?fields={fields}&lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='4A22D3DA-AA1F-4106-BAB0-E6F21C39BC50' or ( HttpVerb='PUT' and API='/v4/documentReview/documents/{documentId}/comments/{commentId}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('4A22D3DA-AA1F-4106-BAB0-E6F21C39BC50', '/v4/documentReview/documents/{documentId}/comments/{commentId}', 'PUT', '/v4/documentReview/documents/{documentId}/comments/{commentId}?fields={fields}&lang={lang}', 'update_documentreview_documents_comments', 'update_documentreview_documents_comments', NULL, 5, 1, 'kay.li@beyondsoft.com', 'Feb  2 2015  8:59AM', 'kay.li@beyondsoft.com', 'Mar 17 2015  2:56AM', '/apis/v4/documentReview/documents/{documentId}/comments/{commentId}?fields={fields}&lang={lang}', 'Agency', NULL, '8.0', NULL, NULL, NULL, 1, 0)
+end 
+
+-- ********************************** Delegates **********************************
+if not exists(select * from [dbo].[Resources] where Id ='F5C9F6A5-B045-4F76-B4E7-483BEA74B018' or ( HttpVerb='GET' and API='/v4/citizenaccess/citizens/delegates'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('F5C9F6A5-B045-4F76-B4E7-483BEA74B018', '/v4/citizenaccess/citizens/delegates', 'GET', '/v4/citizenaccess/citizens/delegates?userName={userName}&name={name}&delegateStatus={delegateStatus}&offset={offset}&limit={limit}&lang={lang}', 'get_citizenaccess_citizens_delegates', 'get_citizenaccess_citizens_delegates', NULL, 5, 0, 'Enhui', 'Apr  1 2015 11:39PM', 'Enhui', 'Apr  1 2015 11:39PM', '/apis/v4/citizens/delegates?userName={userName}&name={name}&delegateStatus={delegateStatus}&offset={offset}&limit={limit}&lang={lang}', 'Citizen', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='03183E54-BB07-41B7-A624-9DCB5ED5668F' or ( HttpVerb='GET' and API='/v4/citizenaccess/citizens/invitations'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('03183E54-BB07-41B7-A624-9DCB5ED5668F', '/v4/citizenaccess/citizens/invitations', 'GET', '/v4/citizenaccess/citizens/invitations?userName={userName}&name={name}&delegateStatus={delegateStatus}&offset={offset}&limit={limit}&lang={lang}', 'get_citizenaccess_citizens_invitations', 'get_citizenaccess_citizens_invitations', NULL, 5, 0, 'Enhui', 'Apr  1 2015 11:40PM', 'Enhui', 'Apr  1 2015 11:41PM', '/apis/v4/citizens/invitations?userName={userName}&name={name}&delegateStatus={delegateStatus}&offset={offset}&limit={limit}&lang={lang}', 'Citizen', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='BDBFEC60-6ABB-4FDC-9BBB-6E3610BD9970' or ( HttpVerb='POST' and API='/v4/citizenaccess/citizens/delegates'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('BDBFEC60-6ABB-4FDC-9BBB-6E3610BD9970', '/v4/citizenaccess/citizens/delegates', 'POST', '/v4/citizenaccess/citizens/delegates?lang={lang}', 'create_citizenaccess_citizens_delegates', 'create_citizenaccess_citizens_delegates', NULL, 5, 0, 'Enhui', 'Mar  31 2015 8:50PM', 'Enhui', 'Mar  31 2015 8:50PM', '/apis/v4/citizens/delegates?lang={lang}', 'Citizen', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='507DAAC7-322C-409B-9045-EB6BB6EDDE28' or ( HttpVerb='PUT' and API='/v4/citizenaccess/citizens/invitation/{id}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('507DAAC7-322C-409B-9045-EB6BB6EDDE28', '/v4/citizenaccess/citizens/invitation/{id}', 'PUT', '/v4/citizenaccess/citizens/invitation/{id}?lang={lang}', 'update_citizenaccess_citizens_invitation', 'update_citizenaccess_citizens_invitation', NULL, 5, 0, 'Enhui', 'Mar  31 2015 8:53PM', 'Enhui', 'Mar  31 2015 8:53PM', '/apis/v4/citizens/invitation/{id}?lang={lang}', 'Citizen', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='0E9DCED2-9277-4CEA-9DCD-AF9D32A028BB' or ( HttpVerb='DELETE' and API='/v4/citizenaccess/citizens/delegates/{ids}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('0E9DCED2-9277-4CEA-9DCD-AF9D32A028BB', '/v4/citizenaccess/citizens/delegates/{ids}', 'DELETE', '/v4/citizenaccess/citizens/delegates/{ids}?lang={lang}', 'delete_citizenaccess_citizens_delegates', 'delete_citizenaccess_citizens_delegates', NULL, 5, 0, 'Enhui', 'Mar  31 2015 6:43PM', 'Enhui', 'Mar  31 2015 6:43PM', '/apis/v4/citizens/delegates/{ids}?lang={lang}', 'Citizen', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+-- ********************************** Other **********************************
+
+if not exists(select * from [dbo].[Resources] where Id ='E3834883-3ED6-4B30-A009-1F6FE8F4E008' or ( HttpVerb='GET' and API='/v4/settings/inspections/types/{ids}'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('E3834883-3ED6-4B30-A009-1F6FE8F4E008', '/v4/settings/inspections/types/{ids}', 'GET', '/v4/settings/inspections/types/{ids}?fields={fields}&lang={lang}', 'get_settings_inspection_type', 'get_settings_inspection_type', NULL, 5, 0, 'ashley.zou@beyondsoft.com', 'Apr  3 2015  2:42AM', 'ashley.zou@beyondsoft.com', 'Apr  7 2015  8:52AM', '/apis/v4/settings/inspections/types/{ids}?expand={expand}&fields={fields}&lang={lang}', 'All', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+
+if not exists(select * from [dbo].[Resources] where Id ='CC323589-08FB-462B-8791-608330039C32' or ( HttpVerb='GET' and API='/v4/settings/inspections/types'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('CC323589-08FB-462B-8791-608330039C32', '/v4/settings/inspections/types', 'GET', '/v4/settings/inspections/types?lang={lang}&offset={offset}&limit={limit}&fields={fields}&group={group}', 'get_settings_inspection_types', 'get_settings_inspections_types', NULL, 5, 0, 'ashley.zou@beyondsoft.com', 'Apr  3 2015  1:53AM', 'ashley.zou@beyondsoft.com', 'Apr  7 2015  8:51AM', '/apis/v4/settings/inspections/types?group={group}&limit={limit}&expand={expand}&offset={offset}&fields={fields}&lang={lang}', 'All', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 1, 0)
+end 
+
+if not exists(select * from [dbo].[Resources] where Id ='AED6FD04-5F16-439E-802C-7DFF5124DC19' or ( HttpVerb='POST' and API='/v4/civicid/accounts'))
+begin
+	insert [dbo].[Resources](Id, API, HttpVerb, RelativeUriTemplateFull, Name, DisplayName, [Description], AuthenticationType, APIAttribute, CreatedBy, CreatedDate, LastUpdatedBy, LastUpdatedDate, ProxyAPI, Applicability, MethodNickName, SupportedAAVersions, SupportedAPIVersions, ResourceGroupName, FIDDescription, IsProxy, IsAAGovxmlAPI)
+	values('AED6FD04-5F16-439E-802C-7DFF5124DC19', '/v4/civicid/accounts', 'POST', '/v4/civicid/accounts?lang={lang}', 'create_civicid_accounts', 'create_civicid_accounts', NULL, 1, 1, 'vsamaresan', 'Apr  7 2015 11:07PM', 'vsamaresan', 'Apr  8 2015  4:59PM', '/apis/v4/civicid/accounts?lang={lang}', 'All', NULL, 'AA7.3.3.5.0', NULL, NULL, NULL, 0, 0)
+end 
+
+update [dbo].[Resources]
+set
+	 LastUpdatedDate='Apr  9 2015  3:13AM'
+	,LastUpdatedBy='Bryant-Tu'
+	,ProxyAPI='/apis/v4/search/records/?offset={offset}&limit={limit}&expand={expand}&fields={fields}&lang={lang}'
+where Id ='C4012345-AAAA-BBBB-CCCC-123456700060'
+
+update [dbo].[Resources]
+set
+	 LastUpdatedDate='Apr  9 2015  3:35AM'
+	,AuthenticationType='0'
+	,LastUpdatedBy='Bryant-Tu'
+where Id ='C4012345-AAAA-BBBB-CCCC-123456700030'

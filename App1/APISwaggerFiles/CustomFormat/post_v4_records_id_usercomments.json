@@ -1,0 +1,44 @@
+{
+    "description": "Create Record User Comment",
+    "httpMethod": "POST",
+    "models": {
+        "commentRequestModel": {
+            "id": "commentRequestModel",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                }
+            }
+        },
+        "commentResultModel": {
+            "id": "commentResultModel",
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "nickname": "createRecordUserCommnet",
+    "parameters": [
+        {
+            "dataType": "string",
+            "description": "Record Id",
+            "isArray": false,
+            "name": "recordid",
+            "paramType": "path",
+            "required": true
+        },
+        {
+            "dataType": "commentRequestModel",
+            "description": "UserComment",
+            "isArray": false,
+            "name": "id",
+            "paramType": "body",
+            "required": true
+        }
+    ],
+    "path": "/v4/records/{recordid}/usercomments",
+    "responseType": "commentResultModel",
+    "summary": "Create Record User Commnet"
+}

@@ -1,0 +1,39 @@
+#region Header
+
+/**
+ * <pre>
+ *
+ *  Accela Mobile Office
+ *  File:
+ *
+ *  Accela, Inc.
+ *  Copyright (C): 2009-2010
+ *
+ *  Description:
+ *
+ *
+ *  Note
+ *  Created By: Code generator
+ *
+ * </pre>
+ */
+
+#endregion Header
+
+using System;
+using System.Xml.Serialization;
+
+namespace Accela.Automation.GovXmlClient.Model
+{
+	/// <summary>
+	/// Summary description for Licenses.
+	/// </summary>
+	public class Licenses
+	{
+		public Licenses()
+		{
+		}
+		[XmlElement(ElementName = "License")]
+		public License[] license;
+	}
+}

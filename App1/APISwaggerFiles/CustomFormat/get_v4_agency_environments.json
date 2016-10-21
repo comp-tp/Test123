@@ -1,0 +1,30 @@
+{
+    "description": "Get Agency Environments",
+    "httpMethod": "GET",
+    "models": {
+		"environment": {
+		   "name": {
+			 "type": "string"
+		   },
+		   "version": {
+			 "type": "string"
+		   },
+		  "product": {
+			"type": "string"
+		  }
+		}
+   },
+    "nickname": "getAgencyEnvironments",
+    "parameters": [
+        {
+            "dataType": "string",
+            "description": "Agency Name",
+            "name": "name",
+            "paramType": "path",
+            "required": true
+        }
+    ],
+    "path": "/v4/agencies/{name}/environments",
+    "responseType": "List<environment>",
+    "summary": "Get Agency Environments"
+}

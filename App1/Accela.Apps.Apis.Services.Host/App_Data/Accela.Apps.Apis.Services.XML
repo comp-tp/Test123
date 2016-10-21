@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Accela.Apps.Apis.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Accela.Apps.Apis.Services.ControllerBase">
+            <summary>
+            Base class for web services.
+            </summary>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.ControllerBase.LogTranscation(System.Object,System.String)">
+            <summary>
+            log the transaction log
+            </summary>
+            <param name="obj">object for log to</param>
+            <param name="logName">log name, like Get Job List</param>
+            <param name="requstId">request id, it use to distinglish request and response.</param>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.ControllerBase.Excute``2(Accela.Apps.Apis.Services.ExcuteService{``0,``1},``1)">
+            <summary>
+            Log service.
+            </summary>
+            <typeparam name="T">Response model.</typeparam>
+            <typeparam name="M">Request model.</typeparam>
+            <param name="action">Method.</param>
+            <param name="request">Request model parameter.</param>
+            <returns>Response object.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.ControllerBase.ExcuteV1_2``2(Accela.Apps.Apis.Services.ExcuteService{``0,``1},``1)">
+            <summary>
+            Log service.
+            </summary>
+            <typeparam name="T">Response model.</typeparam>
+            <typeparam name="M">Request model.</typeparam>
+            <param name="action">Method.</param>
+            <param name="request">Request model parameter.</param>
+            <returns>Response object.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.ControllerBase.Excute``1(Accela.Apps.Apis.Services.ExcuteServiceDownload{``0},``0)">
+            <summary>
+            Download attachment log service.
+            </summary>
+            <typeparam name="M">Request model.</typeparam>
+            <param name="action">Download method.</param>
+            <param name="request">Request model parameter.</param>
+            <returns>Attachment data stream.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.ControllerBase.SetPageRangeToRequest(Accela.Apps.Apis.Models.DTOs.Requests.CommonRequests.RequestBase,System.Int32,System.Int32)">
+            <summary>
+            AMO StartRow begin from index 1  (whatever input 0/-1/-100/-232432), 
+            so we ajust the index to avoid the data's duplicate.
+            </summary>
+            <param name="request"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+        </member>
+        <member name="P:Accela.Apps.Apis.Services.ControllerBase.Log">
+            <summary>
+            Get an ILog instance.
+            </summary>
+        </member>
+        <member name="P:Accela.Apps.Apis.Services.ControllerBase.CurrentUser">
+            <summary>
+            Current Context User.
+            </summary>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemDocumentController.GetDocumentType(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get document type.
+            </summary>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>
+            <param name="offset">Offset.</param>
+            <param name="limit">Limit.</param>
+            <returns>Document type list.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemAssetController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Accela.Apps.Apis.Services.SystemAssetController"/> class.
+            </summary>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemAssetController.GetStatuses(System.String,System.String)">
+            <summary>
+            Gets the statuses.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The language.</param>
+            <returns>the statuses.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemAssetController.GetASIs(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the asset ASIs.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="offset">The offset.</param>
+            <param name="limit">The limit.</param>
+            <returns>the asset ASIs.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemAssetController.GetASITs(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the asset ASIs.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="offset">The offset.</param>
+            <param name="limit">The limit.</param>
+            <returns>the asset ASIs.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.AppDataController.#ctor">
+            <summary>
+            App data service constructor.
+            </summary>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.AppDataController.GetAppData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Get app data.
+            </summary>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>
+            <param name="container">Container.</param>
+            <param name="blobName">Blob name.</param>
+            <param name="appId">App id.</param>
+            <returns>App data response.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.AppDataController.SaveAppData(System.String,System.String,System.String,System.String,System.String,Accela.Apps.Apis.WSModels.AppDatas.WSSaveAppDataRequest)">
+            <summary>
+            Create app data.
+            </summary>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>
+            <param name="container">Container.</param>
+            <param name="blobName">Blob name.</param>
+            <param name="appid">App id.</param>
+            <param name="wsCreateAppDataRequest">Create app data request.</param>
+            <returns>Create app data response.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.AppDataController.DeleteAppData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Delete app data.
+            </summary>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>
+            <param name="container">Container.</param>
+            <param name="blobName">Blob name.</param>
+            <param name="appid">App id.</param>
+            <returns>Delete app data response.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.SystemContactController.GetContactTypes(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get contact type resource
+            </summary>
+            <param name="request">criteria for contact</param>
+            <returns></returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.AnalyticsAppController.CountDailyRecords(Accela.Apps.Apis.WSModels.RecordSummary.WSDailyRecordsCountRequest,System.String,System.String)">
+            <summary>
+            Counts the daily records.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="wsRequest">The ws request.</param>
+            <returns>
+            the daily records count.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Shared.APIHandlers.APIUsageHandler.AddToQueue(Accela.Apps.Shared.Logging.ApiUsage)">
+            <summary>
+            write apiUsage to azure queues, then worker role will batch insert apiUsage to db
+            </summary>
+            <param name="apiUsage"></param>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetRecords(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Get records resource
+            </summary>
+            <param name="request">criteria for record</param>
+            <returns>return matched records</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetRecordsByIds(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get records resource
+            </summary>
+            <param name="token">The token</param>
+            <param name="lang">The language</param>
+            <param name="ids">The record ids</param>
+            <returns>return matched records</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetOwners(System.String,System.String,System.String)">
+            <summary>
+            Gets the owners.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <returns>
+            the owners.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetRecordAdditionals(System.String,System.String,System.String)">
+            <summary>       
+            Gets the record's additionals. 
+            </summary>      
+            <param name="id">The id.</param>       
+            <param name="lang">The lang.</param>        
+            <param name="token">The token.</param>        
+            <returns>the owners.</returns>        
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetRecordASIT(System.String,System.String,System.String)">
+            <summary>
+            get record's asit info
+            </summary>
+            <param name="id"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetParcels(System.String,System.String,System.String)">
+            <summary>
+            Get parcels by recordId
+            </summary>
+            <returns>return matched parcels</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetCosts(System.String,System.String,System.String)">
+            <summary>
+            Get costs by recordId
+            </summary>
+            <returns>return matched costs.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetConditions(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the conditions.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The language.</param>
+            <param name="id">The record id.</param>
+            <param name="priority">The priority.</param>
+            <returns>
+            the conditions.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetInspections(System.String,System.Boolean,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the inspections.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="openInspectionsOnly">if set to <c>true</c> [open inspections only (pending/scheduled)].</param>
+            <param name="daysBefore">The days before.</param>
+            <param name="daysAfter">The days after.</param>
+            <param name="lang">The language.</param>
+            <param name="id">The record id.</param>
+            <param name="offset">The offset.</param>
+            <param name="limit">The limit.</param>
+            <returns>
+            the inspections.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetAssets(System.String,System.String,System.String)">
+            <summary>
+            Gets the inspections.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The language.</param>
+            <param name="id">The record id.</param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns>Assets.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetComments(System.String,System.String,System.String)">
+            <summary>
+            Gets the Record Comments.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The language.</param>
+            <param name="id">The record comment id.</param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns>The comments.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetConditionSummary(System.String,System.String,System.String)">
+            <summary>
+            Gets the condition summary.
+            </summary>
+            <param name="id">The record id.</param>
+            <returns>
+            the condition summary.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetInspectionSummary(System.String,System.String,System.String)">
+            <summary>
+            Gets the inspection summary.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="id">The id.</param>
+            <returns>the inspection summary.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetWorkflowSummary(System.String,System.String,System.String)">
+            <summary>
+            Gets the workflow summary.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="id">The id.</param>
+            <returns>the workflow summary.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetFeeSummary(System.String,System.String,System.String)">
+            <summary>
+            Gets the fee summary.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="id">The id.</param>
+            <returns>the fee summary.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetContactSummary(System.String,System.String,System.String)">
+            <summary>
+            Gets the contact summary.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="id">The id.</param>
+            <returns>the contact summary.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetProjectInformations(System.String,System.String,System.String)">
+            <summary>
+            Gets the project in formations.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="lang">The lang.</param>
+            <param name="id">The id.</param>
+            <returns>
+            the project in formations.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.GetUserComments(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Get user comments.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>        
+            <returns>WSGetCommentResponse.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.RecordsController.AddUserComments(System.String,Accela.Apps.Apis.WSModels.Comments.WSCreateCommentRequest,System.String,System.String)">
+            <summary>
+            Add user comments.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="token">Token.</param>
+            <param name="lang">Lang.</param>        
+            <returns>WSCreateCommentResponse.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.RefreshData">
+            <summary>
+            Clear current user's cache so that client is able to get latest data from next access.
+            </summary>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.UpdateInspection(System.String,Accela.Apps.Apis.Models.DomainModels.InspectionModels.InspectionModel)">
+            <summary>
+            Updates the inspection.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="inspectionModel">The inspection model.</param>
+            <returns>the updated inspection</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetJobList(System.Int32,System.Int32)">
+            <summary>
+            Gets User's Job list items
+            </summary>
+            <param name="token">Cloud User Authentication token</param>
+            <param name="pageIndex">Page start Index. Used for Paging</param>
+            <param name="pageSize">Number of items to return in paged collection.</param>
+            <returns>List of JobListItems</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetInspetionTypes(System.Int32,System.Int32)">
+            <summary>
+            Get inspection type list.
+            </summary>
+            <param name="pageIndex">Page start Index</param>
+            <param name="pageSize">Number of items to return in paged collection</param>
+            <returns>InspectionTypeModel list.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetInspetionStatuses(System.String)">
+            <summary>
+            Gets the inspection statuses.
+            </summary>
+            <param name="inspectionTypeId">The inspection type id.</param>
+            <returns>
+            the inspection statuses.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetInspetionComments(System.String)">
+            <summary>
+            Gets the inspection comments.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <returns>the inspection comments.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetInspetionAttachments(System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the inspection attachments.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>
+            the inspection attachments.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.DownloadAttachment(System.String,System.String)">
+            <summary>
+            Downloads the attachment.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="attachmentId">The attachment id.</param>
+            <returns>
+            the file stream
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.DownloadAttachmentThumbnail(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Downloads the attachment thumbnail.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="attachmentId">The attachment id.</param>
+            <param name="pixelWidth">Width of the pixel.</param>
+            <param name="pixelHeight">Height of the pixel.</param>
+            <returns>
+            the attachment thumbnail.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.CreateAttachment(System.IO.Stream,System.String)">
+            <summary>
+            Creates the attachment.
+            get filename from these sources orderly: url, request header.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="stream">The stream.</param>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetChecklists(System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the checklists.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="pageIndex">Page start Index.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>the checklists.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetChecklistItems(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the checklist items.
+            </summary>
+            <param name="inspectionId">The inspection id.</param>
+            <param name="checklistId">The checklist id.</param>
+            <param name="pageIndex">Page start Index.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>the checklist items.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetStandardCommentGroups(System.Int32,System.Int32)">
+            <summary>
+            Gets the standard comment groups.
+            </summary>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>
+            the standard comment groups.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetStandardComments(System.Int32,System.Int32)">
+            <summary>
+            Gets the standard comments.
+            </summary>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>
+            the standard comments.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetDepartments">
+            <summary>
+            Gets the departments.
+            </summary>
+            <returns>
+            the departments.
+            </returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetInspectors(System.String)">
+            <summary>
+            Gets the inspectors.
+            </summary>
+            <param name="departmentId">The department id.</param>
+            <returns>the inspectors.</returns>
+        </member>
+        <member name="M:Accela.Apps.Apis.Services.InspectorAppController.GetMemoryStream(System.IO.Stream)">
+            <summary>
+            Gets the memory stream.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns>the memory stream.</returns>
+        </member>
+    </members>
+</doc>

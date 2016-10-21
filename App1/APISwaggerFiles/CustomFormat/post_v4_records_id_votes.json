@@ -1,0 +1,36 @@
+{
+  "path": "/v4/records/{recordId}/votes",
+  "httpMethod": "POST",
+  "responseType": "boolean",
+  "parameters": [
+      {
+      "paramType": "path",
+      "required": true,
+      "dataType": "string",
+      "name": "recordId"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "lang"
+    },
+	{
+      "paramType": "body",
+      "required": true,
+      "dataType": "voteRequest",
+      "name": "voteRequest"
+    }
+  ],
+  "models": {
+    "voteRequest": {
+      "id": "voteRequest",
+      "properties": {
+        "vote": {
+          "type": "boolean",
+		   "required": true
+        }
+      }
+    }
+  }
+}

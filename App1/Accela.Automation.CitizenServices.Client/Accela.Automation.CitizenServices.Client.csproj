@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8D39824-FA84-4266-983D-36D492C032B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.Automation.CitizenServices.Client</RootNamespace>
+    <AssemblyName>Accela.Automation.CitizenServices.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accela.Apps.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.2.0.3\lib\net45\Accela.Apps.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.Shared.Gateway.Client, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.Gateway.Client.2.0.1\lib\net451\Accela.Apps.Shared.Gateway.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.2.0.1\lib\net45\Accela.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.Logging.1.0.9\lib\net45\Accela.Core.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Infrastructure.2.0.2\lib\net45\Accela.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.2.1\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\CitizenDataModel\AcaAdminTreeNodeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ACAModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ACATemplateConfigModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ActivityModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AdditionInfo.cs" />
+    <Compile Include="Models\CitizenDataModel\AddressBaseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AddressModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AdminConfigurationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificInfoGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificInfoModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificInfoModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableColumnModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableField4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableGroupModelEntry.cs" />
+    <Compile Include="Models\CitizenDataModel\AppSpecificTableModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppStatusGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AppStatusGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AppStatusGroupPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ASISecurityModelWS.cs" />
+    <Compile Include="Models\CitizenDataModel\ASISecurityQueryParam4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ASITableDrillDownModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ASITableDrillDSeriesModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ASITableDrillDValMapModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AssetContactModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AssetMasterModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AssetOrderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AssetRatingModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AssetRatingPK.cs" />
+    <Compile Include="Models\CitizenDataModel\AttachmentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AuditModel.cs" />
+    <Compile Include="Models\CitizenDataModel\AuditModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\AvailableTimeResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\B1ExpirationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\B1ExpirationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\BCalcValuatnModel.cs" />
+    <Compile Include="Models\CitizenDataModel\BCalcValuatnModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\BizDomainModel.cs" />
+    <Compile Include="Models\CitizenDataModel\BizDomainModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\BStructureModel.cs" />
+    <Compile Include="Models\CitizenDataModel\BStructureModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ButtonSettingModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\BValuatnModel.cs" />
+    <Compile Include="Models\CitizenDataModel\BValuatnModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CalendarEventModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CalendarInspectionTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CalendarModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CalendarTimePeriod.cs" />
+    <Compile Include="Models\CitizenDataModel\CapConditionModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapContactModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapContactModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapDetailModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapIDModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapIDModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapPage4ACAModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapParcelModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapPaymentResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapPaymentResultWithAddressModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypeDetailModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypeFilterModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypeIconModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypePermissionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapTypePermissionPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapView.cs" />
+    <Compile Include="Models\CitizenDataModel\CapWithConditionModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CapWorkDesModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CapWorkDesModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CheckModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CheckModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CommentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CommentModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CompactAddressModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CompactAddressModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ComponentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ConditionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContactAddressModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContactAddressPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContactModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContactModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ContentTemplateModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ContinuingEducationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContinuingEducationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ContinuingEducationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ContinuingEducationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ContractorLicenseModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CostingModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CostingPK.cs" />
+    <Compile Include="Models\CitizenDataModel\CreditCardModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CreditCardModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\CustomComponentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\CustomComponentPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DateAndTimesModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DateTimeRangePageModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DelegateUserModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DelegateUserPK.cs" />
+    <Compile Include="Models\CitizenDataModel\DeleteContracotrLicensePK.cs" />
+    <Compile Include="Models\CitizenDataModel\DepartmentModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\DocumentContentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DocumentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DocumentRelationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\DuplicatedAPOKeyModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EDMSEntityIdModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EdmsPolicyModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EdmsPolicyModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EdmsUserModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EducationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EducationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EducationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EducationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EMSEOnLoginResultModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EMSEResultBaseModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EMSEResultModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\EntityModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EntityPaymentResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EntityPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\EventModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ExaminationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExaminationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ExaminationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExaminationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ExamProviderDetailModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExamScheduleSearchModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExamScheduleViewModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExpressionDTOModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExpressionFieldModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExpressionRunResultModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ExpressionRuntimeArgumentPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ExpressionRuntimeArgumentsModel.cs" />
+    <Compile Include="Models\CitizenDataModel\F4FeeItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\F4FeeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GActivitySpecInfoGroupCodeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GenealogyModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GenealogyTransactionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GenericTemplateAttribute.cs" />
+    <Compile Include="Models\CitizenDataModel\GenericTemplateAttributeEntry.cs" />
+    <Compile Include="Models\CitizenDataModel\GenericTemplateFieldPK.cs" />
+    <Compile Include="Models\CitizenDataModel\GenericTemplateTableValue.cs" />
+    <Compile Include="Models\CitizenDataModel\GenericTemplateTableValuePK.cs" />
+    <Compile Include="Models\CitizenDataModel\GFilterLevelModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GFilterScreenPermissionModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASIModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASISubGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASITableColumnModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASITableColumnModelEntry.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASITableSubGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GgsItemASITableValueModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GGuideSheetItemModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GGuideSheetModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GISObjectModel.cs" />
+    <Compile Include="Models\CitizenDataModel\GlobalSearchParam4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GlobalSearchResult4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GlobalSettingModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GridViewColumnVisible.cs" />
+    <Compile Include="Models\CitizenDataModel\GridViewJson.cs" />
+    <Compile Include="Models\CitizenDataModel\GUITextModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\GValuationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\I18nLocaleRelevantSettingsModel.cs" />
+    <Compile Include="Models\CitizenDataModel\I18NPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\I18nPrimarySettingsModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InfoTableColumnModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\InfoTableGroupCodeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\InfoTableSubgroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\InfoTableValueModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionActionPermissionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionResultGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionScheduleModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionTreeNodeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\InspectionValidationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\JAXBUTModel.cs" />
+    <Compile Include="Models\CitizenDataModel\labelValueBean.cs" />
+    <Compile Include="Models\CitizenDataModel\LanguageModel.cs" />
+    <Compile Include="Models\CitizenDataModel\LicenseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\LicenseModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\LicenseProfessionalModel.cs" />
+    <Compile Include="Models\CitizenDataModel\LicenseProfessionalModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\LogoModel.cs" />
+    <Compile Include="Models\CitizenDataModel\MapEntry4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\MerchantAccountModel.cs" />
+    <Compile Include="Models\CitizenDataModel\MessageModel.cs" />
+    <Compile Include="Models\CitizenDataModel\MyCollectionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\MyCollectionSummaryModel.cs" />
+    <Compile Include="Models\CitizenDataModel\NoticeConditionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\OnlinePaymentResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\OnLinePaymentReturnInfo4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\OnLoginParamsModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\OwnerModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PageFlowComponentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PageFlowGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PageModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ParcelInfoModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ParcelModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ParmModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PartTransactionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PasswordConditionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PasswordResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PaymentBaseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PaymentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PaymentModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\PaymentResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PaymentResultModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\PayTrail.cs" />
+    <Compile Include="Models\CitizenDataModel\PeopleAttributeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\PeopleModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PeopleModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\Period.cs" />
+    <Compile Include="Models\CitizenDataModel\PersonModel.cs" />
+    <Compile Include="Models\CitizenDataModel\PostTransactionLogModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProcessRelationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProjectModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ProjectTreeNodeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderDetailModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderDetailModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ProviderPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ProxyUserRolePrivilegeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\PublicUserModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\PublicUserPlanModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\QueryFormat.cs" />
+    <Compile Include="Models\CitizenDataModel\QueryFormat4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RangeDateModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RecalculateParameterModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReceiptModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RecordTypeLicTypePermissionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RecordTypeLicTypePermissionModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAddressModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAddressView.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAppSpecInfoDropDownModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAppSpecInfoDropDownModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAppSpecInfoFieldModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefAppSpecInfoGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefContinuingEducationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefContinuingEducationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\refContinuingEducationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefContinuingEducationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefContinuingEducationProviderPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefDocumentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefEducationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefEducationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefEducationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefEducationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefEducationProviderPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExaminationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExaminationModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExaminationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExaminationPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExaminationProviderPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExpressionExecuteFieldModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefExpressionPK.cs" />
+    <Compile Include="Models\CitizenDataModel\RefFeeDsecVO.cs" />
+    <Compile Include="Models\CitizenDataModel\RefLicenseProfessionalModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefLicenseProfessionalModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefLicenseProfessionalPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefLicenseProfessionalPKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RefLPView.cs" />
+    <Compile Include="Models\CitizenDataModel\RefOwnerBaseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefOwnerModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RefParcelView.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportActionMessageModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportButtonInfoModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportButtonPropertyModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportDetailModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportInfoModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportParameterModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ReportResultModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RFeeItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RGuideSheetGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RGuideSheetItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RGuideSheetModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\RProviderLocationModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RProviderLocationPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RProviderProctorModel.cs" />
+    <Compile Include="Models\CitizenDataModel\RProviderProctorPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ScheduleExamParamVO.cs" />
+    <Compile Include="Models\CitizenDataModel\SearchLicenseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SearchResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SectionFieldsModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SectionTownShipRangeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SectionTownShipRangeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ServerConstantModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ServiceModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ServiceProviderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\ShoppingCartItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\ShoppingCartModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleAppTypModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleAuditModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleCapModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleTaskItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleViewElementModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleViewElementModel4WSExtender.cs" />
+    <Compile Include="Models\CitizenDataModel\SimpleViewMode4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\SmartChoiceGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\spellCheckResultModel.cs" />
+    <Compile Include="Models\CitizenDataModel\spellWordSuggestionsModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StandardCommentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StandardCommentModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\StepModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StringArray.cs" />
+    <Compile Include="Models\CitizenDataModel\StrucEstaMasterModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StructureEstablishmentModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StructureModel.cs" />
+    <Compile Include="Models\CitizenDataModel\StructureModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\StructureTypeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\StudentInfoVO.cs" />
+    <Compile Include="Models\CitizenDataModel\SupportedLanguageModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SysUserModel.cs" />
+    <Compile Include="Models\CitizenDataModel\SysUserModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\TaskItemModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TaskItemModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\TaskSpecificInfoModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TaskSpecificInfoModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateAttributeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateAttrValueModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateGroup.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateLayoutConfigI18NModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateLayoutConfigModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateLayoutConfigPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateRow.cs" />
+    <Compile Include="Models\CitizenDataModel\TemplateSubgroup.cs" />
+    <Compile Include="Models\CitizenDataModel\TimeGroupModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TimeLogModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TimeTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TransactionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TransactionModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\TrustAccountBaseModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TrustAccountModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TrustAccountPeopleModel.cs" />
+    <Compile Include="Models\CitizenDataModel\TrustAccountPeopleModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\TrustAccountTransactionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\UploadModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\UploadResult4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\UserGroupModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\UserRolePrivilegeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\UserRolePrivilegeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\X4FeeItemInvoiceModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XAssetTypeCapTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XButtonFilterModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XEntityPermissionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XEntityPermissionModelPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XFilterViewElementModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XFilterViewModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XInspectionTypeCategoryModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XInspectionTypeCategoryPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XParOwnerModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XPolicyModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XpolicyUserRolePrivilegeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XProxyUserModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XProxyUserPermissionModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XProxyUserPermissionPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XProxyUserPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContactAddressTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContactAddressTypePKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationAppTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationAppTypeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationAppTypePKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationAppTypePKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationProviderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefContinuingEducationProviderModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefEducationAppTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefEducationAppTypeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefEducationAppTypePKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefEducationAppTypePKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefEducationProviderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\xRefEducationProviderModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationAppTypeModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationAppTypeModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationAppTypePKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationAppTypePKModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationProviderModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XRefExaminationProviderModel4WS.cs" />
+    <Compile Include="Models\CitizenDataModel\XSocialMediaEntityModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XSocialMediaEntityPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XSocialMediaUserModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XSocialMediaUserPKModel.cs" />
+    <Compile Include="Models\CitizenDataModel\XUITextModel.cs" />
+    <Compile Include="Models\CitizenDomailModel\AttachmentModel\CapID.cs" />
+    <Compile Include="Models\CitizenDomailModel\AttachmentModel\DocumentContentModel.cs" />
+    <Compile Include="Models\CitizenDomailModel\AttachmentModel\DocumentModel.cs" />
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\PagedResponse.cs" />
+    <Compile Include="Models\Pagination.cs" />
+    <Compile Include="Models\RequestBase.cs" />
+    <Compile Include="Models\Request\CitizenUserAuthenticateRequest.cs" />
+    <Compile Include="Models\Request\Document\CreateDocumentRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenCreateRecordRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenGetRecordByIdRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenGetRecordTypeRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenSearchRecordsByAddressRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenSearchRecordsByContactRequest.cs" />
+    <Compile Include="Models\Request\Record\CitizenSearchRecordsByRecordRequest.cs" />
+    <Compile Include="Models\ResponseBase.cs" />
+    <Compile Include="Models\ResponseStatus.cs" />
+    <Compile Include="Models\Response\CitizenUserAuthenticateResponse.cs" />
+    <Compile Include="Models\Response\CitizenUserResponse.cs" />
+    <Compile Include="Models\Response\Document\CitizenRecordDocumentsResponse.cs" />
+    <Compile Include="Models\Response\Document\CreateDocumentResponse.cs" />
+    <Compile Include="Models\Response\Document\GetDocumentContentResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenCreateRecordResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenGetRecordByIdResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenGetRecordTypeResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenRecordAddressesResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenRecordContactsResponse.cs" />
+    <Compile Include="Models\Response\Record\CitizenSearchRecordsResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

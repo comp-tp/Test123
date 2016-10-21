@@ -1,0 +1,60 @@
+{
+  "path" : "/v4/search/agencies",
+  "description" : "Search Agency",
+  "httpMethod" : "POST",
+  "summary" : "Search Agency",
+  "responseType" : "List<agency>",
+  "parameters": [
+            {
+              "paramType": "body",
+              "required": true,
+              "dataType": "geoSearchAgencies",
+              "name": "wsRequest"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {
+   "geoSearchAgencies": {
+      "id": "geoSearchAgencies",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        }
+      }
+    },
+    "agency": {
+      "id": "agency",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "serviceProviderCode": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "iconName": {
+          "type": "string"
+        },
+        "hostedACA": {
+          "type": "boolean"
+        },
+        "isForDemo": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

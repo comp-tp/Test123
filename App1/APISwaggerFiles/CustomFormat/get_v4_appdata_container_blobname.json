@@ -1,0 +1,40 @@
+{
+  "path" : "/v4/appdata/{container}/{blobname}",
+  "description" : "Get App Specific Data",
+  "httpMethod" : "GET",
+  "summary" : "Retrieves App data matching the container and blob name. The two parameters are defined by the invoker (an App) and must be unique.",
+  "responseType" : "string",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "container"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "blobName"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appId"
+            },
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "appSecret"
+            },
+            {
+              "paramType": "query",
+              "required": false,
+              "dataType": "string",
+              "name": "lang"
+            }
+          ],
+   "models": {  }
+}

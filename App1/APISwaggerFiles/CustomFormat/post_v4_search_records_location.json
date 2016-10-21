@@ -1,0 +1,76 @@
+{
+    "description": "Search Records Location",
+    "httpMethod": "POST",
+    "models": {
+        "geometryPointModel": {
+            "id": "geometryPointModel",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "x": {
+                    "type": "string"
+                },
+                "y": {
+                    "type": "string"
+                }
+            }
+        },
+        "gisObjectModel": {
+            "id": "gisObjectModel",
+            "properties": {
+                "featureId": {
+                    "type": "string"
+                },
+                "featureIdFieldName": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "layerId": {
+                    "type": "string"
+                },
+                "mapService": {
+                    "type": "string"
+                }
+            }
+        },
+        "locationRequestModel": {
+            "id": "locationRequestModel",
+            "properties": {
+                "ids": {
+                    "type": "List<string>"
+                }
+            }
+        },
+        "locationResultModel": {
+            "id": "locationResultModel",
+            "properties": {
+                "geometryPoint": {
+                    "type": "geometryPointModel"
+                },
+                "gisObject": {
+                    "type": "gisObjectModel"
+                },
+                "id": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "nickname": "searchRecordsLocation",
+    "parameters": [
+        {
+            "dataType": "locationRequestModel",
+            "description": "Record Ids",
+            "isArray": true,
+            "name": "ids",
+            "paramType": "body",
+            "required": true
+        }
+    ],
+    "path": "/v4/search/records/location",
+    "responseType": "List<locationResultModel>",
+    "summary": "Search Records Location"
+}

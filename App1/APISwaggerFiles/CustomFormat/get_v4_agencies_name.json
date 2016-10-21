@@ -1,0 +1,49 @@
+{
+  "path" : "/v4/agencies/{name}",
+  "description" : "get agency",
+  "httpMethod" : "GET",
+  "summary" : "get agency",
+  "responseType" : "agency",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "name"
+            }
+          ],
+   "models": {
+    "agency": {
+      "id": "agency",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "serviceProviderCode": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "iconName": {
+          "type": "string"
+        },
+        "hostedACA": {
+          "type": "boolean"
+        },
+        "isForDemo": {
+          "type": "boolean"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

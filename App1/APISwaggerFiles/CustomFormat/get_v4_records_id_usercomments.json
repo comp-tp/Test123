@@ -1,0 +1,50 @@
+{
+  "path": "/v4/records/{recordId}/usercomments",
+  "httpMethod": "GET",
+  "responseType": "List<comment>",
+  "parameters": [
+      {
+      "paramType": "path",
+      "required": true,
+      "dataType": "string",
+      "name": "recordId"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "lang"
+    },
+	{
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "offset"
+    },
+	    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "limit"
+    }
+  ],
+  "models": {
+    "comment": {
+      "id": "comment",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+		"comment": {
+          "type": "string"
+        },
+		"createdBy": {
+          "type": "string"
+        },
+		 "createdDate": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

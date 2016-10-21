@@ -1,0 +1,26 @@
+{
+    "path": "/v4/civicid/accounts/{id}",
+    "description": "Delete the account link",
+    "httpMethod": "DELETE",
+    "summary": "Delete the link between current civic user and Citizen/Agency user.",
+    "responseType": "",
+    "nickname": "deleteAccountLink",
+    "parameters": [
+        {
+            "name": "id",
+            "description": "Account link Id",
+            "paramType": "path",
+            "required": true,
+            "isArray": false,
+            "dataType": "long"
+        },
+        {
+            "name": "lang",
+            "description": "Language parameter to support I18N. Default language is en_US",
+            "paramType": "query",
+            "required": false,
+            "isArray": false,
+            "dataType": "string"
+        }
+    ]
+}

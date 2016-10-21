@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="Accela.Apps.Apis.Deployment" topologyChangeDiscovery="Blast" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="Accela.Apps.Apis.Services.Host" vmsize="Medium">
+    <Startup>
+      <Task commandLine="DeploymentStartup\Startup.cmd" executionContext="elevated" taskType="simple" />
+      <Task commandLine="AppDynamics\Startup.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HttpsEndpoint" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HttpsEndpoint" protocol="https" port="443" certificate="Certificate1" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <Certificates>
+      <Certificate name="Certificate1" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <!-- config same cross env. -->
+      <Setting name="current_sub_system" />
+      <Setting name="DefaultCulture" />
+      <!-- config specific to env. -->
+      <Setting name="EnableMockAPI" />
+      <Setting name="GenericAgencyName" />
+      <Setting name="EnableSSLorTLSValidation" />
+      <Setting name="AccessTokenSigningKey" />
+      <Setting name="ResourceServerEncryptionKey" />
+      <Setting name="ResourceCacheExpirationMinutes" />
+      <Setting name="AgencyAndEnvironmentCacheExpirationMinutes" />
+      <Setting name="AppCacheExpirationMinutes" />
+      <Setting name="GatewayRequestTimeoutMinutes" />
+      <Setting name="InternalAPI_Timeout_Seconds"/>
+      <Setting name ="StorageRetryPolicy"/>
+      <Setting name="LogLevel" />
+      <!-- config specific to 3rd party ArcGIS server -->
+      <Setting name="ArcGISServerUrl" />
+      <Setting name="ArcGISTokenServiceUrl" />
+      <Setting name="ArcGISTokenUserName" />
+      <Setting name="ArcGISTokenPassword" />
+      <Setting name="ArcGISTokenExpiration" />
+      <Setting name="ArcGISReferer" />
+      <!-- config specific to 3rd party Logentries -->
+      <Setting name="LOGENTRIES_TOKEN" />
+      <!-- config specific to 3rd party Redis server -->
+      <Setting name="redis.server" />
+      <Setting name="redis.port" />
+      <Setting name="redis.ssl" />
+      <Setting name="redis.password" />
+      <!-- config specific to other Construct sub-system -->
+      <Setting name="InternalAPI_AccessKey" />
+      <Setting name="Ref_InternalAPI_Admin" />
+      <Setting name="Ref_InternalAPI_Dev" />
+      <Setting name="Ref_InternalAPI_User" />
+      <Setting name="Ref_InternalAPI_OAuth" />
+      <!-- config specific to infrastructure -->
+      <Setting name="Api_DBConnectionString" />
+      <Setting name="Api_StorageConnectionString" />
+      <Setting name="DocumentDB_ConnectionString" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+  </WebRole>
+</ServiceDefinition>

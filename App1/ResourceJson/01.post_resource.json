@@ -1,0 +1,47 @@
+[
+    {
+      "api": "/v4/settings/contacts/types/{id}/customTables",
+      "httpMethod": "GET",
+      "templateUri": "/v4/settings/contacts/types/{id}/customTables?lang={lang}&fields={fields}",
+      "scope": "get_settings_contact_type_customtables",
+      "scopeGroup": "settings",
+      "authenticationType": "UserIdentityAA",
+      "proxyUri": "/apis/v4/settings/contacts/types/{id}/customTables?lang={lang}&fields={fields}"
+    },
+    {
+      "api": "/v4/records/{recordId}/contacts/{contactId}/customTables",
+      "httpMethod": "GET",
+      "templateUri": "/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}",
+      "scope": "get_record_contact_customtables",
+      "scopeGroup": "records",
+      "authenticationType": "UserIdentityAA",
+      "proxyUri": "/apis/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}"
+    },
+    {
+      "api": "/v4/records/{recordId}/contacts/{contactId}/customTables/meta",
+      "httpMethod": "GET",
+      "templateUri": "/v4/records/{recordId}/contacts/{contactId}/customTables/meta?lang={lang}&fields={fields}",
+      "scope": "get_record_contact_customtables_meta",
+      "scopeGroup": "records",
+      "authenticationType": "UserIdentityAA",
+      "proxyUri": "/apis/v4/records/{recordId}/contacts/{contactId}/customTables/meta?lang={lang}&fields={fields}"
+    },
+    {
+      "api": "/v4/records/{recordId}/contacts/{contactId}/customTables",
+      "httpMethod": "PUT",
+      "templateUri": "/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}&fields={fields}",
+      "scope": "update_record_contact_customtables",
+      "scopeGroup": "records",
+      "authenticationType": "UserIdentityAA",
+      "proxyUri": "/apis/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}&fields={fields}"
+    },
+    {
+      "api": "/v4/records/{recordId}/contacts/{contactId}/customTables/{tableId}/meta",
+      "httpMethod": "GET",
+      "templateUri": "/v4/records/{recordId}/contacts/{contactId}/customTables/{tableId}/meta?lang={lang}&fields={fields}",
+      "scope": "get_record_contact_customtable_meta",
+      "scopeGroup": "records",
+      "authenticationType": "UserIdentityAA",
+      "proxyUri": "/apis/v4/records/{recordId}/contacts/{contactId}/customTables/{tableId}/meta?lang={lang}&fields={fields}"
+    }
+  ]

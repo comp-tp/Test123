@@ -1,0 +1,62 @@
+Create /Update
+	API Request
+		POST :  https://apis.accela.com/apis/v3/resources  -{URL changes based on Construct system to be updated}
+		Headers : 
+                Content-Type : application/json
+                x-accela-subsystem-accesskey : {value from config key -'InternalAPI_AccessKey'}
+		Body:  
+				Copy from - 01.post_resource.json file
+	
+	
+ 
+		Sample Response:
+					{
+                          "resources": [{
+                                                   "status": 200,
+                                                   "id": "79970c09-f88c-4959-aea4-69c79dca4d09",
+                                                   "api": "/v4/records/{recordid}/contacts/{contactid}/customtables/meta",
+                                                   "httpMethod": "GET",
+                                                   "message": "API successfully added."
+                                        },{
+                                                 "status": 200,
+                                                  "id": "c4012345-aaaa-bbbb-cccc-123456700201",
+                                                  "api": "/v4/agencies/{name}",
+                                                 "httpMethod": "GET",
+                                                  "message": "Existing API successfully updated."
+                                        }]
+					}
+                                                 Or else appropriate error message details
+												 
+												 
+Read/ Verify
+	API Request
+		GET :  https://apis.accela.com/apis/v3/resources?id=79970c09-f88c-4959-aea4-69c79dca4d09,c4012345-aaaa-bbbb-cccc-123456700201  -{URL changes based on Construct system to be updated, id value is comma separated value from response }
+		Headers : 
+                Content-Type : application/json
+                x-accela-subsystem-accesskey : {value from config key -'InternalAPI_AccessKey'}
+	
+		Sample Response:
+				{
+					"resources": [
+									{
+									  "id": "6980c39d-cf9f-423f-98d1-5053a03450af",
+									  "api": "/v4/settings/contacts/types/{id}/customTables",
+									  "httpMethod": "GET",
+									  "templateUri": "/v4/settings/contacts/types/{id}/customTables?lang={lang}&fields={fields}",
+									  "scope": "get_settings_contact_type_customtables",
+									  "scopeGroup": "settings",
+									  "authenticationType": "UserIdentityAA",
+									  "proxyUri": "/apis/v4/settings/contacts/types/{id}/customTables?lang={lang}&fields={fields}"
+									},
+									{
+									  "id": "e34aed6d-af0d-4e17-9427-f514ede18a42",
+									  "api": "/v4/records/{recordId}/contacts/{contactId}/customTables",
+									  "httpMethod": "GET",
+									  "templateUri": "/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}",
+									  "scope": "get_record_contact_customtables",
+									  "scopeGroup": "records",
+									  "authenticationType": "UserIdentityAA",
+									  "proxyUri": "/apis/v4/records/{recordId}/contacts/{contactId}/customTables?lang={lang}"
+									}
+								]
+				}

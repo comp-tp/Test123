@@ -1,0 +1,139 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.WSModels", "Accela.Apps.Apis.WSModels\Accela.Apps.Apis.WSModels.csproj", "{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Models", "Accela.Apps.Apis.Models\Accela.Apps.Apis.Models.csproj", "{14FAA66A-3F1B-4385-95A8-32322F6B53C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Repositories.Interfaces", "Accela.Apps.Apis.Repositories.Interfaces\Accela.Apps.Apis.Repositories.Interfaces.csproj", "{01517285-3456-42B3-B62B-E634EA76841B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Repositories.Agency", "Accela.Apps.Apis.Repositories.Agency\Accela.Apps.Apis.Repositories.Agency.csproj", "{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Repositories.Citizen", "Accela.Apps.Apis.Repositories.Citizen\Accela.Apps.Apis.Repositories.Citizen.csproj", "{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.BusinessEntities.Interfaces", "Accela.Apps.Apis.BusinessEntities.Interfaces\Accela.Apps.Apis.BusinessEntities.Interfaces.csproj", "{7E927887-A156-4AD0-8C09-72C9DAE9066C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.BusinessEntities", "Accela.Apps.Apis.BusinessEntities\Accela.Apps.Apis.BusinessEntities.csproj", "{84C9CCB6-10D0-4159-866B-69822CE9EF01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Services", "Accela.Apps.Apis.Services\Accela.Apps.Apis.Services.csproj", "{2F1FEE06-FC01-4803-89A3-A9E1C42A8848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Services.Host.SQLServer", "Accela.Apps.Apis.Services.Host\Accela.Apps.Apis.Services.Host.SQLServer.csproj", "{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Persistence", "Accela.Apps.Apis.Persistence\Accela.Apps.Apis.Persistence.csproj", "{39073116-8E05-4336-ADCE-98E6AA07BD2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Resources", "Accela.Apps.Apis.Resources\Accela.Apps.Apis.Resources.csproj", "{766ED390-9C03-45F3-A328-716CF50CA5A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA7426DF-A72D-4580-9FB2-756A68B9C82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Services.Tests", "Accela.Apps.Apis.Services.Tests\Accela.Apps.Apis.Services.Tests.csproj", "{81473D5C-C226-46BC-9787-02DA5D49DD63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Repositories.Agency.Tests", "Accela.Apps.Apis.Repositories.Agency.Tests\Accela.Apps.Apis.Repositories.Agency.Tests.csproj", "{3FD67673-52F8-4146-9290-5B121CE0CEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.BusinessEntities.Tests", "Accela.Apps.Apis.BusinessEntities.Tests\Accela.Apps.Apis.BusinessEntities.Tests.csproj", "{5C2D6916-FCE4-493F-9DCA-0B20914B32ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutomationAPI", "AutomationAPI", "{A704DE7E-08B6-421A-A2A2-24025C201BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Automation.CitizenServices.Client", "Accela.Automation.CitizenServices.Client\Accela.Automation.CitizenServices.Client.csproj", "{F8D39824-FA84-4266-983D-36D492C032B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Automation.GovXmlServices.Client", "Accela.Automation.GovXmlServices.Client\Accela.Automation.GovXmlServices.Client.csproj", "{103D78C3-1C74-4F0F-B565-7FB868772A3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLServer", "SQLServer", "{84CB8760-DE1E-4E86-B21B-E038D1C2AB7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Apis.Ioc.SQLServer", "Accela.Apps.Apis.Ioc.SQLServer\Accela.Apps.Apis.Ioc.SQLServer.csproj", "{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		SQLServer.Debug|Any CPU = SQLServer.Debug|Any CPU
+		SQLServer|Any CPU = SQLServer|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7938FA-E51A-4DA1-830A-E030E1D5D27F}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{14FAA66A-3F1B-4385-95A8-32322F6B53C5}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FAA66A-3F1B-4385-95A8-32322F6B53C5}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FAA66A-3F1B-4385-95A8-32322F6B53C5}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{14FAA66A-3F1B-4385-95A8-32322F6B53C5}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{01517285-3456-42B3-B62B-E634EA76841B}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01517285-3456-42B3-B62B-E634EA76841B}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01517285-3456-42B3-B62B-E634EA76841B}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{01517285-3456-42B3-B62B-E634EA76841B}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{7E927887-A156-4AD0-8C09-72C9DAE9066C}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E927887-A156-4AD0-8C09-72C9DAE9066C}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E927887-A156-4AD0-8C09-72C9DAE9066C}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{7E927887-A156-4AD0-8C09-72C9DAE9066C}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{84C9CCB6-10D0-4159-866B-69822CE9EF01}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C9CCB6-10D0-4159-866B-69822CE9EF01}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C9CCB6-10D0-4159-866B-69822CE9EF01}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{84C9CCB6-10D0-4159-866B-69822CE9EF01}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{2F1FEE06-FC01-4803-89A3-A9E1C42A8848}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1FEE06-FC01-4803-89A3-A9E1C42A8848}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1FEE06-FC01-4803-89A3-A9E1C42A8848}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1FEE06-FC01-4803-89A3-A9E1C42A8848}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8}.SQLServer.Debug|Any CPU.ActiveCfg = SQLServer.Debug|Any CPU
+		{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8}.SQLServer.Debug|Any CPU.Build.0 = SQLServer.Debug|Any CPU
+		{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8}.SQLServer|Any CPU.ActiveCfg = SQLServer|Any CPU
+		{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8}.SQLServer|Any CPU.Build.0 = SQLServer|Any CPU
+		{39073116-8E05-4336-ADCE-98E6AA07BD2E}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39073116-8E05-4336-ADCE-98E6AA07BD2E}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39073116-8E05-4336-ADCE-98E6AA07BD2E}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{39073116-8E05-4336-ADCE-98E6AA07BD2E}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{766ED390-9C03-45F3-A328-716CF50CA5A8}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766ED390-9C03-45F3-A328-716CF50CA5A8}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766ED390-9C03-45F3-A328-716CF50CA5A8}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{766ED390-9C03-45F3-A328-716CF50CA5A8}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{81473D5C-C226-46BC-9787-02DA5D49DD63}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81473D5C-C226-46BC-9787-02DA5D49DD63}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81473D5C-C226-46BC-9787-02DA5D49DD63}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{81473D5C-C226-46BC-9787-02DA5D49DD63}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{3FD67673-52F8-4146-9290-5B121CE0CEF6}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD67673-52F8-4146-9290-5B121CE0CEF6}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD67673-52F8-4146-9290-5B121CE0CEF6}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD67673-52F8-4146-9290-5B121CE0CEF6}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{5C2D6916-FCE4-493F-9DCA-0B20914B32ED}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2D6916-FCE4-493F-9DCA-0B20914B32ED}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2D6916-FCE4-493F-9DCA-0B20914B32ED}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2D6916-FCE4-493F-9DCA-0B20914B32ED}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{F8D39824-FA84-4266-983D-36D492C032B4}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D39824-FA84-4266-983D-36D492C032B4}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D39824-FA84-4266-983D-36D492C032B4}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D39824-FA84-4266-983D-36D492C032B4}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{103D78C3-1C74-4F0F-B565-7FB868772A3A}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103D78C3-1C74-4F0F-B565-7FB868772A3A}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103D78C3-1C74-4F0F-B565-7FB868772A3A}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{103D78C3-1C74-4F0F-B565-7FB868772A3A}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+		{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481}.SQLServer.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481}.SQLServer.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481}.SQLServer|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481}.SQLServer|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14FAA66A-3F1B-4385-95A8-32322F6B53C5} = {A704DE7E-08B6-421A-A2A2-24025C201BB6}
+		{D0C56D6F-40E9-4A18-A5A3-35FE6F65D63E} = {A704DE7E-08B6-421A-A2A2-24025C201BB6}
+		{5F82CDB2-4BE4-4835-A2BF-B66B011F30ED} = {A704DE7E-08B6-421A-A2A2-24025C201BB6}
+		{2DF9A725-CFA3-476B-B9CF-28D4BB6E4BD8} = {84CB8760-DE1E-4E86-B21B-E038D1C2AB7D}
+		{81473D5C-C226-46BC-9787-02DA5D49DD63} = {FA7426DF-A72D-4580-9FB2-756A68B9C82E}
+		{3FD67673-52F8-4146-9290-5B121CE0CEF6} = {FA7426DF-A72D-4580-9FB2-756A68B9C82E}
+		{5C2D6916-FCE4-493F-9DCA-0B20914B32ED} = {FA7426DF-A72D-4580-9FB2-756A68B9C82E}
+		{F8D39824-FA84-4266-983D-36D492C032B4} = {A704DE7E-08B6-421A-A2A2-24025C201BB6}
+		{103D78C3-1C74-4F0F-B565-7FB868772A3A} = {A704DE7E-08B6-421A-A2A2-24025C201BB6}
+		{4D4632BD-DAE5-4580-9D6E-8B9F74EB2481} = {84CB8760-DE1E-4E86-B21B-E038D1C2AB7D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\TransientFaultHandling.Core.5.0.1118.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.0.1118.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.0.1118.0\DesignTime;packages\EnterpriseLibrary.Logging.5.0.505.0\lib\NET35;packages\Unity.2.1.505.2\lib\NET35;packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\DesignTime
+	EndGlobalSection
+EndGlobal

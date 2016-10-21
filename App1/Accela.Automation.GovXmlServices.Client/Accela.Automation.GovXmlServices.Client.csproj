@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{103D78C3-1C74-4F0F-B565-7FB868772A3A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Accela.Automation.GovXmlServices.Client</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Accela.Automation.GovXmlServices.Client</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>http://localhost/XMLModel/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accela.Apps.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.2.0.3\lib\net45\Accela.Apps.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.Shared.Gateway.Client, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.Gateway.Client.2.0.1\lib\net451\Accela.Apps.Shared.Gateway.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.2.0.1\lib\net45\Accela.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.Logging.1.0.9\lib\net45\Accela.Core.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Infrastructure.2.0.2\lib\net45\Accela.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.2.1\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communicator\GovXmlCommunicator.cs" />
+    <Compile Include="Communicator\ICommunicator.cs" />
+    <Compile Include="Ioc\DefaultServiceLoader.cs" />
+    <Compile Include="Model\ActorRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalInformationGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalInformationGroupId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalInformationGroupIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalInformationSubGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AdditionalItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Addresses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AddressesResponse.cs" />
+    <Compile Include="Model\AddressLines.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AddressLinesBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AddressLinesIFC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Applicant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Asset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetCA.cs" />
+    <Compile Include="Model\AssetCAs.cs" />
+    <Compile Include="Model\AssetCAType.cs" />
+    <Compile Include="Model\AssetCATypes.cs" />
+    <Compile Include="Model\AssetId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Assets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetSecurity.cs" />
+    <Compile Include="Model\AssetType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetTypeId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetTypeIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AssetTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AuditEntity.cs" />
+    <Compile Include="Model\AuditLog.cs" />
+    <Compile Include="Model\AuditLogs.cs" />
+    <Compile Include="Model\CalculateRouteResponse_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CalculateRoute_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CancelInspection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CancelInspectionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPComment.cs" />
+    <Compile Include="Model\CAPComments.cs" />
+    <Compile Include="Model\CapConditions.cs" />
+    <Compile Include="Model\CapContacts.cs" />
+    <Compile Include="Model\CapFees.cs" />
+    <Compile Include="Model\CAPId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CapInspections.cs" />
+    <Compile Include="Model\CapProjectInformation.cs" />
+    <Compile Include="Model\CapProjectInformations.cs" />
+    <Compile Include="Model\CAPRelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPRelations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPStatuses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CapSummary.cs" />
+    <Compile Include="Model\CAPType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPTypeId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPTypeIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CAPTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CapWorkflows.cs" />
+    <Compile Include="Model\ChangePassword.cs" />
+    <Compile Include="Model\Checkitem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Checklist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Cities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\City.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CompactAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CompactAddresses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CompactAddressId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Condition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConditionGroup.cs" />
+    <Compile Include="Model\Conditions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConditionStatus.cs" />
+    <Compile Include="Model\ConditionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConditionTypeId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConditionTypeIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConditionTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ConfirmationNumbers.cs" />
+    <Compile Include="Model\Contact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Contacts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\APOTemplates.cs" />
+    <Compile Include="Model\APOFields.cs" />
+    <Compile Include="Model\CountDailyRecords.cs" />
+    <Compile Include="Model\CountDailyRecordsResponse.cs" />
+    <Compile Include="Model\CreateAssetCA.cs" />
+    <Compile Include="Model\CreateAssetCAResponse.cs" />
+    <Compile Include="Model\DailyRecord.cs" />
+    <Compile Include="Model\DailyRecords.cs" />
+    <Compile Include="Model\DrillDown.cs" />
+    <Compile Include="Model\FacsimileCountryCodes.cs" />
+    <Compile Include="Model\GetAPOTemplate.cs" />
+    <Compile Include="Model\GetAPOTemplateResponse.cs" />
+    <Compile Include="Model\CostAccountIdentifier.cs" />
+    <Compile Include="Model\CostItem.cs" />
+    <Compile Include="Model\CostType.cs" />
+    <Compile Include="Model\CostUnitOfMeasureIdentifier.cs" />
+    <Compile Include="Model\CreateAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CreateAssetResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CreateDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\CreateDocumentResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DataitemChangeEnum.cs" />
+    <Compile Include="Model\DataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DateRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DateRanges.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DeleteDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DeleteDocumentResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\DetailAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DetailAddresses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Disposition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Dispositions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\distance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DistanceAndTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DistanceAndTimes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\District.cs" />
+    <Compile Include="Model\Districts.cs" />
+    <Compile Include="Model\Document.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DocumentGroup.cs" />
+    <Compile Include="Model\DocumentId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DocumentLocators.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Documents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DocumentSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DocumentSets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DocumentType.cs" />
+    <Compile Include="Model\EDMSAdapter.cs" />
+    <Compile Include="Model\EDMSAdapters.cs" />
+    <Compile Include="Model\ElectronicFileLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ElectronicFile_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ElectronicMailAddresses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ElectronicSignatures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ElementList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\Enumeration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\EnumerationList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\EnumerationLists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\EventMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\EventMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Extent_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\FacsimileNumbers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Fee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\FinalizeCAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\FinalizeCAPResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\FSystemOut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAdditionalInformationGroups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAdditionalInformationGroupsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAddress.cs" />
+    <Compile Include="Model\GetAssetCAs.cs" />
+    <Compile Include="Model\GetAssetCAsResponse.cs" />
+    <Compile Include="Model\GetAssetCAStatus.cs" />
+    <Compile Include="Model\GetAssetCAStatusResponse.cs" />
+    <Compile Include="Model\GetAssetCATypes.cs" />
+    <Compile Include="Model\GetAssetCATypesResponse.cs" />
+    <Compile Include="Model\GetAssets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAssetSizeUnits.cs" />
+    <Compile Include="Model\GetAssetSizeUnitsResponse.cs" />
+    <Compile Include="Model\GetAssetsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAssetTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAssetTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetAssetUsages.cs" />
+    <Compile Include="Model\GetAssetUsagesResponse.cs" />
+    <Compile Include="Model\GetAuditLogs.cs" />
+    <Compile Include="Model\GetAuditLogsResponse.cs" />
+    <Compile Include="Model\GetAvailableInspectionDates.cs" />
+    <Compile Include="Model\GetAvailableInspectionDatesResponse.cs" />
+    <Compile Include="Model\GetCAPDetail.cs" />
+    <Compile Include="Model\GetCAPDetailResponse.cs" />
+    <Compile Include="Model\GetCAPInspectionTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPInspectionTypeListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPStatusResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCAPTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCitiesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetConditionTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetConditionTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetContactsResponse.cs" />
+    <Compile Include="Model\GetContacts.cs" />
+    <Compile Include="Model\GetCostTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetCostTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDepartments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDepartmentsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDispositions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDispositionsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocumentGroups.cs" />
+    <Compile Include="Model\GetDocumentGroupsResponse.cs" />
+    <Compile Include="Model\GetDocumentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocumentListResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocumentResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocuments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetDocumentsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetEDMSAdapters.cs" />
+    <Compile Include="Model\GetEDMSAdaptersResponse.cs" />
+    <Compile Include="Model\GetGISSettings.cs" />
+    <Compile Include="Model\GetGuidesheets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetGuidesheetsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetHoldTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetHoldTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionDistricts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionDistrictsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionUnitNumbers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectionUnitNumbersResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetInspectorsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetLicensedProfessionals.cs" />
+    <Compile Include="Model\GetLicensedProfessionalsResponse.cs" />
+    <Compile Include="Model\GetLicenseTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetLicenseTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetModules.cs" />
+    <Compile Include="Model\GetModulesResponse.cs" />
+    <Compile Include="Model\GetOwners.cs" />
+    <Compile Include="Model\GetOwnersResponse.cs" />
+    <Compile Include="Model\GetParcels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetParcelsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetPartInventory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetPartInventoryResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetPartTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetPartTypesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetRoles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetRolesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetSeverityLevels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetSeverityLevelsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetStandardChoices.cs" />
+    <Compile Include="Model\GetStandardComments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetStandardCommentsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetStreetDirections.cs" />
+    <Compile Include="Model\GetStreetDirectionsResponse.cs" />
+    <Compile Include="Model\GetStreetSuffixes.cs" />
+    <Compile Include="Model\GetStreetSuffixesResponse.cs" />
+    <Compile Include="Model\GetTimeAccountingGroups.cs" />
+    <Compile Include="Model\GetTimeAccountingGroupsResponse.cs" />
+    <Compile Include="Model\GetUserSecurities.cs" />
+    <Compile Include="Model\GetUserSecuritiesResponse.cs" />
+    <Compile Include="Model\GetWorkflow.cs" />
+    <Compile Include="Model\GetWorkflowResponse.cs" />
+    <Compile Include="Model\GetWorkOrderTemplates.cs" />
+    <Compile Include="Model\GetWorkOrderTemplatesResponse.cs" />
+    <Compile Include="Model\GetWorksheets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetWorksheetsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GISLayerId.cs" />
+    <Compile Include="Model\GISObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GISObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GovXML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Guideitem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Guideitems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Guidesheet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GuidesheetGroup.cs" />
+    <Compile Include="Model\GuidesheetGroups.cs" />
+    <Compile Include="Model\GuidesheetId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GuidesheetIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Guidesheets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Hold.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldLevels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Holds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldTypeId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldTypeIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HoldTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Identifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InitiateCAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InitiateCAPResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Inspection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionDistrict.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionDistrictId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionDistrictIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionDistricts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionRelation.cs" />
+    <Compile Include="Model\InspectionRelations.cs" />
+    <Compile Include="Model\Inspections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionSheet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionSheets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionTypeId.cs" />
+    <Compile Include="Model\InspectionTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionTypeSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionTypeSetId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionTypeSetIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionTypeSets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectionUnitNumberEnumerations.cs" />
+    <Compile Include="Model\InspectionUnitNumbers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Inspector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectorId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\InspectorIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Inspectors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Jurisdiction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Jurisdictions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Keys.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\License.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Licenses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\LicenseTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\MapReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\MapServerID.cs" />
+    <Compile Include="Model\MapService.cs" />
+    <Compile Include="Model\MapServiceId_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\MiddleNames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Module.cs" />
+    <Compile Include="Model\Modules.cs" />
+    <Compile Include="Model\ObjectId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\OldGuideSheetSeqNbr.cs" />
+    <Compile Include="Model\OperationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\OperationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Option.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Options.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Organization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\OwnerAddress.cs" />
+    <Compile Include="Model\Parcel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ParcelGISAttribute.cs" />
+    <Compile Include="Model\ParcelId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ParcelIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Parcels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ParentCAPIds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Part.cs" />
+    <Compile Include="Model\PartInventory.cs" />
+    <Compile Include="Model\PassGISObjectsResponse_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PassGISObjects_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PersonAndOrganization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PhoneCountryCodes.cs" />
+    <Compile Include="Model\PhysicalDocumentLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PostalAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PostMileage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PostMileageResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Processes.cs" />
+    <Compile Include="Model\Radius_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Range.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RescheduleInspection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RescheduleInspectionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\returnElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ReturnElements_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Roles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\roles_ifc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteNodeIds_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteNodeId_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteNodes_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteNode_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteSegments_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RouteSegment_5_2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\RowStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ScheduleInspection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ScheduleInspectionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SetInspectionPriority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SetInspectionPriorityResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SeverityLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SeverityLevels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SpatialDescriptors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SpatialElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SpatialElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SpatialObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\StandardComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\StandardComments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\StandardCommentsGroup.cs" />
+    <Compile Include="Model\StandardCommentsGroupId.cs" />
+    <Compile Include="Model\StandardCommentsGroupIds.cs" />
+    <Compile Include="Model\StandardCommentsGroups.cs" />
+    <Compile Include="Model\Status.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Statuses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\StreetDirections.cs" />
+    <Compile Include="Model\SummaryItem.cs" />
+    <Compile Include="Model\Sys.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SystemResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\TaskItem.cs" />
+    <Compile Include="Model\TaskItems.cs" />
+    <Compile Include="Model\TelecomAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\TelephoneNumbers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\TextDefault.cs" />
+    <Compile Include="Model\TextDefaults.cs" />
+    <Compile Include="Model\TheOrganization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ThePerson.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\time.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\TimeAccounting.cs" />
+    <Compile Include="Model\TimeAccountingGroups.cs" />
+    <Compile Include="Model\TimeAccountingTypes.cs" />
+    <Compile Include="Model\Type.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Types.cs" />
+    <Compile Include="Model\UnitType.cs" />
+    <Compile Include="Model\UniversalDocumentLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdataParcelResponse.cs" />
+    <Compile Include="Model\UpdateAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateAssetCARequest.cs" />
+    <Compile Include="Model\UpdateAssetCAResponse.cs" />
+    <Compile Include="Model\UpdateAssetResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateCAP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateCAPResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateDocumentResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateInspection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateInspectionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\UpdateParcel.cs" />
+    <Compile Include="Model\UpdateWorkflowTask.cs" />
+    <Compile Include="Model\UpdateWorkflowTaskResponse.cs" />
+    <Compile Include="Model\Usage.cs" />
+    <Compile Include="Model\Usages.cs" />
+    <Compile Include="Model\UserRolePrivilege.cs" />
+    <Compile Include="Model\ValueRange.cs" />
+    <Compile Include="Model\ValueRanges.cs" />
+    <Compile Include="Model\Workflows.cs" />
+    <Compile Include="Model\WorkflowTaskStatus.cs" />
+    <Compile Include="Model\Workitem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Workitems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\WorkOrderTask.cs" />
+    <Compile Include="Model\WorkOrderTemplates.cs" />
+    <Compile Include="Model\Worksheet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Worksheets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\WOTTasks.cs" />
+    <Compile Include="Model\WWWHomePageURL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\GetStandardChoicesResponse.cs" />
+    <Compile Include="Model\GetTimeAccountingTypes.cs" />
+    <Compile Include="Model\GetTimeAccountingTypesResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

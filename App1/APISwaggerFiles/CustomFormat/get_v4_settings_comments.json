@@ -1,0 +1,66 @@
+{
+  "path": "/v4/settings/comments",
+  "description": "get comments",
+  "httpMethod": "GET",
+  "summary": "get comments",
+  "responseType": "List<standardComment>",
+  "parameters": [
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "groups"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "string",
+      "name": "lang"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "offset"
+    },
+    {
+      "paramType": "query",
+      "required": false,
+      "dataType": "integer",
+      "name": "limit"
+    }
+  ],
+  "models": {
+    "standardComment": {
+      "id": "standardComment",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "group": {
+		  "type": "textValue"
+        },
+        "type": {
+		  "type": "textValue"
+        }
+      }
+    },
+	"textValue": {
+	    "id": "textValue",
+		"properties": {
+		"value": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+	  }
+	}
+  }
+}

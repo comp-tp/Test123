@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appdynamics-agent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <controller host="accela142.saas.appdynamics.com" port="443" ssl="true" enable_config_deployment="false">
+    <application name="Accela.Apps.Apis.Azure" />
+    <account name="Accela142" password="4ushr8po47xe" />
+  </controller>
+  <machine-agent />
+  <app-agents azure="true" azure-role-name="" azure-role-instance-id="">
+    <IIS>
+      <automatic />
+    </IIS>
+    <standalone-applications>
+      <standalone-application executable="WaWorkerHost.exe">
+        <tier name="" />
+      </standalone-application>
+    </standalone-applications>
+  </app-agents>
+</appdynamics-agent>

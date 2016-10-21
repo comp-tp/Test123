@@ -1,0 +1,16 @@
+{
+  "path" : "/v4/agencies/{name}/logo",
+  "description" : "get agency logo",
+  "httpMethod" : "GET",
+  "summary" : "get agency logo",
+  "responseType" : "file",
+  "parameters": [
+            {
+              "paramType": "query",
+              "required": true,
+              "dataType": "string",
+              "name": "name"
+            }
+          ],
+   "models": {}
+}

@@ -1,0 +1,22 @@
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE NAME = 'maintenance_weekly_api' AND XTYPE = 'P')
+  DROP PROCEDURE maintenance_weekly_api
+GO
+
+CREATE PROCEDURE maintenance_weekly_api
+AS
+BEGIN
+   
+-- rebuild index
+ALTER INDEX [PK_Resource] ON [Resources]
+REBUILD WITH (ONLINE = ON)
+
+ALTER INDEX [PK_GlobalEntities] ON [GlobalEntities]
+REBUILD WITH (ONLINE = ON)
+
+ALTER INDEX [PK_PERSISTEDDATA] ON PERSISTEDDATA
+REBUILD WITH (ONLINE = ON)
+
+ALTER INDEX [PK_AsyncRequestStatuses] ON ASYNCREQUESTSTATUSES
+REBUILD WITH (ONLINE = ON)
+
+END

@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ApiDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AsyncRequestStatuses">
+          <Key>
+            <PropertyRef Name="RequestID" />
+          </Key>
+          <Property Name="RequestID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HttpMethod" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RequestUrl" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="RequestDataBlobUrl" Type="varchar" MaxLength="255" />
+          <Property Name="ResponseDataBlobUrl" Type="varchar" MaxLength="255" />
+          <Property Name="ExpirationDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GeoCoordinates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GlobalEntityID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CoordinateX" Type="decimal" Precision="18" Scale="12" />
+          <Property Name="CoordinateY" Type="decimal" Precision="18" Scale="12" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GlobalEntities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntityID" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="EntityType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AgencyName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Environment" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CloudUserID" Type="uniqueidentifier" />
+          <Property Name="UDF1" Type="nvarchar" MaxLength="1000" />
+          <Property Name="UDF2" Type="nvarchar" MaxLength="1000" />
+          <Property Name="UDF3" Type="nvarchar" MaxLength="1000" />
+          <Property Name="UDF4" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="IsPrivate" Type="int" Nullable="false" />
+          <Property Name="OpenedDate" Type="datetime" />
+          <Property Name="AssignTo" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GlobalEntityID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ImageURL" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="BlobContainer" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="BlobName" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PersistedData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="Namespace" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DataKey" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="BlobName" Type="nvarchar" MaxLength="1024" Nullable="false" />
+          <Property Name="ExpirationDate" Type="datetime" Nullable="false" />
+          <Property Name="BlobSize" Type="bigint" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Agency" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EntityType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="API" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="HttpVerb" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RelativeUriTemplateFull" Type="varchar" MaxLength="4000" />
+          <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AuthenticationType" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="ProxyAPI" Type="varchar" MaxLength="4000" />
+          <Property Name="IsProxy" Type="int" Nullable="false" />
+          <Property Name="IsAAGovxmlAPI" Type="int" Nullable="false" />
+          <Property Name="ProxyRemoteServerName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Scope2Groups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GroupID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ScopeName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ScopeGroups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_GeoCoordinates_GlobalEntities">
+          <End Role="GlobalEntities" Type="Self.GlobalEntities" Multiplicity="1" />
+          <End Role="GeoCoordinates" Type="Self.GeoCoordinates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GlobalEntities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GeoCoordinates">
+              <PropertyRef Name="GlobalEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Images_GlobalEntities">
+          <End Role="GlobalEntities" Type="Self.GlobalEntities" Multiplicity="1" />
+          <End Role="Images" Type="Self.Images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GlobalEntities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Images">
+              <PropertyRef Name="GlobalEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Scope2Groups_ScopeGroups">
+          <End Role="ScopeGroups" Type="Self.ScopeGroups" Multiplicity="1" />
+          <End Role="Scope2Groups" Type="Self.Scope2Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScopeGroups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Scope2Groups">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ApiDbModelStoreContainer">
+          <EntitySet Name="AsyncRequestStatuses" EntityType="Self.AsyncRequestStatuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GeoCoordinates" EntityType="Self.GeoCoordinates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GlobalEntities" EntityType="Self.GlobalEntities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersistedData" EntityType="Self.PersistedData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resources" EntityType="Self.Resources" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Scope2Groups" EntityType="Self.Scope2Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScopeGroups" EntityType="Self.ScopeGroups" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GeoCoordinates_GlobalEntities" Association="Self.FK_GeoCoordinates_GlobalEntities">
+            <End Role="GlobalEntities" EntitySet="GlobalEntities" />
+            <End Role="GeoCoordinates" EntitySet="GeoCoordinates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Images_GlobalEntities" Association="Self.FK_Images_GlobalEntities">
+            <End Role="GlobalEntities" EntitySet="GlobalEntities" />
+            <End Role="Images" EntitySet="Images" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Scope2Groups_ScopeGroups" Association="Self.FK_Scope2Groups_ScopeGroups">
+            <End Role="ScopeGroups" EntitySet="ScopeGroups" />
+            <End Role="Scope2Groups" EntitySet="Scope2Groups" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ApiDbModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ApiDataContext" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="GeoCoordinates" EntityType="ApiDbModel.GeoCoordinate" />
+          <EntitySet Name="GlobalEntities" EntityType="ApiDbModel.GlobalEntity" />
+          <EntitySet Name="PersistedDatas" EntityType="ApiDbModel.PersistedData" />
+          <EntitySet Name="Images" EntityType="ApiDbModel.Image" />
+          <AssociationSet Name="FK_GeoCoordinates_GlobalEntities" Association="ApiDbModel.FK_GeoCoordinates_GlobalEntities">
+            <End Role="GlobalEntity" EntitySet="GlobalEntities" />
+            <End Role="GeoCoordinate" EntitySet="GeoCoordinates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Images_GlobalEntities" Association="ApiDbModel.FK_Images_GlobalEntities">
+            <End Role="GlobalEntity" EntitySet="GlobalEntities" />
+            <End Role="Images" EntitySet="Images" />
+          </AssociationSet>
+          <EntitySet Name="ScopeGroups" EntityType="ApiDbModel.ScopeGroup" />
+          <EntitySet Name="Scope2Groups" EntityType="ApiDbModel.Scope2Group" />
+          <AssociationSet Name="FK_Scope2Groups_ScopeGroups" Association="ApiDbModel.FK_Scope2Groups_ScopeGroups">
+            <End Role="ScopeGroup" EntitySet="ScopeGroups" />
+            <End Role="Scope2Groups" EntitySet="Scope2Groups" />
+          </AssociationSet>
+          <EntitySet Name="AsyncRequestStatuses" EntityType="ApiDbModel.AsyncRequestStatus" />
+          <EntitySet Name="Resources" EntityType="ApiDbModel.Resource" />
+          </EntityContainer>
+        <EntityType Name="GeoCoordinate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="GlobalEntityID" Type="Guid" Nullable="false" />
+          <Property Name="CoordinateX" Type="Decimal" Precision="18" Scale="12" />
+          <Property Name="CoordinateY" Type="Decimal" Precision="18" Scale="12" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="GlobalEntities" Relationship="ApiDbModel.FK_GeoCoordinates_GlobalEntities" FromRole="GeoCoordinate" ToRole="GlobalEntity" />
+        </EntityType>
+        <EntityType Name="GlobalEntity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="EntityID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="EntityType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AgencyName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Environment" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CloudUserID" Type="Guid" />
+          <Property Name="UDF1" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="UDF2" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="UDF3" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="UDF4" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Type="DateTime" Name="OpenedDate" Precision="3" />
+          <Property Type="String" Name="AssignTo" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsPrivate" Nullable="false" />
+          <NavigationProperty Name="GeoCoordinates" Relationship="ApiDbModel.FK_GeoCoordinates_GlobalEntities" FromRole="GlobalEntity" ToRole="GeoCoordinate" />
+          <NavigationProperty Name="Images" Relationship="ApiDbModel.FK_Images_GlobalEntities" FromRole="GlobalEntity" ToRole="Images" />
+        </EntityType>
+        <EntityType Name="PersistedData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="Namespace" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DataKey" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="BlobName" Type="String" Nullable="false" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BlobSize" Type="Int64" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Agency" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EntityType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="GlobalEntityID" Nullable="false" />
+          <Property Type="String" Name="ImageURL" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BlobContainer" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BlobName" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Precision="3" />
+          <NavigationProperty Name="GlobalEntities" Relationship="ApiDbModel.FK_Images_GlobalEntities" FromRole="Images" ToRole="GlobalEntity" />
+        </EntityType>
+        <Association Name="FK_GeoCoordinates_GlobalEntities">
+          <End Type="ApiDbModel.GlobalEntity" Role="GlobalEntity" Multiplicity="1" />
+          <End Type="ApiDbModel.GeoCoordinate" Role="GeoCoordinate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GlobalEntity">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GeoCoordinate">
+              <PropertyRef Name="GlobalEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Images_GlobalEntities">
+          <End Type="ApiDbModel.GlobalEntity" Role="GlobalEntity" Multiplicity="1" />
+          <End Type="ApiDbModel.Image" Role="Images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GlobalEntity">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Images">
+              <PropertyRef Name="GlobalEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ScopeGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Precision="3" />
+          <NavigationProperty Name="Scope2Groups" Relationship="ApiDbModel.FK_Scope2Groups_ScopeGroups" FromRole="ScopeGroup" ToRole="Scope2Groups" />
+        </EntityType>
+        <EntityType Name="Scope2Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Guid" Name="GroupID" Nullable="false" />
+          <Property Type="String" Name="ScopeName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LastUpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastUpdatedDate" Precision="3" />
+          <NavigationProperty Name="ScopeGroup" Relationship="ApiDbModel.FK_Scope2Groups_ScopeGroups" FromRole="Scope2Groups" ToRole="ScopeGroup" />
+        </EntityType>
+        <Association Name="FK_Scope2Groups_ScopeGroups">
+          <End Type="ApiDbModel.ScopeGroup" Role="ScopeGroup" Multiplicity="1" />
+          <End Type="ApiDbModel.Scope2Group" Role="Scope2Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScopeGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Scope2Groups">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AsyncRequestStatus">
+          <Key>
+            <PropertyRef Name="RequestID" />
+          </Key>
+          <Property Name="RequestID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HttpMethod" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RequestUrl" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="RequestDataBlobUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ResponseDataBlobUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="API" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="HttpVerb" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RelativeUriTemplateFull" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AuthenticationType" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProxyAPI" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="IsProxy" Type="Int32" Nullable="false" />
+          <Property Name="IsAAGovxmlAPI" Type="Int32" Nullable="false" />
+          <Property Name="ProxyRemoteServerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ApiDbModelStoreContainer" CdmEntityContainer="ApiDataContext">
+          <EntitySetMapping Name="GeoCoordinates"><EntityTypeMapping TypeName="ApiDbModel.GeoCoordinate"><MappingFragment StoreEntitySet="GeoCoordinates">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="GlobalEntityID" ColumnName="GlobalEntityID" />
+            <ScalarProperty Name="CoordinateX" ColumnName="CoordinateX" />
+            <ScalarProperty Name="CoordinateY" ColumnName="CoordinateY" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GlobalEntities"><EntityTypeMapping TypeName="ApiDbModel.GlobalEntity"><MappingFragment StoreEntitySet="GlobalEntities">
+            <ScalarProperty Name="IsPrivate" ColumnName="IsPrivate" />
+                <ScalarProperty Name="AssignTo" ColumnName="AssignTo" />
+                <ScalarProperty Name="OpenedDate" ColumnName="OpenedDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+            <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+            <ScalarProperty Name="AgencyName" ColumnName="AgencyName" />
+            <ScalarProperty Name="Environment" ColumnName="Environment" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="CloudUserID" ColumnName="CloudUserID" />
+            <ScalarProperty Name="UDF1" ColumnName="UDF1" />
+            <ScalarProperty Name="UDF2" ColumnName="UDF2" />
+            <ScalarProperty Name="UDF3" ColumnName="UDF3" />
+            <ScalarProperty Name="UDF4" ColumnName="UDF4" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PersistedDatas"><EntityTypeMapping TypeName="ApiDbModel.PersistedData"><MappingFragment StoreEntitySet="PersistedData">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="Namespace" ColumnName="Namespace" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="DataKey" ColumnName="DataKey" />
+            <ScalarProperty Name="BlobName" ColumnName="BlobName" />
+            <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+            <ScalarProperty Name="BlobSize" ColumnName="BlobSize" />
+            <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+            <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+            <ScalarProperty Name="Agency" ColumnName="Agency" />
+            <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="ApiDbModel.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="BlobName" ColumnName="BlobName" />
+                <ScalarProperty Name="BlobContainer" ColumnName="BlobContainer" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="GlobalEntityID" ColumnName="GlobalEntityID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScopeGroups">
+            <EntityTypeMapping TypeName="ApiDbModel.ScopeGroup">
+              <MappingFragment StoreEntitySet="ScopeGroups">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Scope2Groups">
+            <EntityTypeMapping TypeName="ApiDbModel.Scope2Group">
+              <MappingFragment StoreEntitySet="Scope2Groups">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ScopeName" ColumnName="ScopeName" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AsyncRequestStatuses">
+            <EntityTypeMapping TypeName="ApiDbModel.AsyncRequestStatus">
+              <MappingFragment StoreEntitySet="AsyncRequestStatuses">
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="ResponseDataBlobUrl" ColumnName="ResponseDataBlobUrl" />
+                <ScalarProperty Name="RequestDataBlobUrl" ColumnName="RequestDataBlobUrl" />
+                <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+                <ScalarProperty Name="HttpMethod" ColumnName="HttpMethod" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="ApiDbModel.Resource">
+              <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="ProxyRemoteServerName" ColumnName="ProxyRemoteServerName" />
+                <ScalarProperty Name="IsAAGovxmlAPI" ColumnName="IsAAGovxmlAPI" />
+                <ScalarProperty Name="IsProxy" ColumnName="IsProxy" />
+                <ScalarProperty Name="ProxyAPI" ColumnName="ProxyAPI" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="AuthenticationType" ColumnName="AuthenticationType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RelativeUriTemplateFull" ColumnName="RelativeUriTemplateFull" />
+                <ScalarProperty Name="HttpVerb" ColumnName="HttpVerb" />
+                <ScalarProperty Name="API" ColumnName="API" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ApiDataContext" ZoomLevel="76">
+        <EntityTypeShape EntityType="ApiDbModel.GeoCoordinate" Width="1.5" PointX="4.75" PointY="5.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiDbModel.GlobalEntity" Width="1.5" PointX="0.75" PointY="1" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiDbModel.PersistedData" Width="1.5" PointX="6.75" PointY="5.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiDbModel.Image" Width="1.5" PointX="3" PointY="10" Height="2.9417936197916674" />
+        <AssociationConnector Association="ApiDbModel.FK_GeoCoordinates_GlobalEntities">
+          <ConnectorPoint PointX="2.25" PointY="5.2232970260416653" />
+          <ConnectorPoint PointX="5.5" PointY="5.2232970260416653" />
+          <ConnectorPoint PointX="5.5" PointY="5.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="ApiDbModel.FK_Images_GlobalEntities">
+          <ConnectorPoint PointX="1.5" PointY="6.057109375" />
+          <ConnectorPoint PointX="1.5" PointY="11.470896809895834" />
+          <ConnectorPoint PointX="3" PointY="11.470896809895834" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ApiDbModel.ScopeGroup" Width="1.5" PointX="7.75" PointY="10.125" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="ApiDbModel.Scope2Group" Width="1.5" PointX="10" PointY="10.125" Height="2.5571907552083317" />
+        <AssociationConnector Association="ApiDbModel.FK_Scope2Groups_ScopeGroups">
+          <ConnectorPoint PointX="9.25" PointY="11.403595377604166" />
+          <ConnectorPoint PointX="10" PointY="11.403595377604166" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ApiDbModel.AsyncRequestStatus" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ApiDbModel.Resource" Width="1.5" PointX="9.375" PointY="0.75" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

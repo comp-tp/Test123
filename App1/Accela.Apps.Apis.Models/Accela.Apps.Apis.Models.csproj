@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14FAA66A-3F1B-4385-95A8-32322F6B53C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.Apps.Apis.Models</RootNamespace>
+    <AssemblyName>Accela.Apps.Apis.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accela.Apps.Admin.Agency.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Admin.Agency.Client.2.0.1\lib\net451\Accela.Apps.Admin.Agency.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.Admin.WSModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Admin.Agency.Client.2.0.1\lib\net451\Accela.Apps.Admin.WSModels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Apps.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Apps.Shared.2.0.3\lib\net45\Accela.Apps.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.2.0.1\lib\net45\Accela.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Core.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Core.Logging.1.0.9\lib\net45\Accela.Core.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Infrastructure.2.0.2\lib\net45\Accela.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accela.Infrastructure.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accela.Infrastructure.Storage.2.0.0\lib\net45\Accela.Infrastructure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.2.1\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AAReturnElements.cs" />
+    <Compile Include="Common\CacheConstants.cs" />
+    <Compile Include="Common\ConnectionStrings.cs" />
+    <Compile Include="Common\GeocodeConstants.cs" />
+    <Compile Include="Common\IdEscapeHelper.cs" />
+    <Compile Include="DomainModels\ActionDataModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalColumnModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalGroupModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalInformationGroupIdModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalItemModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalRowModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalSubGroupModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalTableModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\AdditionalValueModel.cs" />
+    <Compile Include="DomainModels\AdditionalModels\DrillDownModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetCADepartmentModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetCAModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetCAStaffPersonModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetCAStatusModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetCATypeModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetDescriptionModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetStatusModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetTypeModel.cs" />
+    <Compile Include="DomainModels\AssetModels\AssetUnitTypesModel.cs" />
+    <Compile Include="DomainModels\AssetModels\CAAssetModel.cs" />
+    <Compile Include="DomainModels\AssetParentModel.cs" />
+    <Compile Include="DomainModels\AsyncRequestModels\AsyncHttpResponseMessage.cs" />
+    <Compile Include="DomainModels\AsyncRequestModels\AsyncHttpRequestMessage.cs" />
+    <Compile Include="DomainModels\AsyncRequestModels\AsyncRequestStatusModel.cs" />
+    <Compile Include="DomainModels\ChecklistModels\Checklist.cs" />
+    <Compile Include="DomainModels\ChecklistModels\ChecklistGroupModel.cs" />
+    <Compile Include="DomainModels\ChecklistModels\ChecklistItem.cs" />
+    <Compile Include="DomainModels\ChecklistModels\ChecklistItemStatus.cs" />
+    <Compile Include="DomainModels\ChecklistModels\EnumerationListModel.cs" />
+    <Compile Include="DomainModels\ChecklistModels\EnumerationModel.cs" />
+    <Compile Include="DomainModels\CommentModels\CitizenCommentModel.cs" />
+    <Compile Include="DomainModels\CommentModels\Comment.cs" />
+    <Compile Include="DomainModels\CommentModels\FavoriteCommentModel.cs" />
+    <Compile Include="DomainModels\CommentModels\StandardCommentGroupModel.cs" />
+    <Compile Include="DomainModels\CommentModels\StandardCommentModel.cs" />
+    <Compile Include="DomainModels\CommentModels\StandardCommentTypeModel.cs" />
+    <Compile Include="DomainModels\ConditionModels\ConditionGroupModel.cs" />
+    <Compile Include="DomainModels\ConditionModels\ConditionModel.cs" />
+    <Compile Include="DomainModels\ConditionModels\ConditionStatusModel.cs" />
+    <Compile Include="DomainModels\ConditionModels\ConditionTypeModel.cs" />
+    <Compile Include="DomainModels\ContactModels\ContactModel.cs" />
+    <Compile Include="DomainModels\ContactModels\ContactRoleModel.cs" />
+    <Compile Include="DomainModels\ContactModels\LicensedProfessional.cs" />
+    <Compile Include="DomainModels\ContactModels\LicenseTypeModel.cs" />
+    <Compile Include="DomainModels\ContactModels\OwnerModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostAccountModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostItemTypeModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostStatusModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostTypeModel.cs" />
+    <Compile Include="DomainModels\CostModels\CostUnitOfMeasureModel.cs" />
+    <Compile Include="DomainModels\DataModel.cs" />
+    <Compile Include="DomainModels\EventMessage.cs" />
+    <Compile Include="DomainModels\GISModels\GeocodeSettingsModel.cs" />
+    <Compile Include="DomainModels\GISModels\GISLayerModel.cs" />
+    <Compile Include="DomainModels\GISModels\GISObjectModel.cs" />
+    <Compile Include="DomainModels\GISModels\MapServiceModel.cs" />
+    <Compile Include="DomainModels\GISModels\ParcelGISAttributeModel.cs" />
+    <Compile Include="DomainModels\GlobalEntityModels\GlobalEntityModel.cs" />
+    <Compile Include="DomainModels\Images\Image.cs" />
+    <Compile Include="DomainModels\IMobileEntity.cs" />
+    <Compile Include="DomainModels\InspectionModels\DetailAddressModel.cs" />
+    <Compile Include="DomainModels\MobileErrorCode.cs" />
+    <Compile Include="DomainModels\PersistedDataModels\PersistedDataModel.cs" />
+    <Compile Include="DomainModels\Portals\AppModel.cs" />
+    <Compile Include="DomainModels\Portals\AppSettings.cs" />
+    <Compile Include="DomainModels\Portals\CloudUserModel.cs" />
+    <Compile Include="DomainModels\Portals\ContextUser.cs" />
+    <Compile Include="DomainModels\Portals\CoordinateModel.cs" />
+    <Compile Include="DomainModels\Portals\CoordinatePersistedModel.cs" />
+    <Compile Include="DomainModels\Portals\GeoCoordinateModel.cs" />
+    <Compile Include="DomainModels\Portals\GeoSearchRangeModel.cs" />
+    <Compile Include="DomainModels\IDataModel.cs" />
+    <Compile Include="DomainModels\Identifer2.cs" />
+    <Compile Include="DomainModels\Identifier.cs" />
+    <Compile Include="DomainModels\InspectionModels\InspectionGroupModel.cs" />
+    <Compile Include="DomainModels\InspectionModels\InspectionModel.cs" />
+    <Compile Include="DomainModels\InspectionModels\InspectionStatusModel.cs" />
+    <Compile Include="DomainModels\InspectionModels\InspectionTypeModel.cs" />
+    <Compile Include="DomainModels\InspectionModels\SystemInspectionTypeModel.cs" />
+    <Compile Include="DomainModels\LocationModels\AddressModel.cs" />
+    <Compile Include="DomainModels\LocationModels\GeometryPointModel.cs" />
+    <Compile Include="DomainModels\LocationModels\GisObjectModel.cs" />
+    <Compile Include="DomainModels\LocationModels\LocationBaseModel.cs" />
+    <Compile Include="DomainModels\LocationModels\LocationModel.cs" />
+    <Compile Include="DomainModels\ParcelModels\ParcelModel.cs" />
+    <Compile Include="DomainModels\ParcelModels\ParcelStatusModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartBrandModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartDescriptionModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartInventoryModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartStatusModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartSupplyModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartTypeModel.cs" />
+    <Compile Include="DomainModels\PartModels\PartUnitOfMeasurementModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\AttachmentV4Model.cs" />
+    <Compile Include="DomainModels\ReportModels\ReportCategoryModel.cs" />
+    <Compile Include="DomainModels\ReportModels\ReportModel.cs" />
+    <Compile Include="DomainModels\ReportModels\ReportDefinitionModel.cs" />
+    <Compile Include="DomainModels\ReportModels\ReportParameterModel.cs" />
+    <Compile Include="DomainModels\ResourceModels\ResourceModel.cs" />
+    <Compile Include="DomainModels\Scope\ScopeGroupModel.cs" />
+    <Compile Include="DomainModels\Scope\ScopeModel.cs" />
+    <Compile Include="DomainModels\ServerPropertyModels\ServerPropertyV4Model.cs" />
+    <Compile Include="DomainModels\StandardChoicesModels\StandardChoicesModel.cs" />
+    <Compile Include="DomainModels\System.cs" />
+    <Compile Include="DTOs\AALogonModel.cs" />
+    <Compile Include="DTOs\AARESTModels\AACreateReportRequest.cs" />
+    <Compile Include="DTOs\AARESTModels\AACreateReportResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\AADocument.cs" />
+    <Compile Include="DTOs\AARESTModels\AADocumentResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReport.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportCategoriesResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportCategory.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportDefinition.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportDefinitionResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportParameter.cs" />
+    <Compile Include="DTOs\AARESTModels\AAReportsDefinitionResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\AAResponseBase.cs" />
+    <Compile Include="DTOs\AARESTModels\BizServerPropertiesResponse.cs" />
+    <Compile Include="DTOs\AARESTModels\BizServerProperty.cs" />
+    <Compile Include="DTOs\AddressCriteria.cs" />
+    <Compile Include="DTOs\AssetCriteria.cs" />
+    <Compile Include="DTOs\AssetSearchCriteria.cs" />
+    <Compile Include="DTOs\BBox.cs" />
+    <Compile Include="DTOs\ContextParameter.cs" />
+    <Compile Include="DTOs\GeoCircle.cs" />
+    <Compile Include="DTOs\IDataModel.cs" />
+    <Compile Include="DTOs\IListExtension.cs" />
+    <Compile Include="DTOs\InspectionCriteria.cs" />
+    <Compile Include="DTOs\IPagedList.cs" />
+    <Compile Include="DTOs\LogonModel.cs" />
+    <Compile Include="DTOs\PagedList.cs" />
+    <Compile Include="DTOs\PagedListExtentsion.cs" />
+    <Compile Include="DTOs\Pagination.cs" />
+    <Compile Include="DTOs\ParcelCriteria.cs" />
+    <Compile Include="DTOs\RecordCriteria.cs" />
+    <Compile Include="DTOs\Requests\AddressRequests\AddressesRequest.cs" />
+    <Compile Include="DTOs\Requests\AddressRequests\AddressRequest.cs" />
+    <Compile Include="DTOs\Requests\ApiAuthorizationRequests\ApiAuthorizationRequest.cs" />
+    <Compile Include="DTOs\Requests\AppDataRequests\DeleteAppDataRequest.cs" />
+    <Compile Include="DTOs\Requests\AppDataRequests\GetAppDataRequest.cs" />
+    <Compile Include="DTOs\Requests\AppDataRequests\SaveAppDataRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssessmentsSearchRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetASIsRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetASITsRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetsRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetsSearchRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetStatusesRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetTypesRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\AssetUnitTypesRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\CreateAssetCARequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\CreateAssetRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\GetAssetCAsRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\GetAssetCATypesRequest.cs" />
+    <Compile Include="DTOs\Requests\AssetRequests\UpdateAssetCARequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentContentRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentsRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentThumbContentRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentThumbnailContentV4Request.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentUploadRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\AttachmentRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\CreateAttachmentRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\DocumentTypeRequest.cs" />
+    <Compile Include="DTOs\Requests\AttachmentRequests\UploadAttachmentDescRequest.cs" />
+    <Compile Include="DTOs\Requests\ChecklistRequests\GetChecklistGroupRequest.cs" />
+    <Compile Include="DTOs\Requests\ChecklistRequests\GetChecklistItemRequest.cs" />
+    <Compile Include="DTOs\Requests\ChecklistRequests\GetChecklistRequest.cs" />
+    <Compile Include="DTOs\Requests\CitizenCommentRequests\CreateCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\CitizenCommentRequests\GetCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\CitizenRequests\CreateCivicIdRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\AppSettingRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\AppSettingsRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\AuthenticateCivicRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\AuthenticateUserRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\ConditionsRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\ContactsRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\PageListRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\RefreshRequest.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\RequestBase.cs" />
+    <Compile Include="DTOs\Requests\CommonRequests\SystemInfo.cs" />
+    <Compile Include="DTOs\Requests\ContactRequests\GetContactsRequest.cs" />
+    <Compile Include="DTOs\Requests\ContactRequests\SearchContactsRequest.cs" />
+    <Compile Include="DTOs\Requests\CostRequests\CostsRequest.cs" />
+    <Compile Include="DTOs\Requests\Departments\SystemDepartmentsRequest.cs" />
+    <Compile Include="DTOs\Requests\Departments\SystemDepartmentStaffsRequest.cs" />
+    <Compile Include="DTOs\Requests\EnvironmentRequests\UpdateEnvironmentRequest.cs" />
+    <Compile Include="DTOs\Requests\GeoRequests\GeoGetCoordinatesByAddressesRequest.cs" />
+    <Compile Include="DTOs\Requests\GeoRequests\GeoSearchAgenciesByAddressRequest.cs" />
+    <Compile Include="DTOs\Requests\GeoRequests\GeoSearchAgenciesRequest.cs" />
+    <Compile Include="DTOs\Requests\GISSettingsRequests\GetGISSettingsRequest.cs" />
+    <Compile Include="DTOs\Requests\GlobalEntityRequests\GetGlobalEntitiesCountRequest.cs" />
+    <Compile Include="DTOs\Requests\GlobalEntityRequests\GetGlobalEntitiesRequest.cs" />
+    <Compile Include="DTOs\Requests\GlobalEntityRequests\GetGlobalEntityRequest.cs" />
+    <Compile Include="DTOs\Requests\GlobalEntityRequests\GetRecordCountByRecordTypeRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\AvailableInspectionDatesRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\CancelInspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\CreateInspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionChecklistItemRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionChecklistRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionGroupRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionsRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionStatusRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\InspectionTypeRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\JoblistRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\ReassignInspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\RescheduleInspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\SystemInspectionTypeRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectionRequests\UpdateInspectionRequest.cs" />
+    <Compile Include="DTOs\Requests\InspectorRequests\SystemInspectorRequest.cs" />
+    <Compile Include="DTOs\Requests\ParcelRequests\ParcelAddressesRequest.cs" />
+    <Compile Include="DTOs\Requests\ParcelRequests\ParcelOwnersRequest.cs" />
+    <Compile Include="DTOs\Requests\ParcelRequests\ParcelRequest.cs" />
+    <Compile Include="DTOs\Requests\ParcelRequests\ParcelsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\CreateRecordRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\DailyRecordsCountRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\PartsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordAssetsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordCommentsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordContactsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordInspectionsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordLocationRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordOwnersRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordsGeoRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RecordsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\RelatedRecordsRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\UpdateRecordRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\UpdateWorkflowTaskRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\WorkflowTasksRequest.cs" />
+    <Compile Include="DTOs\Requests\RecordRequests\WorkOrderTasksRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\AdditionalGroupRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\AdditionalRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\AdditionalTableRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\Contact\SystemContactTypesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\CreateFavoriteCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\DeleteFavoriteCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\DepartmentRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\DrillDownValuesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\FavoriteCommentsRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\GetAddressByCoordinateRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\InspectorRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\ModulesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\OwnerRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\OwnersRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\RecordPrioritiesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\RecordStatusesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\RecordTypesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\StandardCommentGroupRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\StandardCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\StreetPrefixesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\UpdateFavoriteCommentRequest.cs" />
+    <Compile Include="DTOs\Requests\ReferenceRequests\WorkOrderTemplateRequest.cs" />
+    <Compile Include="DTOs\Requests\ReportRequests\CreateReportRequest.cs" />
+    <Compile Include="DTOs\Requests\ReportRequests\ReportCategoriesRequest.cs" />
+    <Compile Include="DTOs\Requests\ReportRequests\ReportDefinitionRequest.cs" />
+    <Compile Include="DTOs\Requests\ReportRequests\ReportsDefinitionRequest.cs" />
+    <Compile Include="DTOs\Requests\ResourceRequests\ResourcesFilter.cs" />
+    <Compile Include="DTOs\Requests\ScopeRequests\IsValidScopeRequest.cs" />
+    <Compile Include="DTOs\Requests\StandardChoicesRequest\GetStandardChoicesRequest.cs" />
+    <Compile Include="DTOs\Requests\StandardChoicesRequest\I18NLanguageSettingsRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\ConditionSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\ContactSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\FeeSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\InspectionSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\ProjectInformationRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\RecordSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\SummaryRequests\WorkflowSummaryRequest.cs" />
+    <Compile Include="DTOs\Requests\UserRequests\UserProfileRequest.cs" />
+    <Compile Include="DTOs\Responses\StandardChoicesResponses\I18NLanguageSettingsResponse.cs" />
+    <Compile Include="DTOs\V4\RequestV4Base.cs" />
+    <Compile Include="DTOs\V4\ResponseV4Base.cs" />
+    <Compile Include="DTOs\Responses\AddressResponses\AddressesResponse.cs" />
+    <Compile Include="DTOs\Responses\AddressResponses\AddressResponse.cs" />
+    <Compile Include="DTOs\Responses\AppDataResponses\DeleteAppDataResponse.cs" />
+    <Compile Include="DTOs\Responses\AppDataResponses\GetAppDataResponse.cs" />
+    <Compile Include="DTOs\Responses\AppDataResponses\SaveAppDataResponse.cs" />
+    <Compile Include="DTOs\Responses\AssessmentResponses\CreateAssetCAResponse.cs" />
+    <Compile Include="DTOs\Responses\AssessmentResponses\UpdateAssetCAResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetCATypesResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetsResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetStatusesResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetTypesResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\AssetUnitTypesResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\CreateAssetResponse.cs" />
+    <Compile Include="DTOs\Responses\AssetResponse\GetAssetCAsResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\AttachmentContentResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\AttachmentContentV4Response.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\AttachmentResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\AttachmentsResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\CreateAttachmentResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\DocumentTypesResponse.cs" />
+    <Compile Include="DTOs\Responses\AttachmentResponses\UploadAttachmentDescResponse.cs" />
+    <Compile Include="DTOs\Responses\ChecklistResponses\GetChecklistGroupResponse.cs" />
+    <Compile Include="DTOs\Responses\ChecklistResponses\GetChecklistItemResponse.cs" />
+    <Compile Include="DTOs\Responses\ChecklistResponses\GetChecklistResponse.cs" />
+    <Compile Include="DTOs\Responses\CitizenCommentResponses\CreateCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\CitizenCommentResponses\GetCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\CitizenResponses\CreateCivicIdResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\AppSettingResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\AppSettingsResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\AuthenticateCivicResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\AuthenticateUserResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\BizLoginResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\ConditionsResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\ContactsResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\LoginResponse.cs" />
+    <Compile Include="DTOs\PagedResponse.cs" />
+    <Compile Include="DTOs\Responses\CommonResponses\RefreshDataResponse.cs" />
+    <Compile Include="DTOs\ResponseBase.cs" />
+    <Compile Include="DTOs\Responses\ContactResponses\GetContactsResponse.cs" />
+    <Compile Include="DTOs\Responses\ContactResponses\SearchContactsResponse.cs" />
+    <Compile Include="DTOs\Responses\CostResponses\CostsResponse.cs" />
+    <Compile Include="DTOs\Responses\Departments\SystemDepartmentsResponse.cs" />
+    <Compile Include="DTOs\Responses\Departments\SystemDepartmentStaffsResponse.cs" />
+    <Compile Include="DTOs\Responses\EnvironmentResponses\UpdateEnvironmentResponse.cs" />
+    <Compile Include="DTOs\Responses\GeoResponses\GeoGetCoordinatesByAddressesResponse.cs" />
+    <Compile Include="DTOs\Responses\GeoResponses\GeoLocation.cs" />
+    <Compile Include="DTOs\Responses\GeoResponses\GeoLocationListItem.cs" />
+    <Compile Include="DTOs\Responses\GeoResponses\GeoSearchAgenciesResponse.cs" />
+    <Compile Include="DomainModels\GISModels\GeocodeRoutingServiceSettings.cs" />
+    <Compile Include="DomainModels\GISModels\GeocodeService.cs" />
+    <Compile Include="DTOs\Responses\GISSettingsResponses\GetGISSettingsResponse.cs" />
+    <Compile Include="DomainModels\GISModels\RoutingService.cs" />
+    <Compile Include="DTOs\Responses\GlobalEntityResponse\GetGlobalEntitiesCountResponse.cs" />
+    <Compile Include="DTOs\Responses\GlobalEntityResponse\GetGlobalEntitiesResponse.cs" />
+    <Compile Include="DTOs\Responses\GlobalEntityResponse\GetGlobalEntityResponse.cs" />
+    <Compile Include="DTOs\Responses\GlobalEntityResponse\GetRecordCountByRecordTypeResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\AvailableInspectionDatesResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\CancelInspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\CreateInspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionChecklistItemResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionChecklistResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionGroupResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionsResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionStatusResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\InspectionTypeResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\JoblistResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\ReassignInspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\RescheduleInspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\SystemInspectionTypeResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectionResponses\UpdateInspectionResponse.cs" />
+    <Compile Include="DTOs\Responses\InspectorResponses\SystemInspectorResponse.cs" />
+    <Compile Include="DTOs\Responses\ListResponse.cs" />
+    <Compile Include="DTOs\Responses\ParcelResponses\ParcelOwnersResponse.cs" />
+    <Compile Include="DTOs\Responses\ParcelResponses\ParcelResponse.cs" />
+    <Compile Include="DTOs\Responses\ParcelResponses\ParcelsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\CreateRecordResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\DailyRecordsCountResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\PartsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordAssetsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordCommentsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordContactsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordInspectionsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordLocationResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordOwnersResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordsGeoResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordsLocationResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RecordsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\RelatedRecordsResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\UpdateRecordResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\UpdateWorkflowTaskResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\WorkflowTasksResponse.cs" />
+    <Compile Include="DTOs\Responses\RecordResponses\WorkOrderTasksResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\AdditionalGroupResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\AdditionalResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\AdditionalTableResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\Contact\SystemContactTypesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\CreateFavoriteCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\DeleteFavoriteCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\DepartmentResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\DrillDownValuesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\FavoriteCommentsResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\GetAddressByCoordinateResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\InspectorResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\ModulesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\OwnerResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\OwnersResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\RecordPrioritiesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\RecordStatusesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\RecordTypesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\StandardCommentGroupResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\StandardCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\StreetPrefixesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\UpdateFavoriteCommentResponse.cs" />
+    <Compile Include="DTOs\Responses\ReferenceResponses\WorkOrderTemplateResponse.cs" />
+    <Compile Include="DTOs\Responses\ReportResponses\CreateReportResponse.cs" />
+    <Compile Include="DTOs\Responses\ReportResponses\ReportCategoriesResponse.cs" />
+    <Compile Include="DTOs\Responses\ReportResponses\ReportDefinitionResponse.cs" />
+    <Compile Include="DTOs\Responses\ReportResponses\ReportsDefinitionResponse.cs" />
+    <Compile Include="DTOs\Responses\ResourceResponses\ResourcesResponse.cs" />
+    <Compile Include="DTOs\Responses\StandardChoicesResponses\StandardChoiceResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\ConditionSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\ContactSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\FeeSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\InspectionSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\ProjectInformationResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\RecordSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\SummaryResponses\WorkflowSummaryResponse.cs" />
+    <Compile Include="DTOs\Responses\UserReponses\UserProfileResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DomainModels\RecordModels\DailyRecordModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordCommentModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordGeoModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordIdModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordPriorityModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordStatusModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RecordTypeModel.cs" />
+    <Compile Include="DomainModels\RecordModels\RelatedRecordModel.cs" />
+    <Compile Include="DomainModels\RecordModels\WorkflowTaskModel.cs" />
+    <Compile Include="DomainModels\RecordModels\WorkflowTaskStatusModel.cs" />
+    <Compile Include="DomainModels\RecordModels\WorkOrderTaskModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\AddressModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\Attachment.cs" />
+    <Compile Include="DomainModels\ReferenceModels\DepartmentModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\DocumentGroupModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\DocumentTypeModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\Inspector.cs" />
+    <Compile Include="DomainModels\ReferenceModels\InspectorModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\ModuleModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\SeverityModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\StaffPersonModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\StreetPrefixModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\SystemDepartmentModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\SystemInspectorModel.cs" />
+    <Compile Include="DomainModels\ReferenceModels\WorkOrderTemplateModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\ConditionSummaryModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\ContactSummaryModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\FeeSummaryModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\InspectionSummaryModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\ProjectInformationModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\RecordSummaryModel.cs" />
+    <Compile Include="DomainModels\SummaryModels\WorkflowSummaryModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
