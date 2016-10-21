@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Storage.SQLServer</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela infrastructure using MS SQL Server</description>
+        <summary>Replace MobileExceptions by ArgumentException</summary>
+        <dependencies>
+            <dependency id="Accela.Infrastructure" version="1.0.0" />
+            <dependency id="Accela.Infrastructure.Storage" version="1.0.0" />
+            <dependency id="EntityFramework" version="6.1.2" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure.Storage.SQLServer\bin\Release\Accela.Infrastructure.Storage.SQLServer.dll" target="lib\net45\Accela.Infrastructure.Storage.SQLServer.dll" />
+        <file src="..\Accela.Infrastructure.Storage.SQLServer\bin\Release\Accela.Infrastructure.Storage.SQLServer.dll.config" target="lib\net45\Accela.Infrastructure.Storage.SQLServer.dll.config" />
+    </files>
+</package>

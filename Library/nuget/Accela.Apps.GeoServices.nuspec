@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Apps.GeoServices</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela.Apps.GeoServices net 45</description>
+        <summary>move MobileException</summary>
+        <releaseNotes></releaseNotes>
+    </metadata>
+    <files>
+        <file src="..\Accela.Apps.Shared.GeoServices\bin\Release\Accela.Apps.GeoServices.dll" target="lib\net45\Accela.Apps.GeoServices.dll" />
+    </files>
+</package>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core.Ioc.SimpleInjector</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>1.Update for WebAPI 2.2</description>
+        <summary>1.Update for WebAPI 2.2</summary>
+        <releaseNotes>Update to this version when upgrading to webapi 2.2</releaseNotes>
+        <dependencies>
+            <dependency id="Accela.Core" version="1.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\..\Accela.Core.Ioc.SimpleInjector\bin\Debug\Accela.Core.Ioc.SimpleInjector.dll" target="lib\net45\Accela.Core.Ioc.SimpleInjector.dll" />
+    </files>
+</package>

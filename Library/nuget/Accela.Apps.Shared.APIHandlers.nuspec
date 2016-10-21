@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Apps.Shared.APIHandlers</id>
+        <version>2.0.3</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela API handlers on .NET 4.5</description>
+        <summary>move MobileException</summary>
+        <releaseNotes></releaseNotes>
+    </metadata>
+    <files>
+        <file src="..\Accela.Apps.Shared.APIHandlers\bin\Release\Accela.Apps.Shared.APIHandlers.dll" target="lib\net45\Accela.Apps.Shared.APIHandlers.dll" />
+    </files>
+</package>

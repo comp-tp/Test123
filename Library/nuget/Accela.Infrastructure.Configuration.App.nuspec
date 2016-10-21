@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Configuration.App</id>
+        <version>1.0.1</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela configuration using appSettings</description>
+        <dependencies>
+            <dependency id="Accela.Infrastructure" version="1.0.7" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure.Configuration\bin\Release\Accela.Infrastructure.Configuration.App.dll" target="lib\net45\Accela.Infrastructure.Configuration.App.dll" />
+    </files>
+</package>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Cache.Redis</id>
+        <version>2.0.1</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>1.Update for WebAPI 2.2</description>
+        <summary>Adding ICacheProvider</summary>
+        <dependencies>
+            <dependency id="Accela.Infrastructure.Cache" version="1.0.0" />
+            <dependency id="StackExchange.Redis.StrongName" version="1.0.394" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\..\Accela.Infrastructure.Cache.Redis\bin\Debug\Accela.Infrastructure.Cache.Redis.dll" target="lib\net45\Accela.Infrastructure.Cache.Redis.dll" />
+    </files>
+</package>

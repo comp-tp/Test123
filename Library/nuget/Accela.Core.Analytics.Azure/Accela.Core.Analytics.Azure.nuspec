@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core.Analytics.Azure</id>
+        <version>1.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library/Accela.Apps.Core.Ioc.SimpleInjector</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela analytics in Azure</description>
+        <dependencies>
+            <dependency id="Accela.Core" version="1.0.0" />
+            <dependency id="Accela.Infrastructure" version="1.0.0" />
+            <dependency id="Accela.Infrastructure.Azure" version="1.0.0" />
+            <dependency id="Accela.Core.Analytics" version="1.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\net45\Accela.Core.Analytics.Azure.dll" target="lib\net45\Accela.Core.Analytics.Azure.dll" />
+    </files>
+</package>

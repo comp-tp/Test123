@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core</id>
+        <version>2.0.1</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela core</description>
+        <summary>Remove dependency on Microsoft.Net.Http</summary>
+    </metadata>
+    <files>
+        <file src="Accela.Core.dll" target="lib\net45\Accela.Core.dll" />
+        <file src="Accela.Core.dll.config" target="lib\net45\Accela.Core.dll.config" />
+    </files>
+</package>

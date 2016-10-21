@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Configuration.Azure</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela Azure configuration. It uses Microsoft.WindowsAzure.ConfigurationManager 3.2.1.</description>
+        <summary>1.Update for WebAPI 2.2</summary>
+        <dependencies>
+            <dependency id="Accela.Infrastructure" version="1.0.7" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure.Configuration.Azure\bin\Debug\Accela.Infrastructure.Configuration.Azure.dll" target="lib\net45\Accela.Infrastructure.Configuration.Azure.dll" />
+    </files>
+</package>

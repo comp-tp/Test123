@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Storage</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela infrastructure for storage</description>
+        <summary>Replace MobileExceptions by ArgumentException</summary>
+        <dependencies>
+            <dependency id="Accela.Infrastructure" version="1.0.2" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure.Storage\bin\Release\Accela.Infrastructure.Storage.dll" target="lib\net45\Accela.Infrastructure.Storage.dll" />
+    </files>
+</package>

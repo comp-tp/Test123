@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core.Logging.Azure</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>1.Update for WebAPI 2.2</description>
+        <summary>1.Update for WebAPI 2.2</summary>
+        <releaseNotes>Update to this version when upgrading to webapi 2.2</releaseNotes>
+        <dependencies>
+            <dependency id="Accela.Core" version="1.0.0" />
+            <dependency id="Accela.Infrastructure" version="1.0.0" />
+            <dependency id="Accela.Infrastructure.Storage" version="1.0.0" />
+            <dependency id="Accela.Infrastructure.Storage.Azure" version="1.0.0" />
+            <dependency id="Accela.Core.Logging" version="1.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\..\Accela.Core.Logging.Azure\bin\Debug\Accela.Core.Logging.Azure.dll" target="lib\net45\Accela.Core.Logging.Azure.dll" />
+    </files>
+</package>

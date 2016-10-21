@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Apps.Shared.OAuth.Client</id>
+        <version>2.0.1</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela.Apps.Shared.OAuth.Client .net45</description>
+        <summary>move MobileException</summary>
+    </metadata>
+    <files>
+        <file src="..\Accela.Apps.Shared.OAuth.Client\bin\Release\Accela.Apps.Shared.OAuth.Client.dll" target="lib\net45\Accela.Apps.Shared.OAuth.Client.dll" />
+    </files>
+</package>

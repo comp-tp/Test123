@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Cache</id>
+        <version>1.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela infrastructure for cache</description>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Accela.Infrastructure.Cache.dll" target="lib\net45\Accela.Infrastructure.Cache.dll" />
+    </files>
+</package>

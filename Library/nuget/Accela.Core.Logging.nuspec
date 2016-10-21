@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core.Logging</id>
+        <version>1.0.9</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela logging
+Fixes intermittent issue in concurrent Logging</description>
+        <releaseNotes />
+        <dependencies>
+            <dependency id="Accela.Core" version="1.0.2" />
+            <dependency id="Accela.Infrastructure" version="1.0.6" />
+            <dependency id="NLog" version="3.2.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Core.Logging\bin\Release\Accela.Core.Logging.dll" target="lib\net45\Accela.Core.Logging.dll" />
+    </files>
+</package>

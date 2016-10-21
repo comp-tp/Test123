@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>component configuration help</title>
+	</head>
+	<body>
+    <h1>Logging Component Coniguration Items(Sample):</h1>
+    <h5>
+    <h5>In App configuration(web.config/app.config), Add Below settings:</h5><br />
+    1. Log_DBConnectionString:</h5> Log Database connection string. When host web api to query log data, the host server needs to set this value.
+    <br />Please replace {dbServer},{userid},{password} with correct values.
+        <br /><textarea style="width: 762px; height: 150px">
+<appSettings>
+    <add key="Log_DBConnectionString" value="provider connection string='data source={dbServer};initial catalog=Apps_Diagnostics;persist security info=True;user id={userid};password={password};multipleactiveresultsets=True;App=EntityFramework';metadata=res://*/Logs.csdl|res://*/Logs.ssdl|res://*/Logs.msl;provider=System.Data.SqlClient;"/>
+</appSettings>
+        </textarea><br /><br />
+    <h5>2. Log_StorageConnectionString: </h5>Log is stored to storage temporarily, then a worker role will batch read the logs from storage and batch insert to database.
+        <br /> The log client consumer needs to set the value.
+            <br />Please replace 'UseDevelopmentStorage=true' with correct value.
+       <br /><textarea style="width: 762px; height: 150px">
+<appSettings>
+    <add key="Log_StorageConnectionString" value="UseDevelopmentStorage=true"/>
+</appSettings>
+        </textarea>
+    
+	</body>
+</html>

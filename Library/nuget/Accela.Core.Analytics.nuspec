@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Core.Analytics</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>1.Update for WebAPI 2.2</description>
+        <releaseNotes>Update to this version when upgrading to webapi 2.2</releaseNotes>
+        <dependencies>
+            <dependency id="Accela.Core" version="1.0.2" />
+            <dependency id="Accela.Infrastructure" version="1.0.6" />
+            <dependency id="NLog" version="3.2.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Core.Analytics\bin\Debug\Accela.Core.Analytics.dll" target="lib\net45\Accela.Core.Analytics.dll" />
+        <file src="..\Accela.Core.Analytics\bin\Debug\Accela.Core.Analytics.pdb" target="lib\net45\Accela.Core.Analytics.pdb" />
+    </files>
+</package>

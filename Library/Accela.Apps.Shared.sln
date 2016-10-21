@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared", "Accela.Apps.Shared\Accela.Apps.Shared.csproj", "{F3463F67-7806-485A-9E51-4963E756AF27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.WSModels", "Accela.Apps.Shared.WSModels\Accela.Apps.Shared.WSModels.csproj", "{45E92EBE-1B17-4E8E-B4CE-50822135F5C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.APIHandlers", "Accela.Apps.Shared.APIHandlers\Accela.Apps.Shared.APIHandlers.csproj", "{B9FF2ACB-D205-4B19-969A-D9F5E90C68A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.OAuth.Client", "Accela.Apps.Shared.OAuth.Client\Accela.Apps.Shared.OAuth.Client.csproj", "{9BD89F49-9E8B-4E46-940E-E1C8283050A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.GeoServices", "Accela.Apps.Shared.GeoServices\Accela.Apps.Shared.GeoServices.csproj", "{9CDF3C27-FC1F-4EF7-AD10-BD47AA91BD45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.OAuth.Token", "Accela.Apps.Shared.OAuth.Token\Accela.Apps.Shared.OAuth.Token.csproj", "{44C11E02-90AB-4432-BD37-CB435366A10F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.Web", "Accela.Apps.Shared.Web\Accela.Apps.Shared.Web.csproj", "{4359F2BA-2536-4977-AB63-CE526504BE91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{12DE6C4C-E7C6-42F1-884A-CA496D519271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.Web.Tests", "Accela.Apps.Shared.Web.Tests\Accela.Apps.Shared.Web.Tests.csproj", "{BF9AF9E1-4689-47AC-B033-046E79F4636E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.APIHandlers.Test", "Accela.Apps.Shared.APIHandlers.Test\Accela.Apps.Shared.APIHandlers.Test.csproj", "{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CE3EC634-A659-47B6-98FB-3E6834F3F7F1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.Apps.Shared.Test", "Accela.Apps.Shared.Test\Accela.Apps.Shared.Test.csproj", "{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3463F67-7806-485A-9E51-4963E756AF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3463F67-7806-485A-9E51-4963E756AF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3463F67-7806-485A-9E51-4963E756AF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3463F67-7806-485A-9E51-4963E756AF27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E92EBE-1B17-4E8E-B4CE-50822135F5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E92EBE-1B17-4E8E-B4CE-50822135F5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E92EBE-1B17-4E8E-B4CE-50822135F5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E92EBE-1B17-4E8E-B4CE-50822135F5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FF2ACB-D205-4B19-969A-D9F5E90C68A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FF2ACB-D205-4B19-969A-D9F5E90C68A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FF2ACB-D205-4B19-969A-D9F5E90C68A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FF2ACB-D205-4B19-969A-D9F5E90C68A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD89F49-9E8B-4E46-940E-E1C8283050A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD89F49-9E8B-4E46-940E-E1C8283050A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD89F49-9E8B-4E46-940E-E1C8283050A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD89F49-9E8B-4E46-940E-E1C8283050A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDF3C27-FC1F-4EF7-AD10-BD47AA91BD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDF3C27-FC1F-4EF7-AD10-BD47AA91BD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDF3C27-FC1F-4EF7-AD10-BD47AA91BD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDF3C27-FC1F-4EF7-AD10-BD47AA91BD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C11E02-90AB-4432-BD37-CB435366A10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C11E02-90AB-4432-BD37-CB435366A10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C11E02-90AB-4432-BD37-CB435366A10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C11E02-90AB-4432-BD37-CB435366A10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4359F2BA-2536-4977-AB63-CE526504BE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4359F2BA-2536-4977-AB63-CE526504BE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4359F2BA-2536-4977-AB63-CE526504BE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4359F2BA-2536-4977-AB63-CE526504BE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9AF9E1-4689-47AC-B033-046E79F4636E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9AF9E1-4689-47AC-B033-046E79F4636E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9AF9E1-4689-47AC-B033-046E79F4636E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9AF9E1-4689-47AC-B033-046E79F4636E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF9AF9E1-4689-47AC-B033-046E79F4636E} = {12DE6C4C-E7C6-42F1-884A-CA496D519271}
+		{81DF3BCC-3E14-4C5E-BA71-E9262E648B4B} = {12DE6C4C-E7C6-42F1-884A-CA496D519271}
+		{D7385116-BA5E-48CF-9AB4-7B3FB08E02EB} = {12DE6C4C-E7C6-42F1-884A-CA496D519271}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.0\lib\NET35;packages\TransientFaultHandling.Core.5.0.1118.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.0.1118.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.0.1118.0\DesignTime
+	EndGlobalSection
+EndGlobal

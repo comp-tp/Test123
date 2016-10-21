@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.PubSub.Enterprise</id>
+        <version>1.0.0</version>
+        <authors>Accela Inc.</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela Infrastructure publish/subscribe implementation based o enterprise service bus</description>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="Accela.Infrastructure.PubSub" version="1.0.0" />
+                <dependency id="Accela.Infrastructure" version="1.0.1" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Accela.Infrastructure.PubSub.Enterprise.dll" target="lib\net45\Accela.Infrastructure.PubSub.Enterprise.dll" />
+    </files>
+</package>

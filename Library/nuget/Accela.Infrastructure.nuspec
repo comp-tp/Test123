@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure</id>
+        <version>2.0.2</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela infrastructure for configuration</description>
+        <summary>Remove MobileExceptions from infrastructure</summary>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure\bin\Release\Accela.Infrastructure.dll" target="lib\net45\Accela.Infrastructure.dll" />
+    </files>
+</package>

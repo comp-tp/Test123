@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Accela.Infrastructure.Storage.Azure</id>
+        <version>2.0.0</version>
+        <authors>Accela Inc</authors>
+        <projectUrl>https://github.com/Accela-Inc/Construct-Shared-Library</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Accela infrastructure using Azure. It uses WindowsAzure.Storage 7.2.0, Microsoft.Azure.DocumentDB 1.9.3, and Microsoft.Data.xxx 5.7.0</description>
+        <summary>It uses WindowsAzure.Storage 7.2.0, Microsoft.Azure.DocumentDB 1.9.3, and Microsoft.Data.xxx 5.7.0. Replace MobileExceptions by ArgumentException</summary>
+        <dependencies>
+            <dependency id="Accela.Infrastructure" />
+            <dependency id="Accela.Infrastructure.Storage" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Accela.Infrastructure.Storage.Azure\bin\Release\Accela.Infrastructure.Storage.Azure.dll" target="lib\net45\Accela.Infrastructure.Storage.Azure.dll" />
+        <file src="..\Accela.Infrastructure.Storage.Azure\bin\Release\Accela.Infrastructure.Storage.Azure.dll.config" target="lib\net45\Accela.Infrastructure.Storage.Azure.dll.config" />
+    </files>
+</package>

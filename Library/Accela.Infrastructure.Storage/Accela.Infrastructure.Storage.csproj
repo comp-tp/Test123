@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0494F6C6-547C-4376-A5A4-70B8AE7D7569}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.Infrastructure.Storage</RootNamespace>
+    <AssemblyName>Accela.Infrastructure.Storage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocumentDB\DocumentSearchOptions.cs" />
+    <Compile Include="DocumentDB\IDocumentContext.cs" />
+    <Compile Include="DocumentDB\IDocumentEntity.cs" />
+    <Compile Include="PagedResults.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\IQueueProcessor.cs" />
+    <Compile Include="Queue\IQueueStorage.cs" />
+    <Compile Include="Queue\LoggingTaskExtension.cs" />
+    <Compile Include="Queue\ObjectConverter.cs" />
+    <Compile Include="Queue\QueueMessage.cs" />
+    <Compile Include="Queue\QueueMessageType.cs" />
+    <Compile Include="Queue\QueueNameValidation.cs" />
+    <Compile Include="Queue\QueueProcessorBase.cs" />
+    <Compile Include="Queue\QueueStorageExtension.cs" />
+    <Compile Include="Queue\QueueValidation.cs" />
+    <Compile Include="Storage\BinaryStorageExtension.cs" />
+    <Compile Include="Storage\BlobProperties.cs" />
+    <Compile Include="Storage\BlobSearchOptions.cs" />
+    <Compile Include="Storage\BlobSearchResult.cs" />
+    <Compile Include="Storage\Constants.cs" />
+    <Compile Include="Storage\IBinaryStorage.cs" />
+    <Compile Include="Tables\EdmType.cs" />
+    <Compile Include="Tables\ITableEntity.cs" />
+    <Compile Include="Tables\ITableStorage.cs" />
+    <Compile Include="Tables\QueryComparisons.cs" />
+    <Compile Include="Tables\TableOperators.cs" />
+    <Compile Include="Tables\TableQueryCondition.cs" />
+    <Compile Include="Tables\TableSearchOptions.cs" />
+    <Compile Include="Tables\TableStorageExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BinaryStorageDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accela.Infrastructure\Accela.Infrastructure.csproj">
+      <Project>{f3ca6119-3c25-4480-9349-6e057d4fa4d8}</Project>
+      <Name>Accela.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
